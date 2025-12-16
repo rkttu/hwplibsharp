@@ -74,9 +74,16 @@ public class RemovingTableRowTest
     {
         Section s = hwpFile.BodyText.SectionList[0];
         Paragraph firstParagraph = s.GetParagraph(0);
-        if (firstParagraph.ControlList[2].Type == ControlType.Table)
+        
+        if (firstParagraph.ControlList == null)
+            return null;
+            
+        foreach (var control in firstParagraph.ControlList)
         {
-            return (ControlTable)firstParagraph.ControlList[2];
+            if (control.Type == ControlType.Table)
+            {
+                return (ControlTable)control;
+            }
         }
         return null;
     }

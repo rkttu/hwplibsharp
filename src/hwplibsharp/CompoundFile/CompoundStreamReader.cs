@@ -63,6 +63,11 @@ public class CompoundStreamReader : IDisposable
     /// </summary>
     private long _currentPositionAfterHeader;
 
+    /// <summary>
+    /// 레코드 헤더를 읽은 직후인지 여부
+    /// </summary>
+    private bool _immediatelyAfterReadingHeader;
+
     private bool _disposed;
 
     /// <summary>
@@ -75,6 +80,7 @@ public class CompoundStreamReader : IDisposable
         _stream = stream;
         _fileVersion = fileVersion;
         _readBytes = 0;
+        _immediatelyAfterReadingHeader = false;
     }
 
     /// <summary>
@@ -144,6 +150,7 @@ public class CompoundStreamReader : IDisposable
     private void ForwardPosition(int readBytes)
     {
         _readBytes += readBytes;
+        _immediatelyAfterReadingHeader = false;
     }
 
     /// <summary>
@@ -314,6 +321,7 @@ public class CompoundStreamReader : IDisposable
 
         _header = new RecordHeader(tagId, level, size);
         _currentPositionAfterHeader = _readBytes;
+        _immediatelyAfterReadingHeader = true;
         return true;
     }
 
@@ -345,6 +353,11 @@ public class CompoundStreamReader : IDisposable
     /// 현재 헤더 이후 위치
     /// </summary>
     public long CurrentPositionAfterHeader => _currentPositionAfterHeader;
+
+    /// <summary>
+    /// 레코드 헤더를 읽은 직후인지 여부
+    /// </summary>
+    public bool IsImmediatelyAfterReadingHeader => _immediatelyAfterReadingHeader;
 
     /// <summary>
     /// 레코드의 끝인지 여부

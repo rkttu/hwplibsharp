@@ -182,6 +182,15 @@ public class ForSection
             _currentParagraph.AddControl(field);
             _lastControl = field;
         }
+        // 표 컨트롤인 경우
+        else if (ctrlId == ControlType.Table.GetCtrlId())
+        {
+            var table = new ControlTable();
+            var fct = new ForControlTable();
+            fct.Read(table, _sr);
+            _currentParagraph.AddControl(table);
+            _lastControl = table;
+        }
         else
         {
             // 다른 종류의 컨트롤은 아직 구현되지 않음
