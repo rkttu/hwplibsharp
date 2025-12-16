@@ -1,7 +1,10 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText;
+using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.Etc;
+using HwpLib.Reader.BodyText.Control;
 using HwpLib.Reader.BodyText.Paragraph;
+using ControlNS = HwpLib.Object.BodyText.Control;
 
 namespace HwpLib.Reader.BodyText;
 
@@ -24,6 +27,11 @@ public class ForSection
     /// 현재 문단
     /// </summary>
     private Object.BodyText.Paragraph.Paragraph? _currentParagraph;
+
+    /// <summary>
+    /// 마지막으로 읽은 컨트롤
+    /// </summary>
+    private ControlNS.Control? _lastControl;
 
     /// <summary>
     /// 생성자
@@ -83,6 +91,10 @@ public class ForSection
         else if (tagId == HWPTag.CtrlHeader)
         {
             ReadCtrlHeader();
+        }
+        else if (tagId == HWPTag.CtrlData)
+        {
+            ReadCtrlData();
         }
         else
         {
@@ -153,7 +165,44 @@ public class ForSection
     /// </summary>
     private void ReadCtrlHeader()
     {
-        // TODO: 컨트롤 읽기 구현 필요
-        _sr!.SkipToEndRecord();
+        if (_currentParagraph == null || _sr == null)
+        {
+            _sr!.SkipToEndRecord();
+            return;
+        }
+
+        // 컨트롤 ID를 읽는다 (4바이트)
+        uint ctrlId = _sr.ReadUInt4();
+
+        // 필드 컨트롤인 경우
+        if (ControlTypeExtensions.IsField(ctrlId))
+        {
+            var field = new ControlField(ctrlId);
+            ForControlField.ReadCtrlHeader(field, _sr);
+            _currentParagraph.AddControl(field);
+            _lastControl = field;
+        }
+        else
+        {
+            // 다른 종류의 컨트롤은 아직 구현되지 않음
+            _sr.SkipToEndRecord();
+            _lastControl = null;
+        }
+    }
+
+    /// <summary>
+    /// 컨트롤 데이터 레코드를 읽는다.
+    /// </summary>
+    private void ReadCtrlData()
+    {
+        if (_lastControl == null || _sr == null)
+        {
+            _sr!.SkipToEndRecord();
+            return;
+        }
+
+        var ctrlData = ForCtrlData.Read(_sr);
+        _lastControl.SetCtrlData(ctrlData);
+        _sr.SkipToEndRecord();
     }
 }
