@@ -1,5 +1,10 @@
 # libhwpsharp
 
+[![NuGet](https://img.shields.io/nuget/v/HwpLibSharp.svg)](https://www.nuget.org/packages/HwpLibSharp/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/HwpLibSharp.svg)](https://www.nuget.org/packages/HwpLibSharp/)
+[![CI](https://github.com/rkttu/libhwpsharp/actions/workflows/ci.yml/badge.svg)](https://github.com/rkttu/libhwpsharp/actions/workflows/ci.yml)
+[![Release to NuGet](https://github.com/rkttu/libhwpsharp/actions/workflows/release.yml/badge.svg)](https://github.com/rkttu/libhwpsharp/actions/workflows/release.yml)
+
 .NET용 HWP(한글) 파일 라이브러리
 
 > ⚠️ **주의**: 이 프로젝트는 **실험적(Experimental)** 프로젝트입니다. 지속적으로 업데이트될 예정이며, API가 예고 없이 변경될 수 있습니다. 프로덕션 환경에서 사용 시 발생하는 문제에 대해서는 책임을 지지 않습니다. 이 소프트웨어는 **있는 그대로(AS-IS)** 제공됩니다.
