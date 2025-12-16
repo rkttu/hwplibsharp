@@ -141,8 +141,43 @@ public class HWPReader : IDisposable
     /// </summary>
     private void ReadBodyText()
     {
-        // TODO: BodyText 읽기 구현
-        // BodyText 읽기는 아직 구현되지 않았습니다.
+        if (_cfr!.IsChildStorage("BodyText"))
+        {
+            _cfr.MoveChildStorage("BodyText");
+
+            // Section 스트림 이름들 찾기 (Section0, Section1, ...)
+            var sectionNames = _cfr.ListChildNames()
+                .Where(name => name.StartsWith("Section"))
+                .OrderBy(name => 
+                {
+                    // Section 이름에서 숫자 추출
+                    string numPart = name.Substring("Section".Length);
+                    return int.TryParse(numPart, out int num) ? num : 0;
+                })
+                .ToList();
+
+            foreach (var sectionName in sectionNames)
+            {
+                var section = _hwpFile!.BodyText.AddNewSection();
+                ReadSection(sectionName, section);
+            }
+
+            _cfr.MoveParentStorage();
+        }
+    }
+
+    /// <summary>
+    /// Section 스트림을 읽는다.
+    /// </summary>
+    /// <param name="sectionName">섹션 스트림 이름</param>
+    /// <param name="section">섹션 객체</param>
+    private void ReadSection(string sectionName, HwpLib.Object.BodyText.Section section)
+    {
+        using var sr = _cfr!.GetChildStreamReader(sectionName, IsCompressed(), GetVersion());
+        
+        // Section 스트림 읽기
+        // TODO: 전체 Section 읽기 로직 구현 필요 (ForSection.Read 등)
+        // 현재는 빈 Section만 생성
     }
 
     /// <summary>
