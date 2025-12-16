@@ -23,7 +23,6 @@ public class ExtractingTextFromBigFileTest
     }
 
     [TestMethod]
-    [Ignore("HWPReader.ForExtractText는 아직 구현되지 않음 - TODO")]
     public void ExtractTextFromBigFile_ShouldSucceed()
     {
         // Arrange
