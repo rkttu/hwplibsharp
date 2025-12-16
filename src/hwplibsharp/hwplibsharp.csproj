@@ -22,7 +22,12 @@
 		<RepositoryUrl>https://github.com/rkttu/libhwpsharp</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>hwp;hangul;word-processor;document;korean</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="OpenMcdf" Version="3.1.0" />

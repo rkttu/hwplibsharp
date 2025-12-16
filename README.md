@@ -8,6 +8,12 @@
 
 이 프로젝트는 [neolord0/hwplib](https://github.com/neolord0/hwplib)의 Java 코드를 .NET으로 포팅한 것입니다. AI 코딩 어시스턴트를 활용하여 [@rkttu](https://github.com/rkttu)가 .NET 개발자들을 위해 포팅 작업을 진행하였습니다.
 
+## 기술적 특징
+
+- **.NET 8.0 타겟**: 최신 .NET 8.0을 대상으로 빌드되었습니다.
+- **OpenMcdf 사용**: 원본 Java 프로젝트에서 사용하던 Apache POI 대신, .NET 네이티브 라이브러리인 [OpenMcdf](https://github.com/ironfede/openmcdf)를 사용하여 OLE 복합 문서를 처리합니다.
+- **AOT 빌드 지원**: Native AOT(Ahead-of-Time) 컴파일을 지원하도록 설계되어, 더 빠른 시작 시간과 낮은 메모리 사용량을 제공합니다.
+
 ## 원본 프로젝트
 
 - **원본 리포지터리**: [neolord0/hwplib](https://github.com/neolord0/hwplib)
