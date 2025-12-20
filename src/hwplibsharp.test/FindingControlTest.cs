@@ -20,7 +20,7 @@ public class FindingControlTest
                 var firstCell = firstRow.CellList[0];
 
                 var normalString = firstCell.ParagraphList.GetNormalString();
-                if (normalString?.StartsWith('A') == true)
+                if (normalString?.StartsWith("A", StringComparison.Ordinal) == true)
                 {
                     return true;
                 }

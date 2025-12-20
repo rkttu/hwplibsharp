@@ -1,5 +1,6 @@
 using HwpLib.Object;
 using HwpLib.Reader;
+using System.Net.Http;
 
 namespace HwpLibSharp.Test;
 

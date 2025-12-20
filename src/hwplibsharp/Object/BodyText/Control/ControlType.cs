@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HwpLib.Object.BodyText.Control
+﻿namespace HwpLib.Object.BodyText.Control
 {
     /// <summary>
     /// 컨트롤 타입
@@ -174,7 +172,13 @@ namespace HwpLib.Object.BodyText.Control
         /// <returns>컨트롤 타입</returns>
         public static ControlType CtrlIdOf(uint ctrlId)
         {
-            foreach (ControlType ct in Enum.GetValues(typeof(ControlType)))
+#if NET5_0_OR_GREATER
+            // .NET 5+ uses AOT-compatible Enum.GetValues<T>()
+            foreach (ControlType ct in System.Enum.GetValues<ControlType>())
+#else
+            // .NET Framework / .NET Standard uses reflection-based approach (AOT not applicable)
+            foreach (ControlType ct in (ControlType[])System.Enum.GetValues(typeof(ControlType)))
+#endif
             {
                 if ((uint)ct == ctrlId)
                 {

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net472</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;net472;net8.0</TargetFrameworks>
 		<LangVersion>8.0</LangVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
@@ -18,7 +18,7 @@
 		<!-- Package Metadata -->
 		<PackageId>HwpLibSharp</PackageId>
 		<Title>HwpLibSharp</Title>
-		<Description>A .NET library for reading and writing HWP (Hangul Word Processor) files. AI-assisted translation from the original Java hwplib library by neolord0. Requires .NET Framework 4.7.2+ or .NET Standard 2.0 compatible runtime.</Description>
+		<Description>A .NET library for reading and writing HWP (Hangul Word Processor) files. AI-assisted translation from the original Java hwplib library by neolord0. Supports .NET 8+, .NET Framework 4.7.2+, and .NET Standard 2.0 compatible runtimes. Native AOT compatible on .NET 8+.</Description>
 		<Authors>neolord0;rkttu</Authors>
 		<Copyright>Copyright (c) neolord0. All rights reserved. .NET port by rkttu with AI-assisted translation.</Copyright>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -27,6 +27,11 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>hwp;hangul;word-processor;document;korean</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<!-- .NET 8.0+ Native AOT Compatibility -->
+	<PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">
+		<IsAotCompatible>true</IsAotCompatible>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -17,25 +17,48 @@
 
 ## 기술적 특징
 
-- **다중 프레임워크 지원**: .NET Standard 2.0과 .NET Framework 4.7.2를 동시에 타겟으로 빌드됩니다.
+- **다중 프레임워크 지원**: .NET Standard 2.0, .NET Framework 4.7.2, .NET 8.0을 동시에 타겟으로 빌드됩니다.
+- **Native AOT 호환**: .NET 8 이상에서 Native AOT 컴파일을 지원합니다. 리플렉션 의존성을 최소화하여 AOT 친화적으로 구현되었습니다.
 - **OpenMcdf 사용**: 원본 Java 프로젝트에서 사용하던 Apache POI 대신, .NET 네이티브 라이브러리인 [OpenMcdf](https://github.com/ironfede/openmcdf)를 사용하여 OLE 복합 문서를 처리합니다.
 - **Nullable 참조 형식 지원**: C# 8.0의 Nullable 참조 형식을 지원하여, null 관련 버그를 컴파일 타임에 방지할 수 있습니다.
+- **AnyCPU 지원**: 32비트 및 64비트 환경 모두에서 동작합니다.
 
 ## 시스템 요구 사항
 
 이 라이브러리는 다음 런타임 환경에서 사용할 수 있습니다:
 
-| 플랫폼 | 최소 버전 | 비고 |
-|--------|-----------|------|
-| .NET Framework | 4.7.2 | Windows 전용 |
-| .NET Core | 2.0 | 크로스 플랫폼 |
-| .NET | 5.0+ | 크로스 플랫폼 |
-| Mono | 5.4 | 크로스 플랫폼 |
-| Xamarin.iOS | 10.14 | iOS |
-| Xamarin.Android | 8.0 | Android |
-| Unity | 2018.1 | 게임 엔진 |
+| 플랫폼 | 최소 버전 | 타겟 | 비고 |
+|--------|-----------|------|------|
+| .NET | 8.0+ | `net8.0` | Native AOT 지원 |
+| .NET | 5.0 ~ 7.0 | `netstandard2.0` | 크로스 플랫폼 |
+| .NET Core | 2.0+ | `netstandard2.0` | 크로스 플랫폼 |
+| .NET Framework | 4.7.2+ | `net472` | Windows 전용 |
+| Mono | 5.4+ | `netstandard2.0` | 크로스 플랫폼 |
+| Xamarin.iOS | 10.14+ | `netstandard2.0` | iOS |
+| Xamarin.Android | 8.0+ | `netstandard2.0` | Android |
+| Unity | 2018.1+ | `netstandard2.0` | 게임 엔진 |
 
-> ⚠️ **.NET Framework 4.6.1 ~ 4.7.1**: .NET Standard 2.0 호환 모드로 동작하지만, 일부 기능이 제한될 수 있습니다. 가능하면 .NET Framework 4.7.2 이상으로 업그레이드하는 것을 권장합니다.
+### Blazor 지원
+
+| 플랫폼 | 지원 여부 | 비고 |
+|--------|-----------|------|
+| Blazor Server | ✅ 완전 지원 | 모든 API 사용 가능 |
+| Blazor WebAssembly | ⚠️ 부분 지원 | `FromFile`/`ToFile` 사용 불가, Stream 기반 API 사용 필요 |
+
+**Blazor WebAssembly 사용 예시:**
+
+```csharp
+// JavaScript interop으로 파일 읽기 후 Stream으로 전달
+var hwpFile = HWPReader.FromStream(memoryStream);
+
+// 저장 시에도 Stream 사용
+using var outputStream = new MemoryStream();
+HWPWriter.ToStream(hwpFile, outputStream);
+var bytes = outputStream.ToArray();
+// JavaScript interop으로 파일 다운로드 처리
+```
+
+> ⚠️ **.NET Framework 4.6.1 ~ 4.7.1**: .NET Standard 2.0 호환 모드로 동작하지만, 일부 기능이 제한될 수 있습니다. 가능하면 .NET Framework 4.7.2 이상으로 업그레이드 하는 것을 권장합니다.
 
 ## 원본 프로젝트
 

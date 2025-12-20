@@ -54,7 +54,13 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
         /// </summary>
         public static ColorEffectSort FromValue(int value)
         {
-            foreach (ColorEffectSort ces in Enum.GetValues(typeof(ColorEffectSort)))
+#if NET5_0_OR_GREATER
+            // .NET 5+ uses AOT-compatible Enum.GetValues<T>
+            foreach (ColorEffectSort ces in System.Enum.GetValues<ColorEffectSort>())
+#else
+            // .NET Framework / .NET Standard uses reflection-based approach (AOT not applicable)
+            foreach (ColorEffectSort ces in (ColorEffectSort[])System.Enum.GetValues(typeof(ColorEffectSort)))
+#endif
             {
                 if ((int)ces == value || (int)ces + 500 == value)
                 {

@@ -54,7 +54,13 @@ namespace HwpLib.Object.BodyText.Control.Form
         /// <returns>FormObjectType 값 또는 null</returns>
         public static FormObjectType? FromUint4(uint id)
         {
-            foreach (FormObjectType fot in Enum.GetValues(typeof(FormObjectType)))
+#if NET5_0_OR_GREATER
+            // .NET 5+ uses AOT-compatible Enum.GetValues<T>()
+            foreach (FormObjectType fot in System.Enum.GetValues<FormObjectType>())
+#else
+            // .NET Framework / .NET Standard uses reflection-based approach (AOT not applicable)
+            foreach (FormObjectType fot in (FormObjectType[])System.Enum.GetValues(typeof(FormObjectType)))
+#endif
             {
                 if ((uint)fot == id)
                 {
