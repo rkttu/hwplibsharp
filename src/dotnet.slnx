@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="hwplibsharp.test/hwplibsharp.test.csproj" />
+  <Project Path="hwplibsharp/hwplibsharp.csproj" />
+</Solution>
