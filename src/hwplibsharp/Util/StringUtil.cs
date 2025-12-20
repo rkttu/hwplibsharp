@@ -37,7 +37,7 @@ public static class StringUtil
         for (int j = 0; j < bytes.Length; j++)
         {
             int v = bytes[j] & 0xFF;
-            hexChars[j * 3] = HexArray[v >>> 4];
+            hexChars[j * 3] = HexArray[(v >> 4) & 0x0F];
             hexChars[j * 3 + 1] = HexArray[v & 0x0F];
             hexChars[j * 3 + 2] = ' ';
         }
