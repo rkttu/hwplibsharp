@@ -1,0 +1,148 @@
+# =====================================================================
+# Upstream Java hwplib 변경 사항 자동 추적 워크플로우
+# 
+# 이 워크플로우는 원본 Java hwplib 서브모듈의 변경 사항을 감지하고,
+# AI 코딩 에이전트가 .NET 버전에 반영할 수 있도록 이슈를 생성합니다.
+# =====================================================================
+
+name: Sync Upstream Java Changes
+
+on:
+  schedule:
+    # 3일마다 UTC 00:00 (KST 09:00) 실행
+    - cron: '0 0 */3 * *'
+  workflow_dispatch:  # 수동 트리거 지원
+
+jobs:
+  check-upstream:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      
+      - name: Check for upstream changes
+        id: check
+        run: |
+          cd hwplib
+          git fetch origin
+          
+          # 현재 서브모듈 HEAD와 원격 main 브랜치 비교
+          CURRENT_COMMIT=$(git rev-parse HEAD)
+          UPSTREAM_COMMIT=$(git rev-parse origin/main)
+          
+          if [ "$CURRENT_COMMIT" != "$UPSTREAM_COMMIT" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            
+            # 변경된 커밋 목록 저장
+            echo "## 새로운 커밋" > ../upstream_changes.md
+            echo "" >> ../upstream_changes.md
+            git log HEAD..origin/main --format="- **%h** %s (%an, %ad)" --date=short >> ../upstream_changes.md
+            
+            # 변경된 Java 파일 목록 저장
+            echo "" >> ../upstream_changes.md
+            echo "## 변경된 Java 파일" >> ../upstream_changes.md
+            echo "" >> ../upstream_changes.md
+            echo "\`\`\`" >> ../upstream_changes.md
+            git diff HEAD..origin/main --name-only | grep "\.java$" >> ../upstream_changes.md || echo "(Java 파일 변경 없음)" >> ../upstream_changes.md
+            echo "\`\`\`" >> ../upstream_changes.md
+            
+            # 커밋 수 계산
+            COMMIT_COUNT=$(git log HEAD..origin/main --oneline | wc -l)
+            echo "commit_count=$COMMIT_COUNT" >> $GITHUB_OUTPUT
+            
+            # 버전 정보 추출 (pom.xml에서)
+            UPSTREAM_VERSION=$(grep -m1 "<version>" pom.xml | sed 's/.*<version>\(.*\)<\/version>.*/\1/')
+            echo "upstream_version=$UPSTREAM_VERSION" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No upstream changes detected."
+          fi
+      
+      - name: Create Issue for AI Agent
+        if: steps.check.outputs.changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const changes = fs.readFileSync('upstream_changes.md', 'utf8');
+            const commitCount = '${{ steps.check.outputs.commit_count }}';
+            const upstreamVersion = '${{ steps.check.outputs.upstream_version }}';
+            
+            const issueBody = `## 🔄 Java hwplib 업스트림 변경 감지
+
+            **감지된 커밋 수**: ${commitCount}개
+            **업스트림 버전**: ${upstreamVersion}
+
+            ${changes}
+
+            ---
+
+            ## 📋 AI 에이전트 작업 요청
+
+            @copilot 다음 작업을 수행해주세요:
+
+            1. 위 변경된 Java 파일들을 분석해주세요
+            2. 각 Java 파일에 대응하는 C# 파일을 찾아주세요 (파일 상단 \`// Java Original:\` 주석 참조)
+            3. Java 변경 사항을 C# 코드에 반영해주세요
+            4. 빌드 및 테스트를 실행해주세요
+            5. 버전 번호 업데이트가 필요한지 확인해주세요
+
+            ### 참고 문서
+            - [AGENTS.md](./AGENTS.md) - 코딩 에이전트 가이드
+            - [docs/TRANSLATION_STATUS.md](./docs/TRANSLATION_STATUS.md) - 번역 현황
+
+            ---
+            *이 이슈는 자동으로 생성되었습니다.*
+            `;
+
+            // 기존에 열린 동일한 이슈가 있는지 확인
+            const existingIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'upstream-sync'
+            });
+
+            if (existingIssues.data.length > 0) {
+              // 기존 이슈에 코멘트 추가
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssues.data[0].number,
+                body: `## 🔄 추가 변경 사항 감지\n\n${changes}`
+              });
+              console.log(`Updated existing issue #${existingIssues.data[0].number}`);
+            } else {
+              // 새 이슈 생성
+              const newIssue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🔄 Upstream hwplib 변경 감지 (${commitCount}개 커밋)`,
+                body: issueBody,
+                labels: ['upstream-sync', 'ai-agent-task']
+              });
+              console.log(`Created new issue #${newIssue.data.number}`);
+            }
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ "${{ steps.check.outputs.changes }}" == "true" ]; then
+            echo "### ✅ 업스트림 변경 감지됨" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "- 커밋 수: ${{ steps.check.outputs.commit_count }}" >> $GITHUB_STEP_SUMMARY
+            echo "- 업스트림 버전: ${{ steps.check.outputs.upstream_version }}" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "이슈가 생성되었습니다. AI 에이전트가 변경 사항을 검토할 예정입니다." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ℹ️ 업스트림 변경 없음" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "현재 서브모듈이 최신 상태입니다." >> $GITHUB_STEP_SUMMARY
+          fi

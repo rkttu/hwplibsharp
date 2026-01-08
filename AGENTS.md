@@ -21,10 +21,97 @@ Java로 작성된 [neolord0/hwplib](https://github.com/neolord0/hwplib)를 C#으
 
 ---
 
+## 🔄 Upstream 동기화 프로세스
+
+이 프로젝트는 Java [neolord0/hwplib](https://github.com/neolord0/hwplib)를 서브모듈로 포함하고 있으며, 
+**3일마다** 자동으로 업스트림 변경 사항을 확인합니다.
+
+### 자동 동기화 워크플로우
+
+- **위치**: `.github/workflows/sync-upstream.yml`
+- **실행 주기**: 3일마다 (UTC 00:00 / KST 09:00)
+- **동작**: 
+  1. Java 서브모듈의 새 커밋 감지
+  2. 변경된 Java 파일 목록 추출
+  3. AI 에이전트 작업용 GitHub 이슈 자동 생성
+
+### 수동 동기화 방법
+
+```bash
+# 1. 서브모듈 업데이트
+cd hwplib
+git fetch origin
+git log HEAD..origin/main --oneline  # 새 커밋 확인
+
+# 2. 변경된 Java 파일 확인
+git diff HEAD..origin/main --name-only | grep "\.java$"
+
+# 3. 서브모듈 업데이트 적용
+git checkout origin/main
+cd ..
+git add hwplib
+```
+
+### Java → C# 파일 매핑 방법
+
+모든 C# 파일은 상단에 원본 Java 파일 경로가 주석으로 포함되어 있습니다:
+
+```csharp
+// =====================================================================
+// Java Original: kr/dogfoot/hwplib/object/HWPFile.java
+// Repository: https://github.com/neolord0/hwplib
+// =====================================================================
+```
+
+대응 파일을 찾으려면:
+```bash
+# 특정 Java 파일에 대응하는 C# 파일 찾기
+grep -r "Java Original: kr/dogfoot/hwplib/object/HWPFile.java" src/hwplibsharp/
+```
+
+### AI 에이전트 작업 요청 템플릿
+
+```
+hwplib 서브모듈의 [커밋 해시] 변경 사항을 .NET 버전에 반영해주세요.
+
+변경된 Java 파일:
+- kr/dogfoot/hwplib/xxx/Yyy.java
+
+작업 요청:
+1. 해당 Java 파일의 변경 내용 분석
+2. 대응하는 C# 파일 찾기 및 수정
+3. 빌드 및 테스트 실행
+4. 버전 번호 업데이트 필요시 반영
+```
+
+### 주요 변환 규칙 (Java → C#)
+
+| Java | C# | 예시 |
+|------|-----|------|
+| `getXxx()` / `setXxx()` | `Xxx` 프로퍼티 | `getName()` → `Name` |
+| `isXxx()` | `IsXxx` 프로퍼티 | `isValid()` → `IsValid` |
+| `ArrayList<T>` | `List<T>` | |
+| `HashMap<K,V>` | `Dictionary<K,V>` | |
+| `byte` (signed) | `sbyte` | |
+| `long` (for uint) | `uint` 또는 `long` | 컨텍스트에 따라 |
+
+### 네이밍 충돌 해결 (DocInfo 클래스)
+
+| Java 클래스 | C# 클래스 | 이유 |
+|-------------|-----------|------|
+| `BinData` | `BinDataInfo` | 네임스페이스 충돌 |
+| `BorderFill` | `BorderFillInfo` | 네임스페이스 충돌 |
+| `CharShape` | `CharShapeInfo` | 네임스페이스 충돌 |
+| `ParaShape` | `ParaShapeInfo` | 네임스페이스 충돌 |
+
+---
+
 ## 🏗️ 프로젝트 구조
 
 ```
 libhwpsharp/
+├── .github/workflows/         # GitHub Actions 워크플로우
+│   └── sync-upstream.yml      # 업스트림 동기화 자동화
 ├── src/
 │   ├── hwplibsharp/           # 메인 라이브러리
 │   │   ├── CompoundFile/      # HWP 컴파운드 파일 처리
