@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/HWPReader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -53,7 +53,7 @@ namespace HwpLib.Reader
         /// <returns>HWPFile 객체</returns>
         public static HWPFile FromFile(string filePath)
         {
-            using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
             return FromStream(stream);
         }
 
