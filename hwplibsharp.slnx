@@ -4,6 +4,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="hwplibsharp.test/hwplibsharp.test.csproj" />
-  <Project Path="hwplibsharp/hwplibsharp.csproj" />
+  <Project Path="src/hwplibsharp.test/hwplibsharp.test.csproj" />
+  <Project Path="src/hwplibsharp/hwplibsharp.csproj" />
 </Solution>
