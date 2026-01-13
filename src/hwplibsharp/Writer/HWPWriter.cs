@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/HWPWriter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -101,9 +101,8 @@ namespace HwpLib.Writer
         /// </summary>
         private void AutoSet()
         {
-            // TODO: AutoSetter 구현 후 활성화
-            // var iid = new InstanceID();
-            // AutoSetter.AutoSet(_hwpFile, iid);
+            var iid = new AutoSetter.InstanceID();
+            AutoSetter.AutoSetter.AutoSet(_hwpFile, iid);
         }
 
         /// <summary>
