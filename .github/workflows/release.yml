@@ -20,19 +20,15 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: src
 
     - name: Build
       run: dotnet build --no-restore --configuration Release
-      working-directory: src
 
     - name: Test
       run: dotnet test --no-build --configuration Release --verbosity normal
-      working-directory: src
 
     - name: Pack
       run: dotnet pack --no-build --configuration Release --output ./nupkgs
-      working-directory: src
 
     - name: Push to NuGet
       run: |
@@ -40,4 +36,3 @@ jobs:
           dotnet nuget push $pkg.FullName --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
         }
       shell: pwsh
-      working-directory: src
