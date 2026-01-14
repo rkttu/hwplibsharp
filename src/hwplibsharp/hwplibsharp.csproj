@@ -11,9 +11,9 @@
 		<Prefer32Bit>false</Prefer32Bit>
 
 		<!-- Version Information -->
-		<Version>1.1.10</Version>
-		<AssemblyVersion>1.1.10.0</AssemblyVersion>
-		<FileVersion>1.1.10.0</FileVersion>
+		<Version>1.1.10.1</Version>
+		<AssemblyVersion>1.1.10.1</AssemblyVersion>
+		<FileVersion>1.1.10.1</FileVersion>
 
 		<!-- Package Metadata -->
 		<PackageId>HwpLibSharp</PackageId>
