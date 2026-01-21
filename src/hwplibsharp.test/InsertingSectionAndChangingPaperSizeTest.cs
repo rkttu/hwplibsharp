@@ -27,7 +27,10 @@ public class InsertingSectionAndChangingPaperSizeTest
         var newSection = hwpFile.BodyText.AddNewSection();
 
         // 새 섹션에 빈 문단 추가
-        var newParagraph = newSection.AddNewParagraph();
+        // 중요: newSection.AddNewParagraph()를 직접 호출하면 내용이 없는(Uninitialized) 문단 객체만 생성되어
+        // 파일 저장 시 필수 레코드(Header, Text, CharShape 등) 누락으로 인해 파일이 깨집니다.
+        // 따라서 EmptyParagraphAdder를 사용하여 유효한 기본 구조를 갖춘 문단을 추가해야 합니다.
+        EmptyParagraphAdder.Add(newSection);
 
         // 새 섹션의 용지 크기를 A3로 변경
         var firstParagraph = newSection.GetParagraph(0);
