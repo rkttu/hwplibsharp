@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForDocInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -101,6 +101,8 @@ namespace HwpLib.Reader.DocInfo
                 ReadTrackChange2();
             else if (tagId == HWPTag.TrackChangeAuthor)
                 ReadTrackChangeAuthor();
+            else
+                _sr.SkipToEndRecord(); // 알려지지 않은 태그는 스킵
         }
 
         /// <summary>

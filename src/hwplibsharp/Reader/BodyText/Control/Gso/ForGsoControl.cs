@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForGsoControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -87,6 +87,11 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             _sr!.ReadRecordHeader();
             while (_sr.CurrentRecordHeader?.TagId != HWPTag.ShapeComponent)
             {
+                if (_sr.IsEndOfStream())
+                {
+                    break;
+                }
+
                 if (_sr.CurrentRecordHeader?.TagId == HWPTag.ListHeader)
                 {
                     _caption = new Caption();
@@ -103,6 +108,16 @@ namespace HwpLib.Reader.BodyText.Control.Gso
                     {
                         _sr.ReadRecordHeader();
                     }
+                }
+                else
+                {
+                    // 예상치 못한 태그가 나온 경우, 해당 레코드를 스킵하고 다음 레코드 헤더를 읽음
+                    _sr.SkipToEndRecord();
+                    if (_sr.IsEndOfStream())
+                    {
+                        break;
+                    }
+                    _sr.ReadRecordHeader();
                 }
             }
         }

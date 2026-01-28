@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForParameterSet.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -103,11 +103,19 @@ namespace HwpLib.Reader.BodyText.Control
                 for (int i = 0; i < count; i++)
                 {
                     var arrayItem = pi.GetValue_ParameterArray(i)!;
-                    arrayItem.Id = arrayItemId;
-                    arrayItem.Type = pi.Type;
-                    ReadParameterValue(arrayItem, sr);
+                    ReadParameterItemForArray(arrayItem, sr, arrayItemId);
                 }
             }
+        }
+
+        /// <summary>
+        /// 배열 안에 파라메터 아이템을 읽는다.
+        /// </summary>
+        private static void ReadParameterItemForArray(ParameterItem pi, CompoundStreamReader sr, int id)
+        {
+            pi.Id = id;
+            pi.Type = (ParameterType)sr.ReadUInt2();
+            ReadParameterValue(pi, sr);
         }
     }
 

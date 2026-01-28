@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForParagraphList.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,6 +7,7 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.Etc;
+using HwpLib.Reader.BodyText.Control.Gso;
 using HwpLib.Reader.BodyText.Paragraph;
 using System;
 
@@ -27,10 +28,19 @@ namespace HwpLib.Reader.BodyText.Control
         public static void Read(IParagraphList pli, CompoundStreamReader sr)
         {
             var fp = new ForParagraph();
-            sr.ReadRecordHeader();
+            if (!sr.ReadRecordHeader())
+            {
+                return;
+            }
 
             while (!sr.IsEndOfStream())
             {
+                // ParaHeader가 아닌 경우 루프 종료 (무한 루프 방지)
+                if (sr.CurrentRecordHeader?.TagId != HWPTag.ParaHeader)
+                {
+                    break;
+                }
+
                 var para = pli.AddNewParagraph();
                 fp.Read(para, sr);
                 if (para.Header.LastInList)
@@ -224,10 +234,11 @@ namespace HwpLib.Reader.BodyText.Control
         {
             uint id = _sr!.ReadUInt4();
 
-            // Gso ��Ʈ���� ��� - �ӽ÷� ��ŵ
+            // Gso 컨트롤의 경우 - ForGsoControl로 읽음
             if (id == ControlType.Gso.GetCtrlId())
             {
-                SkipControlWithSubRecords();
+                var forGso = new ForGsoControl();
+                forGso.Read(_paragraph!, _sr);
                 return;
             }
 

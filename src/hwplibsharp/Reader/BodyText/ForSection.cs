@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForSection.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -58,15 +58,29 @@ namespace HwpLib.Reader.BodyText
             _section = section;
             _sr = sr;
 
-            while (!sr.IsEndOfStream())
+            // Java 원본과 동일한 구조: ForParagraphList를 사용하여 문단 읽기
+            ForParagraphList.Read(section, sr);
+
+            // 마지막 바탕쪽 정보 처리
+            if (sr.IsEndOfStream() || sr.CurrentRecordHeader?.TagId != HWPTag.ListHeader)
             {
-                if (!sr.IsImmediatelyAfterReadingHeader)
-                {
-                    if (!sr.ReadRecordHeader())
-                        break;
-                }
-                ReadRecordBody();
+                return;
             }
+            section.CreateLastBatangPageInfo();
+            Control.Secd.ForBatangPageInfo.Read(section.LastBatangPageInfo!, sr);
+
+            // 임의의 바탕쪽 정보 처리
+            if (!sr.IsImmediatelyAfterReadingHeader)
+            {
+                if (!sr.ReadRecordHeader())
+                    return;
+            }
+            if (sr.IsEndOfStream() || sr.CurrentRecordHeader?.TagId != HWPTag.ListHeader)
+            {
+                return;
+            }
+            section.CreateAnyBatangPageInfo();
+            Control.Secd.ForBatangPageInfo.Read(section.AnyBatangPageInfo!, sr);
         }
 
         /// <summary>
@@ -185,7 +199,7 @@ namespace HwpLib.Reader.BodyText
             if (ControlTypeExtensions.IsField(ctrlId))
             {
                 var field = new ControlField(ctrlId);
-                ForControlField.ReadCtrlHeader(field, _sr);
+                ForControlField.Read(field, _sr);
                 _currentParagraph.AddControl(field);
                 _lastControl = field;
             }

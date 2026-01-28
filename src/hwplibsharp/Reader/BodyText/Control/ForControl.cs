@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -94,7 +94,7 @@ namespace HwpLib.Reader.BodyText.Control
 
         private static void Field(Object.BodyText.Control.Control c, CompoundStreamReader sr)
         {
-            ForControlField.ReadCtrlHeader((ControlField)c, sr);
+            ForControlField.Read((ControlField)c, sr);
         }
 
         private static void Table(Object.BodyText.Control.Control c, CompoundStreamReader sr)
