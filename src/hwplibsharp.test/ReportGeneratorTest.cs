@@ -88,7 +88,7 @@ namespace HwpLibSharp.Test
 
             // Assert
             Assert.IsTrue(File.Exists(writePath), "파일 생성 성공");
-            Assert.AreEqual(3, hwpFile.BodyText.SectionList.Count, "섹션 개수 확인");
+            Assert.HasCount(3, hwpFile.BodyText.SectionList, "섹션 개수 확인");
         }
 
         [TestMethod]
