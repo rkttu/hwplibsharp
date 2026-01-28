@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/fileheader/FileVersion.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -130,7 +130,7 @@ namespace HwpLib.Object.FileHeader
         /// </summary>
         public override string ToString()
         {
-            return $"{_mm}.{_nn}.{_pp}.{_rr}";
+            return $"{_mm}.{_nn}.{_pp}.{_rr}.";
         }
 
         /// <summary>

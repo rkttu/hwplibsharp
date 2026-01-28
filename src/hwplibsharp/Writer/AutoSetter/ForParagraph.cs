@@ -68,8 +68,6 @@ namespace HwpLib.Writer.AutoSetter
             {
                 h.LineAlignCount = 0;
             }
-
-            h.InstanceID = 0;
         }
 
         /// <summary>
