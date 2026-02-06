@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlIndexMark.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 찾아보기 표식 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -56,5 +54,4 @@ namespace HwpLib.Writer.BodyText.Control
             return size;
         }
     }
-
 }

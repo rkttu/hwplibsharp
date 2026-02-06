@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/PageDefProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 용지 설정의 속성에 대한 객체
     /// </summary>
@@ -62,5 +60,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             _value = from._value;
         }
     }
-
 }

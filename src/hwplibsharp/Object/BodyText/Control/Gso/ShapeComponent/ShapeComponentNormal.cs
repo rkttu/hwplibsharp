@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponent/ShapeComponentNormal.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent
 {
-
     /// <summary>
     /// 일반 컨트롤을 위한 객체 공통 속성 레코드
     /// </summary>
@@ -144,5 +142,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent
             }
         }
     }
-
 }

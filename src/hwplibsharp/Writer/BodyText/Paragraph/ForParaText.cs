@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForParaText.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Paragraph.Text;
 using HwpLib.Object.Etc;
 using System;
 
-
 namespace HwpLib.Writer.BodyText.Paragraph
 {
-
     /// <summary>
     /// 문단의 텍스트 레코드를 쓰기 위한 객체
     /// </summary>
@@ -131,5 +129,4 @@ namespace HwpLib.Writer.BodyText.Paragraph
             sw.WriteUInt2(hc.Code);
         }
     }
-
 }

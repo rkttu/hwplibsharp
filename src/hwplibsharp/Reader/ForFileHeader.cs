@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/ForFileHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Util.Binary;
 using System;
 using System.Linq;
 
-
 namespace HwpLib.Reader
 {
-
     /// <summary>
     /// 파일 헤더를 읽기 위한 객체
     /// </summary>
@@ -76,5 +74,4 @@ namespace HwpLib.Reader
             fh.IsCclDocument = BitFlag.Get(flag, 11);
         }
     }
-
 }

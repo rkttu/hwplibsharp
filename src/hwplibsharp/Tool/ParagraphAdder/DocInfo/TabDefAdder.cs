@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/TabDefAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -14,8 +14,8 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class TabDefInfoAdder
     {
-        private DocInfoAdder _docInfoAdder;
-        private Dictionary<int, int> _idMatchingMap;
+        private readonly DocInfoAdder _docInfoAdder;
+        private readonly Dictionary<int, int> _idMatchingMap;
 
         /// <summary>
         /// <see cref="TabDefInfoAdder"/> 클래스의 새 인스턴스를 초기화합니다.
@@ -89,7 +89,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return -1;
         }
 
-        private bool Equal(TabDefInfo? source, TabDefInfo? target)
+        private static bool Equal(TabDefInfo? source, TabDefInfo? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -97,7 +97,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
                 && EqualTabInfoList(source.TabInfoList, target.TabInfoList);
         }
 
-        private bool EqualTabInfoList(IReadOnlyList<TabInfo>? source, IReadOnlyList<TabInfo>? target)
+        private static bool EqualTabInfoList(IReadOnlyList<TabInfo>? source, IReadOnlyList<TabInfo>? target)
         {
             if (source == null || target == null) return source == target;
             if (source.Count != target.Count) return false;
@@ -113,7 +113,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return true;
         }
 
-        private bool EqualTabInfo(TabInfo? source, TabInfo? target)
+        private static bool EqualTabInfo(TabInfo? source, TabInfo? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -146,7 +146,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return (list?.Count ?? 1) - 1;
         }
 
-        private void CopyTabInfo(TabInfo source, TabInfo target)
+        private static void CopyTabInfo(TabInfo source, TabInfo target)
         {
             target.Position = source.Position;
             target.TabSort = source.TabSort;

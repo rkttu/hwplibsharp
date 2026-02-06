@@ -1,17 +1,16 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentTextArt.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Polygon;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.TextArt;
 using HwpLib.Object.DocInfo.FaceName;
 using HwpLib.Object.Etc;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// 글맵시(TextArt) 개체 속성 레코드
     /// </summary>
@@ -352,5 +351,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             }
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/DocInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.Etc;
 using System.Collections.Generic;
 using CfRecordHeader = HwpLib.CompoundFile.RecordHeader;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 문서 정보를 나타내는 객체. HWP파일 내의 "DocInfo" stream에 저장된다.
     /// </summary>
@@ -806,5 +804,4 @@ namespace HwpLib.Object.DocInfo
             }
         }
     }
-
 }

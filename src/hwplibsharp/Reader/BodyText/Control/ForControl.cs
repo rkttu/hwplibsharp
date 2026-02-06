@@ -7,20 +7,18 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Reader.BodyText.Paragraph;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ��Ʈ���� �б� ���� ��ü
+    /// 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControl
     {
         /// <summary>
-        /// ��Ʈ���� ������ ���� ��Ʈ���� �д´�.
+        /// 컨트롤의 종류에 따라 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="c">��Ʈ�� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="c">컨트롤 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(Object.BodyText.Control.Control c, CompoundStreamReader sr)
         {
             if (ControlTypeExtensions.IsField(c.Type.GetCtrlId()))
@@ -195,5 +193,4 @@ namespace HwpLib.Reader.BodyText.Control
             fchc.Read((ControlHiddenComment)c, sr);
         }
     }
-
 }

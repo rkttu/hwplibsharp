@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/objectlinkline/ControlPoint.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.ObjectLinkLine
 {
-
     /// <summary>
     /// 개체 연결선의 제어점
     /// </summary>
@@ -70,5 +70,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.ObjectLinkLine
             _type = from._type;
         }
     }
-
 }

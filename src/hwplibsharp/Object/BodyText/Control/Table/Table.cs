@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/table/Table.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Control.Table
 {
-
     /// <summary>
     /// 테이블 정보를 포함하는 레코드
     /// </summary>
@@ -232,5 +231,4 @@ namespace HwpLib.Object.BodyText.Control.Table
             }
         }
     }
-
 }

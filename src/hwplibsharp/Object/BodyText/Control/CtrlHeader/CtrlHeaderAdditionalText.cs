@@ -1,15 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderAdditionalText.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.AdditionalText;
+using HwpLib.Object.DocInfo.ParaShape;
+using HwpLib.Object.Etc;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.AdditionalText;
-    using HwpLib.Object.DocInfo.ParaShape;
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 덧말 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -18,12 +17,12 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// main text
         /// </summary>
-        private HWPString mainText;
+        private readonly HWPString mainText;
 
         /// <summary>
         /// sub text
         /// </summary>
-        private HWPString subText;
+        private readonly HWPString subText;
 
         /// <summary>
         /// 덧말 위치
@@ -86,5 +85,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             Alignment = from2.Alignment;
         }
     }
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/BorderThickness.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill
 {
-
     /// <summary>
     /// 테두리선의 두께
     /// </summary>
@@ -136,5 +135,4 @@ namespace HwpLib.Object.DocInfo.BorderFill
             };
         }
     }
-
 }

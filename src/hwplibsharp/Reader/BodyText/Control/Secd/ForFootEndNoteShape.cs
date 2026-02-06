@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/secd/ForFootEndNoteShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,20 +7,18 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.SectionDefine;
 using HwpLib.Object.DocInfo.BorderFill;
 
-
 namespace HwpLib.Reader.BodyText.Control.Secd
 {
-
     /// <summary>
-    /// ����/���� ��� ���ڵ带 �б� ���� ��ü
+    /// 각주/미주 모양 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForFootEndNoteShape
     {
         /// <summary>
-        /// ����/���� ��� ���ڵ带 �д´�.
+        /// 각주/미주 모양 레코드를 읽는다.
         /// </summary>
-        /// <param name="fens">����/���� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="fens">각주/미주 모양 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(FootEndNoteShape fens, CompoundStreamReader sr)
         {
             fens.Property.Value = sr.ReadUInt4();
@@ -41,5 +39,4 @@ namespace HwpLib.Reader.BodyText.Control.Secd
             fens.Unknown = sr.ReadUInt4();
         }
     }
-
 }

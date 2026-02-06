@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderField.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.Field;
+using HwpLib.Object.Etc;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.Field;
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 필드 컨트롤를 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -17,12 +16,12 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 속성
         /// </summary>
-        private FieldHeaderProperty property;
+        private readonly FieldHeaderProperty property;
 
         /// <summary>
         /// command
         /// </summary>
-        private HWPString command;
+        private readonly HWPString command;
 
         /// <summary>
         /// 생성자
@@ -91,5 +90,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             MemoIndex = from2.MemoIndex;
         }
     }
-
 }

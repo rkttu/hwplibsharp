@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlEquation.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Writer.BodyText.Control.Eqed;
 using HwpLib.Writer.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 수식 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -32,5 +30,4 @@ namespace HwpLib.Writer.BodyText.Control
             sw.DownRecordLevel();
         }
     }
-
 }

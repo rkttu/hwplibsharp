@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlPicture.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,20 +11,18 @@ using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 using HwpLib.Reader.DocInfo.BorderFill;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// �׸� ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 그림 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlPicture
     {
         /// <summary>
-        /// �׸� ��Ʈ���� ������ �κ��� �д´�.
+        /// 그림 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="picture">�׸� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="picture">그림 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlPicture picture, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -48,10 +46,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �׸� ��ü �Ӽ� ���ڵ带 �д´�.
+        /// 그림 개체 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="scp">�׸� ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scp">그림 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentPicture(ShapeComponentPicture scp, CompoundStreamReader sr)
         {
             scp.BorderColor.Value = sr.ReadUInt4();
@@ -95,10 +93,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �׸� ��ü �Ӽ� ���ڵ��� ���� ���� �κ��� �д´�.
+        /// 그림 개체 속성 레코드의 내부 여백 부분을 읽는다.
         /// </summary>
-        /// <param name="im">���� ������ ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="im">내부 여백을 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void InnerMargin(InnerMargin im, CompoundStreamReader sr)
         {
             im.Left = sr.ReadUInt2();
@@ -107,5 +105,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             im.Bottom = sr.ReadUInt2();
         }
     }
-
 }

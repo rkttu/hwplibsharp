@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlPageOddEvenAdjust.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 홀/짝수 조정(페이지 번호 제어) 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -44,5 +42,4 @@ namespace HwpLib.Writer.BodyText.Control
             sw.WriteRecordHeader(HWPTag.CtrlHeader, 8);
         }
     }
-
 }

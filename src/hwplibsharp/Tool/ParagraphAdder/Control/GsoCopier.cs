@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/control/GsoCopier.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -27,7 +27,7 @@ namespace HwpLib.Tool.ParagraphAdder.Control
             switch (source.GsoType)
             {
                 case GsoControlType.Line:
-                    CopyLine((ControlLine)source, (ControlLine)target, docInfoAdder);
+                    CopyLine((ControlLine)source, (ControlLine)target/*, docInfoAdder*/);
                     break;
                 case GsoControlType.Rectangle:
                     CopyRectangle((ControlRectangle)source, (ControlRectangle)target, docInfoAdder);
@@ -54,15 +54,15 @@ namespace HwpLib.Tool.ParagraphAdder.Control
                     CopyContainer((ControlContainer)source, (ControlContainer)target, docInfoAdder);
                     break;
                 case GsoControlType.ObjectLinkLine:
-                    CopyObjectLinkLine((ControlObjectLinkLine)source, (ControlObjectLinkLine)target, docInfoAdder);
+                    CopyObjectLinkLine((ControlObjectLinkLine)source, (ControlObjectLinkLine)target/*, docInfoAdder*/);
                     break;
                 case GsoControlType.TextArt:
-                    CopyTextArt((ControlTextArt)source, (ControlTextArt)target, docInfoAdder);
+                    CopyTextArt((ControlTextArt)source, (ControlTextArt)target/*, docInfoAdder*/);
                     break;
             }
         }
 
-        private static void CopyLine(ControlLine source, ControlLine target, DocInfoAdder? docInfoAdder)
+        private static void CopyLine(ControlLine source, ControlLine target/*, DocInfoAdder? docInfoAdder*/)
         {
             target.ShapeComponentLine?.Copy(source.ShapeComponentLine);
         }
@@ -189,12 +189,12 @@ namespace HwpLib.Tool.ParagraphAdder.Control
             }
         }
 
-        private static void CopyObjectLinkLine(ControlObjectLinkLine source, ControlObjectLinkLine target, DocInfoAdder? docInfoAdder)
+        private static void CopyObjectLinkLine(ControlObjectLinkLine source, ControlObjectLinkLine target/*, DocInfoAdder? docInfoAdder*/)
         {
             target.ShapeComponentLine?.Copy(source.ShapeComponentLine);
         }
 
-        private static void CopyTextArt(ControlTextArt source, ControlTextArt target, DocInfoAdder? docInfoAdder)
+        private static void CopyTextArt(ControlTextArt source, ControlTextArt target/*, DocInfoAdder? docInfoAdder*/)
         {
             target.ShapeComponentTextArt?.Copy(source.ShapeComponentTextArt);
         }

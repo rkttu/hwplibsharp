@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/ControlOLE.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso
 {
-
     /// <summary>
     /// OLE 개체 컨트롤
     /// </summary>
@@ -56,5 +55,4 @@ namespace HwpLib.Object.BodyText.Control.Gso
             return cloned;
         }
     }
-
 }

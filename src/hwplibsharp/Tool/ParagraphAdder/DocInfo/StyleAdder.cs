@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/StyleAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -13,8 +13,8 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class StyleAdder
     {
-        private DocInfoAdder _docInfoAdder;
-        private Dictionary<int, int> _idMatchingMap;
+        private readonly DocInfoAdder _docInfoAdder;
+        private readonly Dictionary<int, int> _idMatchingMap;
 
         /// <summary>
         /// <see cref="StyleAdder"/> 클래스의 새 인스턴스를 초기화합니다.

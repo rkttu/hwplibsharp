@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/PageDef.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 용지 설정에 대한 레코드
     /// </summary>
@@ -173,5 +172,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             _property.Copy(from._property);
         }
     }
-
 }

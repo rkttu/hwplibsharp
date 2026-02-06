@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/ParagraphAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -19,12 +19,12 @@ namespace HwpLib.Tool.ParagraphAdder
         /// <summary>
         /// target 한글 파일
         /// </summary>
-        private HWPFile _targetHWPFile;
+        private readonly HWPFile _targetHWPFile;
 
         /// <summary>
         /// target 문단 리스트
         /// </summary>
-        private IParagraphList _targetParaList;
+        private readonly IParagraphList _targetParaList;
 
         /// <summary>
         /// 삽입할 곳의 문단 인덱스

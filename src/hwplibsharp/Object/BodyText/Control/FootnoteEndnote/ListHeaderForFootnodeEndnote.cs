@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/footnoteendnote/ListHeaderForFootnoteEndnote.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText.Control.Gso.TextBox;
 
-
 namespace HwpLib.Object.BodyText.Control.FootnoteEndnote
 {
-
     /// <summary>
     /// 미주/각주를 위한 문단 리스트 헤더 레코드
     /// </summary>
@@ -42,5 +40,4 @@ namespace HwpLib.Object.BodyText.Control.FootnoteEndnote
             Property.Copy(from.Property);
         }
     }
-
 }

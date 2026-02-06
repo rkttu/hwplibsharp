@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForDocInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.Etc;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 문서 정보(DocInfo) 스트림을 쓰기 위한 객체
     /// </summary>
@@ -301,5 +299,4 @@ namespace HwpLib.Writer.DocInfo
             }
         }
     }
-
 }

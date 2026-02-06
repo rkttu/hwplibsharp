@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/ReflectionEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 반사 효과 속성
     /// </summary>
@@ -235,5 +235,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
             _offsetDirection = from._offsetDirection;
         }
     }
-
 }

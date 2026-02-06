@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/tabdef/TabSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.TabDef
 {
-
     /// <summary>
     /// 탭의 종류
     /// </summary>
@@ -60,5 +59,4 @@ namespace HwpLib.Object.DocInfo.TabDef
             };
         }
     }
-
 }

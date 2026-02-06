@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderHiddenComment.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================

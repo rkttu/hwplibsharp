@@ -1,16 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderColumnDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine;
+using HwpLib.Object.DocInfo.BorderFill;
 using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine;
-    using HwpLib.Object.DocInfo.BorderFill;
-
     /// <summary>
     /// 단 정의 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -19,17 +17,17 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 속성
         /// </summary>
-        private ColumnDefineHeaderProperty property;
+        private readonly ColumnDefineHeaderProperty property;
 
         /// <summary>
         /// 단 정보 리스트
         /// </summary>
-        private List<ColumnInfo> columnInfoList;
+        private readonly List<ColumnInfo> columnInfoList;
 
         /// <summary>
         /// 단 구분선 정보
         /// </summary>
-        private EachBorder divideLine;
+        private readonly EachBorder divideLine;
 
         /// <summary>
         /// 생성자
@@ -97,5 +95,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             divideLine.Copy(from2.divideLine);
         }
     }
-
 }

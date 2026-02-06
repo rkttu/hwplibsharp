@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/columndefine/ColumnDefineHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine
 {
-
     /// <summary>
     /// 단 정의 컨트롤의 속성 객체
     /// </summary>
@@ -107,5 +105,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine
             Value = from.Value;
         }
     }
-
 }

@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
     /// 필드 컨트롤을 읽기 위한 객체
     /// </summary>
@@ -81,5 +79,4 @@ namespace HwpLib.Reader.BodyText.Control
             }
         }
     }
-
 }

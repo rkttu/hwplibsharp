@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/control/ForControlColumnDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText.Control;
 
-
 namespace HwpLib.Writer.AutoSetter.Control
 {
-
     /// <summary>
     /// 단 정의 컨트롤을 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -35,5 +33,4 @@ namespace HwpLib.Writer.AutoSetter.Control
             }
         }
     }
-
 }

@@ -8,10 +8,8 @@ using HwpLib.Object.Etc;
 using System;
 using DocInfoType = HwpLib.Object.DocInfo.DocInfo;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 문서 정보(DocInfo) 스트림을 읽기 위한 객체
     /// </summary>
@@ -327,5 +325,4 @@ namespace HwpLib.Reader.DocInfo
             ForUnknown.Read(ur, _sr!);
         }
     }
-
 }

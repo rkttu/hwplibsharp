@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ellipse/ShapeComponentEllipseProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Arc;
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ellipse
 {
-
     /// <summary>
     /// 타원 개체의 속성을 나타내는 객체
     /// </summary>
@@ -71,5 +70,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ellipse
             _value = from._value;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlSectionDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.BodyText.Control.SectionDefine;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText.Control
 {
-
     /// <summary>
     /// 구역 정의 컨트롤
     /// </summary>
@@ -137,5 +135,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

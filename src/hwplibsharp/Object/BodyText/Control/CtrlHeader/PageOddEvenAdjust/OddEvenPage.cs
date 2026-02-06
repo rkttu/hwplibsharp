@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/pageoddeven/OddEvenPage.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageOddEvenAdjust
 {
-
     /// <summary>
     /// 홀짝수 페이지 구분
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageOddEvenAdjust
             };
         }
     }
-
 }

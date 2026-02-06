@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/ParagraphCopier.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -18,7 +18,7 @@ namespace HwpLib.Tool.ParagraphAdder
     /// </summary>
     public class ParagraphCopier
     {
-        private DocInfoAdder? _docInfoAdder;
+        private readonly DocInfoAdder? _docInfoAdder;
         private Paragraph? _source;
         private Paragraph? _target;
         private bool _includingSectionInfo;
@@ -173,8 +173,7 @@ namespace HwpLib.Tool.ParagraphAdder
                 {
                     case ControlType.Table:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Table) as ControlTable;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Table) is ControlTable targetControl)
                                 TableCopier.Copy((ControlTable)c, targetControl, _docInfoAdder);
                         }
                         break;
@@ -187,130 +186,112 @@ namespace HwpLib.Tool.ParagraphAdder
                         break;
                     case ControlType.Equation:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Equation) as ControlEquation;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Equation) is ControlEquation targetControl)
                                 EquationCopier.Copy((ControlEquation)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.SectionDefine:
                         if (_includingSectionInfo)
                         {
-                            var targetControl = _target.AddNewControl(ControlType.SectionDefine) as ControlSectionDefine;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.SectionDefine) is ControlSectionDefine targetControl)
                                 SectionDefineCopier.Copy((ControlSectionDefine)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.ColumnDefine:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.ColumnDefine) as ControlColumnDefine;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.ColumnDefine) is ControlColumnDefine targetControl)
                                 ETCControlCopier.CopyColumnDefine((ControlColumnDefine)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.Header:
                         if (_includingSectionInfo)
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Header) as ControlHeader;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Header) is ControlHeader targetControl)
                                 ETCControlCopier.CopyHeader((ControlHeader)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.Footer:
                         if (_includingSectionInfo)
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Footer) as ControlFooter;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Footer) is ControlFooter targetControl)
                                 ETCControlCopier.CopyFooter((ControlFooter)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.Footnote:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Footnote) as ControlFootnote;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Footnote) is ControlFootnote targetControl)
                                 ETCControlCopier.CopyFootnote((ControlFootnote)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.Endnote:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Endnote) as ControlEndnote;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Endnote) is ControlEndnote targetControl)
                                 ETCControlCopier.CopyEndnote((ControlEndnote)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.AutoNumber:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.AutoNumber) as ControlAutoNumber;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.AutoNumber) is ControlAutoNumber targetControl)
                                 ETCControlCopier.CopyAutoNumber((ControlAutoNumber)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.NewNumber:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.NewNumber) as ControlNewNumber;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.NewNumber) is ControlNewNumber targetControl)
                                 ETCControlCopier.CopyNewNumber((ControlNewNumber)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.PageHide:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.PageHide) as ControlPageHide;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.PageHide) is ControlPageHide targetControl)
                                 ETCControlCopier.CopyPageHide((ControlPageHide)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.PageOddEvenAdjust:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.PageOddEvenAdjust) as ControlPageOddEvenAdjust;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.PageOddEvenAdjust) is ControlPageOddEvenAdjust targetControl)
                                 ETCControlCopier.CopyPageOddEvenAdjust((ControlPageOddEvenAdjust)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.PageNumberPosition:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.PageNumberPosition) as ControlPageNumberPosition;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.PageNumberPosition) is ControlPageNumberPosition targetControl)
                                 ETCControlCopier.CopyPageNumberPosition((ControlPageNumberPosition)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.IndexMark:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.IndexMark) as ControlIndexMark;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.IndexMark) is ControlIndexMark targetControl)
                                 ETCControlCopier.CopyIndexMark((ControlIndexMark)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.Bookmark:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Bookmark) as ControlBookmark;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Bookmark) is ControlBookmark targetControl)
                                 ETCControlCopier.CopyBookmark((ControlBookmark)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.OverlappingLetter:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.OverlappingLetter) as ControlOverlappingLetter;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.OverlappingLetter) is ControlOverlappingLetter targetControl)
                                 OverlappingLetterCopier.Copy((ControlOverlappingLetter)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.AdditionalText:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.AdditionalText) as ControlAdditionalText;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.AdditionalText) is ControlAdditionalText targetControl)
                                 AdditionalTextCopier.Copy((ControlAdditionalText)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.HiddenComment:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.HiddenComment) as ControlHiddenComment;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.HiddenComment) is ControlHiddenComment targetControl)
                                 ETCControlCopier.CopyHiddenComment((ControlHiddenComment)c, targetControl, _docInfoAdder);
                         }
                         break;
                     case ControlType.Form:
                         {
-                            var targetControl = _target.AddNewControl(ControlType.Form) as ControlForm;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(ControlType.Form) is ControlForm targetControl)
                                 ETCControlCopier.CopyForm((ControlForm)c, targetControl, _docInfoAdder);
                         }
                         break;
@@ -319,8 +300,7 @@ namespace HwpLib.Tool.ParagraphAdder
                         if (c.Type.IsField())
                         {
                             var sourceField = (ControlField)c;
-                            var targetControl = _target.AddNewControl(sourceField.GetHeader()?.CtrlId ?? 0) as ControlField;
-                            if (targetControl != null)
+                            if (_target.AddNewControl(sourceField.GetHeader()?.CtrlId ?? 0) is ControlField targetControl)
                                 ETCControlCopier.CopyField(sourceField, targetControl, _docInfoAdder);
                         }
                         break;

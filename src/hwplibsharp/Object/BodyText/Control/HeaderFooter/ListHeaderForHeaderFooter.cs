@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/headerfooter/ListHeaderForHeaderFooter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText.Control.Gso.TextBox;
 
-
 namespace HwpLib.Object.BodyText.Control.HeaderFooter
 {
-
     /// <summary>
     /// 머리말/꼬리말을 위한 문단 리스트 헤더 레코드
     /// </summary>
@@ -86,5 +84,4 @@ namespace HwpLib.Object.BodyText.Control.HeaderFooter
             _textHeight = from._textHeight;
         }
     }
-
 }

@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentRectangle.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// 사각형 개체 속성 레코드
     /// </summary>
@@ -160,5 +160,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             _y4 = from._y4;
         }
     }
-
 }

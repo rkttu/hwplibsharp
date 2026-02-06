@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlTextArt.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,20 +10,18 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.TextArt;
 using HwpLib.Object.DocInfo.FaceName;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// �۸ʽ� ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 글맵시 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlTextArt
     {
         /// <summary>
-        /// �۸ʽ� ��Ʈ���� ������ �κ��� �д´�.
+        /// 글맵시 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="textArt">�۸ʽ� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="textArt">글맵시 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlTextArt textArt, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -35,10 +33,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �۸ʽ� ��ü �Ӽ� ���ڵ带 �д´�.
+        /// 글맵시 객체 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="scta">�۸ʽ� ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scta">글맵시 객체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentTextArt(ShapeComponentTextArt scta, CompoundStreamReader sr)
         {
             scta.X1 = sr.ReadSInt4();
@@ -71,5 +69,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             }
         }
     }
-
 }

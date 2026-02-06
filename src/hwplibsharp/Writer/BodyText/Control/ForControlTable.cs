@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlTable.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Writer.BodyText.Control.Gso.Part;
 using HwpLib.Writer.BodyText.Control.Tbl;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 표 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -47,5 +45,4 @@ namespace HwpLib.Writer.BodyText.Control
             }
         }
     }
-
 }

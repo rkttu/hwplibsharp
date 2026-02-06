@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/headerfooter/ForListHeaderForHeaderFooter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.HeaderFooter;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.HeaderFooter
 {
-
     /// <summary>
     /// 머리말/꼬리말 컨트롤의 리스트 헤더 레코드를 쓰기 위한 객체
     /// </summary>
@@ -38,5 +36,4 @@ namespace HwpLib.Writer.BodyText.Control.HeaderFooter
             sw.WriteRecordHeader(HWPTag.ListHeader, 34);
         }
     }
-
 }

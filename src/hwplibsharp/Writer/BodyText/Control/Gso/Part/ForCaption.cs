@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/part/ForCaption.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.Gso.Caption;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Paragraph;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso.Part
 {
-
     /// <summary>
     /// 캡션 정보를 쓰기 위한 객체
     /// </summary>
@@ -55,5 +53,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso.Part
             sw.WriteRecordHeader(HWPTag.ListHeader, 30);
         }
     }
-
 }

@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/sectiondefine/SectionDefineHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Util.Binary;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine
 {
-
-    using HwpLib.Util.Binary;
-
     /// <summary>
     /// 구역 정의 컨트롤의 속성 객체
     /// </summary>
@@ -169,5 +168,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine
             Value = from.Value;
         }
     }
-
 }

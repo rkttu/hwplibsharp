@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/lineseg/LineSegItem.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Paragraph.LineSeg
 {
-
     /// <summary>
     /// 각 줄의 align 정보에 대한 객체
     /// </summary>
@@ -85,5 +84,4 @@ namespace HwpLib.Object.BodyText.Paragraph.LineSeg
             return cloned;
         }
     }
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/LayoutCompatibility.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 레이아웃 호환성에 대한 레코드
     /// </summary>
@@ -75,14 +74,15 @@ namespace HwpLib.Object.DocInfo
         /// <returns>멤버 값이 동일한 <see cref="LayoutCompatibility"/>의 새 인스턴스입니다.</returns>
         public LayoutCompatibility Clone()
         {
-            var cloned = new LayoutCompatibility();
-            cloned._letterLevelFormat = _letterLevelFormat;
-            cloned._paragraphLevelFormat = _paragraphLevelFormat;
-            cloned._sectionLevelFormat = _sectionLevelFormat;
-            cloned._objectLevelFormat = _objectLevelFormat;
-            cloned._fieldLevelFormat = _fieldLevelFormat;
+            var cloned = new LayoutCompatibility
+            {
+                _letterLevelFormat = _letterLevelFormat,
+                _paragraphLevelFormat = _paragraphLevelFormat,
+                _sectionLevelFormat = _sectionLevelFormat,
+                _objectLevelFormat = _objectLevelFormat,
+                _fieldLevelFormat = _fieldLevelFormat
+            };
             return cloned;
         }
     }
-
 }

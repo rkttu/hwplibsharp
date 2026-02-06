@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/field/FieldHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.Field
 {
-
     /// <summary>
     /// 필드 컨트롤의 속성을 나타내는 객체
     /// </summary>
@@ -125,5 +123,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.Field
             Value = from.Value;
         }
     }
-
 }

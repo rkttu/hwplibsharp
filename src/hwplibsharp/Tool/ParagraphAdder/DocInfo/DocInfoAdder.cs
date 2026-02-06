@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/DocInfoAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -12,18 +12,18 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class DocInfoAdder
     {
-        private HWPFile? _sourceHWPFile;
-        private HWPFile? _targetHWPFile;
+        private readonly HWPFile? _sourceHWPFile;
+        private readonly HWPFile? _targetHWPFile;
 
-        private BinDataAdder _binDataAdder;
-        private BorderFillInfoAdder _borderFillAdder;
-        private BulletAdder _bulletAdder;
-        private CharShapeInfoAdder _charShapeAdder;
-        private FaceNameInfoAdder _faceNameAdder;
-        private NumberingAdder _numberingAdder;
-        private ParaShapeInfoAdder _paraShapeAdder;
-        private StyleAdder _styleAdder;
-        private TabDefInfoAdder _tabDefAdder;
+        private readonly BinDataAdder _binDataAdder;
+        private readonly BorderFillInfoAdder _borderFillAdder;
+        private readonly BulletAdder _bulletAdder;
+        private readonly CharShapeInfoAdder _charShapeAdder;
+        private readonly FaceNameInfoAdder _faceNameAdder;
+        private readonly NumberingAdder _numberingAdder;
+        private readonly ParaShapeInfoAdder _paraShapeAdder;
+        private readonly StyleAdder _styleAdder;
+        private readonly TabDefInfoAdder _tabDefAdder;
 
         /// <summary>
         /// DocInfoAdder의 새 인스턴스를 초기화합니다.

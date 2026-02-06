@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/fieldform/FieldData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Paragraph;
 
-
 namespace HwpLib.Tool.ObjectFinder.FieldForm
 {
-
     /// <summary>
     /// 필드 데이터
     /// </summary>
@@ -117,5 +115,4 @@ namespace HwpLib.Tool.ObjectFinder.FieldForm
                     EndCharIndex - StartCharIndex == 1);
         }
     }
-
 }

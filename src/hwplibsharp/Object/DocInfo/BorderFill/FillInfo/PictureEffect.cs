@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/PictureEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 그림 효과
     /// </summary>
@@ -56,5 +55,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
                 _ => PictureEffect.RealPicture,
             };
     }
-
 }

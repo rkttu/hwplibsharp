@@ -1,12 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/textart/TextArtShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using System;
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.TextArt
 {
-
     /// <summary>
     /// 글맵시 모양
     /// </summary>
@@ -257,5 +257,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.TextArt
             return TextArtShape.Parallelogram;
         }
     }
-
 }

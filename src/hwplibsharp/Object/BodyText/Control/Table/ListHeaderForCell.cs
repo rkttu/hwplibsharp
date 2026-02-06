@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/table/ListHeaderForCell.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Table
 {
-
     /// <summary>
     /// 셀의 문단 리스트 헤더 레코드
     /// </summary>
@@ -248,5 +247,4 @@ namespace HwpLib.Object.BodyText.Control.Table
             _fieldName = from._fieldName;
         }
     }
-
 }

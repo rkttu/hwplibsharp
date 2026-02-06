@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlRectangle.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,20 +9,18 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// �簢�� ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 사각형 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlRectangle
     {
         /// <summary>
-        /// �簢�� ��Ʈ���� ������ �κ��� �д´�.
+        /// 사각형 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="rectangle">�簢�� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="rectangle">사각형 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlRectangle rectangle, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -57,10 +55,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �簢�� ��ü �Ӽ� ���ڵ带 �д´�.
+        /// 사각형 개체 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="scr">�簢�� ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scr">사각형 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentRectangle(ShapeComponentRectangle scr, CompoundStreamReader sr)
         {
             scr.RoundRate = sr.ReadUInt1();
@@ -74,5 +72,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             scr.Y4 = sr.ReadSInt4();
         }
     }
-
 }

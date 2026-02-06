@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/control/ForControlTable.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Control.Table;
 using HwpLib.Writer.AutoSetter.Control.Gso.Part;
 
-
 namespace HwpLib.Writer.AutoSetter.Control
 {
-
     /// <summary>
     /// 표 컨트롤을 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -71,5 +69,4 @@ namespace HwpLib.Writer.AutoSetter.Control
             c.ListHeader.ParaCount = c.ParagraphList.ParagraphCount;
         }
     }
-
 }

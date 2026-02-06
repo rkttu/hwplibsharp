@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/Numbering.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.DocInfo.Numbering;
 using System;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 문단 번호 레코드
     /// </summary>
@@ -85,5 +83,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

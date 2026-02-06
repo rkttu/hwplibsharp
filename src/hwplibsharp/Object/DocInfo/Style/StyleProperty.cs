@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/style/StyleProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.Style
 {
-
     /// <summary>
     /// 스타일의 속성 객체
     /// </summary>
@@ -44,5 +42,4 @@ namespace HwpLib.Object.DocInfo.Style
             Value = from.Value;
         }
     }
-
 }

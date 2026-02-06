@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/ForControlTextArt.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso
 {
-
     /// <summary>
     /// TextArt 컨트롤의 나머지 부분을 쓰기 위한 객체
     /// </summary>
@@ -77,5 +75,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso
             return size;
         }
     }
-
 }

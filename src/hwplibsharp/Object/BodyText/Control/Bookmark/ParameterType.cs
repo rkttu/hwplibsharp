@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/bookmark/ParameterType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Bookmark
 {
-
     /// <summary>
     /// 파라미터 아이템 종류
     /// </summary>
@@ -118,5 +117,4 @@ namespace HwpLib.Object.BodyText.Control.Bookmark
             };
         }
     }
-
 }

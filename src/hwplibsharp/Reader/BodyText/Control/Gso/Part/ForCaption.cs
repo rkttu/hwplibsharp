@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/part/ForCaption.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,20 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Gso.Caption;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso.Part
 {
-
     /// <summary>
-    /// ĸ�� ������ �б� ���� ��ü
+    /// 캡션 정보을 읽기 위한 객체
     /// </summary>
     public static class ForCaption
     {
         /// <summary>
-        /// ĸ�� ������ �д´�.
+        /// 캡션 정보을 읽는다.
         /// </summary>
-        /// <param name="caption">ĸ�� ����</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="caption">캡션 정보</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(Caption caption, CompoundStreamReader sr)
         {
             ListHeader(caption.ListHeader, sr);
@@ -27,10 +25,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// ĸ�� ������ ���� ����Ʈ ��� ���ڵ带 �д´�.
+        /// 캡션 정보의 문단 리스트 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="listHeader">ĸ�� ������ ���� ����Ʈ ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="listHeader">캡션 정보의 문단 리스트 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ListHeader(ListHeaderForCaption listHeader, CompoundStreamReader sr)
         {
             listHeader.ParaCount = sr.ReadSInt4();
@@ -39,9 +37,8 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
             listHeader.CaptionWidth = sr.ReadUInt4();
             listHeader.SpaceBetweenCaptionAndFrame = sr.ReadUInt2();
             listHeader.TextWidth = sr.ReadUInt4();
-            // ������ ���� 8bytes�� ���� �� ����.
+            // 나머지 8bytes는 의미를 알 수 없다.
             sr.SkipToEndRecord();
         }
     }
-
 }

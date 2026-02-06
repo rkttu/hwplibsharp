@@ -6,10 +6,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace HwpLib.Object.BodyText.Paragraph.Text
 {
-
     /// <summary>
     /// 문단의 텍스트 레코드
     /// </summary>
@@ -432,5 +430,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Text
             _charList.Add(hwpChar);
         }
     }
-
 }

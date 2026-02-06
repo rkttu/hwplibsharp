@@ -1,15 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentCurve.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Curve;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Polygon;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// 곡선 개체 속성 레코드
     /// </summary>
@@ -83,5 +82,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             }
         }
     }
-
 }

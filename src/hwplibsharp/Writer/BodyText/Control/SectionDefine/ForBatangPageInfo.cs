@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/sectiondefine/ForBatangPageInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.SectionDefine;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Paragraph;
 
-
 namespace HwpLib.Writer.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 바탕쪽 정보를 쓰기 위한 객체
     /// </summary>
@@ -50,5 +48,4 @@ namespace HwpLib.Writer.BodyText.Control.SectionDefine
             sw.WriteRecordHeader(HWPTag.ListHeader, 34);
         }
     }
-
 }

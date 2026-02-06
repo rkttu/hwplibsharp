@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Writer.BodyText.Control.Form;
 using HwpLib.Writer.BodyText.Control.Gso;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -98,5 +96,4 @@ namespace HwpLib.Writer.BodyText.Control
             }
         }
     }
-
 }

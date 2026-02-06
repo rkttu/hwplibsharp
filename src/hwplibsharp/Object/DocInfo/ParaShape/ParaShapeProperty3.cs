@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/parashape/ParaShapeProperty3.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.ParaShape
 {
-
     /// <summary>
     /// 문단 모양의 속성3 객체 (5.0.2.5 버전 이상)
     /// </summary>
@@ -44,5 +42,4 @@ namespace HwpLib.Object.DocInfo.ParaShape
             Value = from.Value;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/tbl/ForTable.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,20 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Table;
 
-
 namespace HwpLib.Reader.BodyText.Control.Tbl
 {
-
     /// <summary>
-    /// ǥ ���� ���ڵ带 �б� ���� ��ü
+    /// 표 정보 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForTable
     {
         /// <summary>
-        /// ǥ ���� ���ڵ带 �д´�.
+        /// 표 정보 레코드를 읽는다.
         /// </summary>
-        /// <param name="table">ǥ ���� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="table">표 정보 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(Table table, CompoundStreamReader sr)
         {
             table.Property.Value = sr.ReadUInt4();
@@ -46,10 +44,10 @@ namespace HwpLib.Reader.BodyText.Control.Tbl
         }
 
         /// <summary>
-        /// zone info�� �д´�.
+        /// zone info을 읽는다.
         /// </summary>
-        /// <param name="table">ǥ ���� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="table">표 정보 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ZoneInfo(Table table, CompoundStreamReader sr)
         {
             int count = sr.ReadUInt2();
@@ -64,5 +62,4 @@ namespace HwpLib.Reader.BodyText.Control.Tbl
             }
         }
     }
-
 }

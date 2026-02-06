@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/ParagraphList.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -138,7 +138,7 @@ namespace HwpLib.Object.BodyText.Paragraph
             foreach (var p in _paragraphList)
             {
                 sb.Append(p.GetNormalString());
-                sb.Append("\n");
+                sb.Append('\n');
             }
             return sb.ToString();
         }

@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/tabdef/TabInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.BorderFill;
 
-
 namespace HwpLib.Object.DocInfo.TabDef
 {
-
     /// <summary>
     /// 탭 정보에 대한 객체
     /// </summary>
@@ -50,5 +48,4 @@ namespace HwpLib.Object.DocInfo.TabDef
             };
         }
     }
-
 }

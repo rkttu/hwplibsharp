@@ -1,20 +1,15 @@
 using HwpLib.Object;
-using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Control.CtrlHeader.Gso;
 using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.LineInfo;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.ShadowInfo;
 using HwpLib.Object.BodyText.Paragraph;
-using HwpLib.Object.BodyText.Paragraph.Text;
 using HwpLib.Object.DocInfo.BinData;
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
-using HwpLib.Reader;
 using HwpLib.Tool.BlankFileMaker;
 using HwpLib.Writer;
-using System;
 using System.Drawing;
-using System.IO;
 using Section = HwpLib.Object.BodyText.Section;
 
 namespace HwpLibSharp.Test

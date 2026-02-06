@@ -1,17 +1,16 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentPicture.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.LineInfo;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Polygon;
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// 그림 개체 속성 레코드
     /// </summary>
@@ -275,5 +274,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             _imageHeight = from._imageHeight;
         }
     }
-
 }

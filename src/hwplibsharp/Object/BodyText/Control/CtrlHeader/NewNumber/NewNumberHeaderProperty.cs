@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/newnumber/NewNumberHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.NewNumber
 {
-
     using HwpLib.Object.BodyText.Control.CtrlHeader.AutoNumber;
     using HwpLib.Util.Binary;
 
@@ -44,5 +43,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.NewNumber
             Value = from.Value;
         }
     }
-
 }

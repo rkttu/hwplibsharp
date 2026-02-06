@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForCharShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.DocInfo.CharShape;
 using HwpLib.Object.Etc;
 using HwpLib.Object.FileHeader;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 글자 모양 레코드를 쓰기 위한 객체
     /// </summary>
@@ -123,5 +121,4 @@ namespace HwpLib.Writer.DocInfo
             }
         }
     }
-
 }

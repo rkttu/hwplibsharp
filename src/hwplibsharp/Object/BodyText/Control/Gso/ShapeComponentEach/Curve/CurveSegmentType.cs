@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/curve/CurveSegmentType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Curve
 {
-
     /// <summary>
     /// 곡선의 Segment Type
     /// </summary>
@@ -43,5 +43,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Curve
                 _ => CurveSegmentType.Line,
             };
     }
-
 }

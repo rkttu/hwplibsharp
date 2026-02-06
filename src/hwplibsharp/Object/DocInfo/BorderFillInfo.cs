@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/BorderFill.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 테두리/배경의 모양을 나타내는 레코드
     /// </summary>
@@ -89,5 +87,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

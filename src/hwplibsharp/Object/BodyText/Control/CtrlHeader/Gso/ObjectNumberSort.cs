@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/gso/ObjectNumberSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
 {
-
     /// <summary>
     /// 개체가 속하는 번호 범주
     /// </summary>
@@ -54,5 +53,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
             _ => ObjectNumberSort.None
         };
     }
-
 }

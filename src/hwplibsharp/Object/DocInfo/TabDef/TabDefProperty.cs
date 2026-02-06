@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/tabdef/TabDefProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.TabDef
 {
-
     /// <summary>
     /// 탭 정의의 속성 객체
     /// </summary>
@@ -53,5 +51,4 @@ namespace HwpLib.Object.DocInfo.TabDef
             Value = from.Value;
         }
     }
-
 }

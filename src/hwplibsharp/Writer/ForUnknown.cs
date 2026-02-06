@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/ForUnknown.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.Etc;
 using System;
 
-
 namespace HwpLib.Writer
 {
-
     /// <summary>
     /// 알수 없는 레코드를 쓰기 위한 객체
     /// </summary>
@@ -28,5 +26,4 @@ namespace HwpLib.Writer
             sw.WriteBytes(ur.Body ?? Array.Empty<byte>());
         }
     }
-
 }

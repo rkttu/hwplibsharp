@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/polygon/PositionXY.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Polygon
 {
-
     /// <summary>
     /// 좌표를 나타내는 객체
     /// </summary>
@@ -66,5 +66,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Polygon
             _y = from._y;
         }
     }
-
 }

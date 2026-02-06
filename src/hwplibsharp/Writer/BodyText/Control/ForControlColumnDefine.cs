@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlColumnDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.Bookmark;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 단 정의 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -100,5 +98,4 @@ namespace HwpLib.Writer.BodyText.Control
             }
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/control/gso/ForGsoControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.TextBox;
 using HwpLib.Writer.AutoSetter.Control.Gso.Part;
 
-
 namespace HwpLib.Writer.AutoSetter.Control.Gso
 {
-
     /// <summary>
     /// 각각의 그리기 개체 컨트롤을 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -153,5 +151,4 @@ namespace HwpLib.Writer.AutoSetter.Control.Gso
             TextBox(rect.TextBox, iid);
         }
     }
-
 }

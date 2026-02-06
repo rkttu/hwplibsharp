@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/documentproperties/CaretPosition.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.DocumentProperties
 {
-
     /// <summary>
     /// 캐럿의 위치 정보
     /// </summary>
@@ -44,5 +43,4 @@ namespace HwpLib.Object.DocInfo.DocumentProperties
             PositionInParagraph = from.PositionInParagraph;
         }
     }
-
 }

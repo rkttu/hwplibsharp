@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlEllipse.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,20 +9,18 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// Ÿ�� ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 타원 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlEllipse
     {
         /// <summary>
-        /// Ÿ�� ��Ʈ���� ������ �κ��� �д´�.
+        /// 타원 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="ellipse">Ÿ�� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="ellipse">타원 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlEllipse ellipse, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -45,10 +43,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// Ÿ�� ��ü �Ӽ� ���ڵ带 �д´�.
+        /// 타원 개체 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="sce">Ÿ�� ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="sce">타원 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentEllipse(ShapeComponentEllipse sce, CompoundStreamReader sr)
         {
             sce.Property.Value = sr.ReadUInt4();
@@ -68,5 +66,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             sce.EndY2 = sr.ReadSInt4();
         }
     }
-
 }

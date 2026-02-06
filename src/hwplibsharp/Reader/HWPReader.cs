@@ -15,10 +15,8 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-
 namespace HwpLib.Reader
 {
-
     /// <summary>
     /// 한글 파일을 읽기 위한 객체
     /// </summary>
@@ -118,7 +116,11 @@ namespace HwpLib.Reader
         {
             using var httpClient = new HttpClient();
             cancellationToken.ThrowIfCancellationRequested();
+#if NETCOREAPP
+            var bytes = await httpClient.GetByteArrayAsync(url, cancellationToken);
+#else
             var bytes = await httpClient.GetByteArrayAsync(url);
+#endif
             cancellationToken.ThrowIfCancellationRequested();
             using var stream = new MemoryStream(bytes);
             return FromStream(stream);
@@ -331,5 +333,4 @@ namespace HwpLib.Reader
             Dispose(false);
         }
     }
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/bookmark/CtrlData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Bookmark
 {
-
     /// <summary>
     /// 임의 데이터 레코드
     /// </summary>
@@ -33,5 +32,4 @@ namespace HwpLib.Object.BodyText.Control.Bookmark
             ParameterSet.Copy(from.ParameterSet);
         }
     }
-
 }

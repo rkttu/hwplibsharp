@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/ImageFill.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 이미지 채우기 객체
     /// </summary>
@@ -53,5 +52,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
             _pictureInfo.Copy(from._pictureInfo);
         }
     }
-
 }

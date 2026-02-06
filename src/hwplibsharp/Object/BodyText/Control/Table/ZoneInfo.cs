@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/table/ZoneInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Table
 {
-
     /// <summary>
     /// 영역 속성
     /// </summary>
@@ -94,14 +93,15 @@ namespace HwpLib.Object.BodyText.Control.Table
         /// <returns>복제된 객체</returns>
         public ZoneInfo Clone()
         {
-            ZoneInfo cloned = new ZoneInfo();
-            cloned._startColumn = _startColumn;
-            cloned._startRow = _startRow;
-            cloned._endColumn = _endColumn;
-            cloned._endRow = _endRow;
-            cloned._borderFillId = _borderFillId;
+            ZoneInfo cloned = new ZoneInfo
+            {
+                _startColumn = _startColumn,
+                _startRow = _startRow,
+                _endColumn = _endColumn,
+                _endRow = _endRow,
+                _borderFillId = _borderFillId
+            };
             return cloned;
         }
     }
-
 }

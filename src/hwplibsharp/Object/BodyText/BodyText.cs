@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/BodyText.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.BodyText.Paragraph.Memo;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText
 {
-
     /// <summary>
     /// 본문을 나타내는 객체. HWP파일 내에 "BodyText" storage에 저장된다.
     /// </summary>
@@ -68,11 +66,7 @@ namespace HwpLib.Object.BodyText
         /// <returns>새로 생성된 메모</returns>
         public Memo AddNewMemo()
         {
-            if (_memoList == null)
-            {
-                _memoList = new List<Memo>();
-            }
-
+            _memoList ??= new List<Memo>();
             var m = new Memo();
             _memoList.Add(m);
             return m;
@@ -109,5 +103,4 @@ namespace HwpLib.Object.BodyText
             }
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForNumbering.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.Numbering;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 문단 번호 레코드를 읽기 위한 객체
     /// </summary>
@@ -114,5 +112,4 @@ namespace HwpLib.Reader.DocInfo
             }
         }
     }
-
 }

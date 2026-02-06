@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForParaLineSeg.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Paragraph.LineSeg;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Paragraph
 {
-
     /// <summary>
     /// 문단의 레이아웃 레코드를 쓰기 위한 객체
     /// </summary>
@@ -69,5 +67,4 @@ namespace HwpLib.Writer.BodyText.Paragraph
             sw.WriteUInt4(lsi.Tag.Value);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/eqed/ForEQEdit.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Equation;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.Eqed
 {
-
     /// <summary>
     /// 수식 정보 레코드를 쓰기 위한 객체
     /// </summary>
@@ -55,5 +53,4 @@ namespace HwpLib.Writer.BodyText.Control.Eqed
             return size;
         }
     }
-
 }

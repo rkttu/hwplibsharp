@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/Style.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.Style;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 스타일에 대한 레코드
     /// </summary>
@@ -95,9 +93,11 @@ namespace HwpLib.Object.DocInfo
         /// <returns>멤버 값이 동일한 <see cref="StyleInfo"/>의 새 인스턴스입니다.</returns>
         public StyleInfo Clone()
         {
-            var cloned = new StyleInfo();
-            cloned._hangulName = _hangulName;
-            cloned._englishName = _englishName;
+            var cloned = new StyleInfo
+            {
+                _hangulName = _hangulName,
+                _englishName = _englishName
+            };
             cloned._property.Copy(_property);
             cloned._nextStyleId = _nextStyleId;
             cloned._languageId = _languageId;
@@ -106,5 +106,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

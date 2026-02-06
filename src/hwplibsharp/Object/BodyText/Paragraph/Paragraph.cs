@@ -1,23 +1,21 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/Paragraph.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader;
+using HwpLib.Object.BodyText.Control.Gso;
+using HwpLib.Object.BodyText.Paragraph.CharShape;
+using HwpLib.Object.BodyText.Paragraph.Header;
+using HwpLib.Object.BodyText.Paragraph.LineSeg;
+using HwpLib.Object.BodyText.Paragraph.RangeTag;
+using HwpLib.Object.BodyText.Paragraph.Text;
+using ControlNS = HwpLib.Object.BodyText.Control;
 using System;
 using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Paragraph
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader;
-    using HwpLib.Object.BodyText.Control.Gso;
-    using HwpLib.Object.BodyText.Paragraph.CharShape;
-    using HwpLib.Object.BodyText.Paragraph.Header;
-    using HwpLib.Object.BodyText.Paragraph.LineSeg;
-    using HwpLib.Object.BodyText.Paragraph.RangeTag;
-    using HwpLib.Object.BodyText.Paragraph.Text;
-    using ControlNS = HwpLib.Object.BodyText.Control;
-
     /// <summary>
     /// 하나의 문단을 나타내는 객체
     /// </summary>
@@ -31,7 +29,7 @@ namespace HwpLib.Object.BodyText.Paragraph
         /// <summary>
         /// 헤더
         /// </summary>
-        private ParaHeader header;
+        private readonly ParaHeader header;
 
         /// <summary>
         /// 텍스트
@@ -177,10 +175,7 @@ namespace HwpLib.Object.BodyText.Paragraph
         /// <returns>새로 생성된 컨트롤 객체</returns>
         public ControlNS.Control? AddNewControl(uint id)
         {
-            if (controlList == null)
-            {
-                controlList = new List<ControlNS.Control>();
-            }
+            controlList ??= new List<ControlNS.Control>();
             ControlNS.Control? c = ControlNS.FactoryForControl.Create(id);
             if (c != null)
             {
@@ -218,10 +213,7 @@ namespace HwpLib.Object.BodyText.Paragraph
         /// <returns>새로 생성한 양식 컨트롤</returns>
         public ControlNS.ControlForm AddNewFormControl(CtrlHeaderGso header)
         {
-            if (controlList == null)
-            {
-                controlList = new List<ControlNS.Control>();
-            }
+            controlList ??= new List<ControlNS.Control>();
             ControlNS.ControlForm fc = ControlNS.FactoryForControl.CreateFormControl(header);
             controlList.Add(fc);
             return fc;
@@ -236,10 +228,7 @@ namespace HwpLib.Object.BodyText.Paragraph
         /// <returns>새로 생성한 GSO 컨트롤</returns>
         public GsoControl? AddNewGsoControl(uint gsoId, CtrlHeaderGso header)
         {
-            if (controlList == null)
-            {
-                controlList = new List<ControlNS.Control>();
-            }
+            controlList ??= new List<ControlNS.Control>();
             GsoControl? gc = ControlNS.FactoryForControl.CreateGso(gsoId, header);
             if (gc != null)
             {
@@ -267,10 +256,7 @@ namespace HwpLib.Object.BodyText.Paragraph
         /// <param name="c">추가할 컨트롤</param>
         public void AddControl(ControlNS.Control c)
         {
-            if (controlList == null)
-            {
-                controlList = new List<ControlNS.Control>();
-            }
+            controlList ??= new List<ControlNS.Control>();
             controlList.Add(c);
         }
 
@@ -299,10 +285,7 @@ namespace HwpLib.Object.BodyText.Paragraph
         /// <returns>새로 생성된 메모</returns>
         public Memo.Memo AddNewMemo()
         {
-            if (memoList == null)
-            {
-                memoList = new List<Memo.Memo>();
-            }
+            memoList ??= new List<Memo.Memo>();
             var memo = new Memo.Memo();
             memoList.Add(memo);
             return memo;
@@ -401,5 +384,4 @@ namespace HwpLib.Object.BodyText.Paragraph
             return cloned;
         }
     }
-
 }

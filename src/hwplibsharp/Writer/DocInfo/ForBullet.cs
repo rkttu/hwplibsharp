@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForBullet.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.DocInfo.BorderFill;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 글머리표 레코드를 쓰기 위한 객체
     /// </summary>
@@ -51,5 +49,4 @@ namespace HwpLib.Writer.DocInfo
             sw.WriteRecordHeader(HWPTag.Bullet, 25);
         }
     }
-
 }

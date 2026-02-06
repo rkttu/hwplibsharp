@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForStyle.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 스타일 레코드를 읽기 위한 객체
     /// </summary>
@@ -41,5 +39,4 @@ namespace HwpLib.Reader.DocInfo
             sr.Skip(2);
         }
     }
-
 }

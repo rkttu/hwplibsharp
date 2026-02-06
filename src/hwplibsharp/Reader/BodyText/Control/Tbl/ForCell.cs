@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/tbl/ForCell.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,20 +9,18 @@ using HwpLib.Object.BodyText.Control.Table;
 using HwpLib.Object.Etc;
 using System;
 
-
 namespace HwpLib.Reader.BodyText.Control.Tbl
 {
-
     /// <summary>
-    /// ǥ�� ���� �б� ���� ��ü
+    /// 표의 셀을 읽기 위한 객체
     /// </summary>
     public static class ForCell
     {
         /// <summary>
-        /// ǥ�� ���� �д´�.
+        /// 표의 셀을 읽는다.
         /// </summary>
-        /// <param name="cell">ǥ�� ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="cell">표의 셀</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(Cell cell, CompoundStreamReader sr)
         {
             if (!sr.IsImmediatelyAfterReadingHeader)
@@ -41,10 +39,10 @@ namespace HwpLib.Reader.BodyText.Control.Tbl
         }
 
         /// <summary>
-        /// ���� ���� ����Ʈ ��� ���ڵ带 �д´�.
+        /// 셀의 문단 리스트 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="lh">���� ���� ����Ʈ ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="lh">셀의 문단 리스트 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ListHeader(ListHeaderForCell lh, CompoundStreamReader sr)
         {
             lh.ParaCount = sr.ReadSInt4();
@@ -74,10 +72,10 @@ namespace HwpLib.Reader.BodyText.Control.Tbl
         }
 
         /// <summary>
-        /// �ʵ� �̸��� �д´�.
+        /// 필드 이름을 읽는다.
         /// </summary>
-        /// <param name="lh">���� ���� ����Ʈ ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="lh">셀의 문단 리스트 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void FieldName(ListHeaderForCell lh, CompoundStreamReader sr)
         {
             var ps = new ParameterSet();
@@ -96,13 +94,12 @@ namespace HwpLib.Reader.BodyText.Control.Tbl
         }
 
         /// <summary>
-        /// �˷����� ���� ������ ����Ʈ�� ó���Ѵ�.
+        /// 알려지지 않은 나머지 바이트를 처리한다.
         /// </summary>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="sr">스트림 리더</param>
         private static void UnknownRestBytes(CompoundStreamReader sr)
         {
             sr.SkipToEndRecord();
         }
     }
-
 }

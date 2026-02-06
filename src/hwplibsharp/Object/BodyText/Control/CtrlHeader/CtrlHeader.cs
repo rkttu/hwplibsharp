@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
     /// <summary>
     /// 컨트롤 헤더 객체들을 위한 부모 클래스
     /// </summary>
@@ -36,5 +35,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <param name="from">복사할 원본 <see cref="CtrlHeader"/> 인스턴스입니다.</param>
         public abstract void Copy(CtrlHeader from);
     }
-
 }

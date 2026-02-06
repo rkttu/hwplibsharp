@@ -14,7 +14,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class FaceNameInfoAdder
     {
-        private DocInfoAdder _docInfoAdder;
+        private readonly DocInfoAdder _docInfoAdder;
 
         /// <summary>
         /// FaceNameInfoAdder 클래스의 새 인스턴스를 초기화합니다.
@@ -45,7 +45,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return Process(source, targetDocInfo.HangulFaceNameList, targetDocInfo.AddNewHangulFaceName);
         }
 
-        private FaceNameInfo? GetFaceNameInfo(IReadOnlyList<FaceNameInfo>? faceNameList, int index)
+        private static FaceNameInfo? GetFaceNameInfo(IReadOnlyList<FaceNameInfo>? faceNameList, int index)
         {
             if (faceNameList == null) return null;
 
@@ -65,7 +65,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             }
         }
 
-        private int Process(FaceNameInfo? source, IReadOnlyList<FaceNameInfo>? targetList, System.Func<FaceNameInfo>? addNewFunc)
+        private static int Process(FaceNameInfo? source, IReadOnlyList<FaceNameInfo>? targetList, System.Func<FaceNameInfo>? addNewFunc)
         {
             if (source == null || targetList == null || addNewFunc == null) return 0;
 
@@ -77,7 +77,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return index;
         }
 
-        private int Find(FaceNameInfo source, IReadOnlyList<FaceNameInfo> targetList)
+        private static int Find(FaceNameInfo source, IReadOnlyList<FaceNameInfo> targetList)
         {
             int count = targetList.Count;
             for (int index = 0; index < count; index++)
@@ -91,7 +91,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return -1;
         }
 
-        private bool Equal(FaceNameInfo? source, FaceNameInfo? target)
+        private static bool Equal(FaceNameInfo? source, FaceNameInfo? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -103,7 +103,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
                 && source.BaseFontName == target.BaseFontName;
         }
 
-        private bool EqualNullableString(string? source, string? target)
+        private static bool EqualNullableString(string? source, string? target)
         {
             if (source == null && target == null)
             {
@@ -112,7 +112,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return source?.Equals(target) == true;
         }
 
-        private bool EqualFontTypeInfo(FontTypeInfo? source, FontTypeInfo? target)
+        private static bool EqualFontTypeInfo(FontTypeInfo? source, FontTypeInfo? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -128,7 +128,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
                 && source.XHeight == target.XHeight;
         }
 
-        private int AddAndCopy(FaceNameInfo source, System.Func<FaceNameInfo> addNewFunc, IReadOnlyList<FaceNameInfo> targetList)
+        private static int AddAndCopy(FaceNameInfo source, System.Func<FaceNameInfo> addNewFunc, IReadOnlyList<FaceNameInfo> targetList)
         {
             var target = addNewFunc();
 
@@ -143,7 +143,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return targetList.Count - 1;
         }
 
-        private void CopyFontTypeInfo(FontTypeInfo? source, FontTypeInfo? target)
+        private static void CopyFontTypeInfo(FontTypeInfo? source, FontTypeInfo? target)
         {
             if (source == null || target == null) return;
 

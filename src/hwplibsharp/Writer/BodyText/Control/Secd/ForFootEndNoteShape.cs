@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/secd/ForFootEndNoteShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.SectionDefine;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.Secd
 {
-
     /// <summary>
     /// 각주/미주 모양 레코드를 쓰기 위한 객체
     /// </summary>
@@ -50,5 +48,4 @@ namespace HwpLib.Writer.BodyText.Control.Secd
             sw.WriteRecordHeader(HWPTag.FootnoteShape, 28);
         }
     }
-
 }

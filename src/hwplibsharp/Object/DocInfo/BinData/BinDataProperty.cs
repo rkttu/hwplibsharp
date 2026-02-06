@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/bindata/BinDataProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.BinData
 {
-
     /// <summary>
     /// 바이너리 데이터의 속성
     /// </summary>
@@ -62,5 +60,4 @@ namespace HwpLib.Object.DocInfo.BinData
             Value = from.Value;
         }
     }
-
 }

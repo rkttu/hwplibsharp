@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForBinData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.BinData;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 바이너리 데이터 레코드를 읽기 위한 객체
     /// </summary>
@@ -39,5 +37,4 @@ namespace HwpLib.Reader.DocInfo
             }
         }
     }
-
 }

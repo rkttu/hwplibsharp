@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/ForUnknown.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Reader
 {
-
     /// <summary>
     /// 알수 없는 레코드를 읽기 위한 객체
     /// </summary>
@@ -27,5 +25,4 @@ namespace HwpLib.Reader
             unknown.Body = body;
         }
     }
-
 }

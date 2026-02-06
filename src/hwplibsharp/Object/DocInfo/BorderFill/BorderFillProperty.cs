@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/BorderFillProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.BorderFill
 {
-
     /// <summary>
     /// 테두리/배경 객체의 속성
     /// </summary>
@@ -129,5 +127,4 @@ namespace HwpLib.Object.DocInfo.BorderFill
             Value = from.Value;
         }
     }
-
 }

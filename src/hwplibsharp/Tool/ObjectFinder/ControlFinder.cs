@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/ControlFinder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,10 +10,8 @@ using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Paragraph;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Tool.ObjectFinder
 {
-
     /// <summary>
     /// 원하는 컨트롤을 찾기 위한 객체
     /// </summary>
@@ -346,5 +344,4 @@ namespace HwpLib.Tool.ObjectFinder
             }
         }
     }
-
 }

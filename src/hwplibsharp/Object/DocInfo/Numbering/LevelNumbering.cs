@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/numbering/LevelNumbering.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.DocInfo.Numbering
 {
-
     /// <summary>
     /// 각 수준(1~7)에 해당하는 문단 번호 정보
     /// </summary>
@@ -59,5 +57,4 @@ namespace HwpLib.Object.DocInfo.Numbering
             StartNumber = from.StartNumber;
         }
     }
-
 }

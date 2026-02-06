@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/ForControlRectangle.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,10 +10,8 @@ using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.Bookmark;
 using HwpLib.Writer.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso
 {
-
     /// <summary>
     /// 사각형 컨트롤의 나머지 부분을 쓰기 위한 객체
     /// </summary>
@@ -70,5 +68,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso
             sw.WriteRecordHeader(HWPTag.ShapeComponentRectangle, 33);
         }
     }
-
 }

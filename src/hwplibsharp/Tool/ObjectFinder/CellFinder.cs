@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/CellFinder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,10 +11,8 @@ using HwpLib.Object.BodyText.Control.Gso.TextBox;
 using HwpLib.Object.BodyText.Control.Table;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Tool.ObjectFinder
 {
-
     /// <summary>
     /// 필드명이 일치하는 셀을 찾는 기능을 하는 객체
     /// </summary>
@@ -94,7 +92,7 @@ namespace HwpLib.Tool.ObjectFinder
         /// <param name="cell">셀</param>
         /// <param name="fieldName">필드명</param>
         /// <returns>셀의 필드명이 원하는 필드명과 일치하는지 여부</returns>
-        private bool MatchFieldName(Cell cell, string fieldName)
+        private static bool MatchFieldName(Cell cell, string fieldName)
         {
             return cell != null
                    && cell.ListHeader.FieldName != null
@@ -234,5 +232,4 @@ namespace HwpLib.Tool.ObjectFinder
             ForParagraphList(textBox.ParagraphList);
         }
     }
-
 }

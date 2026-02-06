@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/header/ControlMask.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Paragraph.Header
 {
-
     /// <summary>
     /// 문단에 포함된 컨트롤의 종류를 나타내는 객체
     /// </summary>
@@ -206,5 +204,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Header
             Value = from.Value;
         }
     }
-
 }

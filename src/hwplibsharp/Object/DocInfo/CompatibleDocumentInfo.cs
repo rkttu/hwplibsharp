@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/CompatibleDocument.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.CompatibleDocument;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 호환 문서에 대한 레코드
     /// </summary>
@@ -38,10 +36,11 @@ namespace HwpLib.Object.DocInfo
         /// <returns>멤버 값이 동일한 <see cref="CompatibleDocumentInfo"/>의 새 인스턴스입니다.</returns>
         public CompatibleDocumentInfo Clone()
         {
-            var cloned = new CompatibleDocumentInfo();
-            cloned._targetProgram = _targetProgram;
+            var cloned = new CompatibleDocumentInfo
+            {
+                _targetProgram = _targetProgram
+            };
             return cloned;
         }
     }
-
 }

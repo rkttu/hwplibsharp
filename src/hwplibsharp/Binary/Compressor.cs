@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/compressors/Compressor.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using System;
 using System.IO;
 using System.IO.Compression;
 
-
 namespace HwpLib.Binary
 {
-
     /// <summary>
     /// 압축 및 압축 해제를 위한 유틸리티 클래스
     /// </summary>
@@ -108,5 +106,4 @@ namespace HwpLib.Binary
             return DecompressedBytes((Stream)ms);
         }
     }
-
 }

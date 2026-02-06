@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlOLE.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,20 +8,18 @@ using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// OLE ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// OLE 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlOLE
     {
         /// <summary>
-        /// OLE ��Ʈ���� ������ �κ��� �д´�.
+        /// OLE 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="ole">OLE ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="ole">OLE 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlOLE ole, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -33,10 +31,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// OLE ��ü �Ӽ� ���ڵ带 �д´�.
+        /// OLE 개체 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="sco">OLE ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="sco">OLE 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentOLE(ShapeComponentOLE sco, CompoundStreamReader sr)
         {
             sco.Property.Value = sr.ReadUInt4();
@@ -50,10 +48,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �� �� ���� ������ ����� �д´�.
+        /// 알 수 없는 데이터 블럭을 읽는다.
         /// </summary>
-        /// <param name="sco">OLE ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="sco">OLE 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void UnknownData(ShapeComponentOLE sco, CompoundStreamReader sr)
         {
             int unknownSize = (int)(sr.CurrentRecordHeader!.Size - (sr.CurrentPosition - sr.CurrentPositionAfterHeader));
@@ -64,5 +62,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             }
         }
     }
-
 }

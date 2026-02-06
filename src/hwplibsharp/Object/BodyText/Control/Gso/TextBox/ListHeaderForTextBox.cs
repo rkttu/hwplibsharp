@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/textbox/ListHeaderForTextBox.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.TextBox
 {
-
     /// <summary>
     /// 글상자를 위한 문단 리스트 헤더 레코드
     /// </summary>
@@ -157,5 +157,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.TextBox
             _fieldName = from._fieldName;
         }
     }
-
 }

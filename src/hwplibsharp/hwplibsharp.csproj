@@ -28,6 +28,7 @@
 		<PackageTags>hwp;hangul;word-processor;document;korean</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<RootNamespace>HwpLIb</RootNamespace>
 	</PropertyGroup>
 
 	<!-- .NET 8.0+ Native AOT Compatibility -->

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/compoundFile/writer/CompoundFileWriter.java
 // Repository: https://github.com/neolord0/hwplib
 // Note: Adapted for OpenMcdf (C# uses OpenMcdf instead of Apache POI)
@@ -10,10 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-
 namespace HwpLib.CompoundFile
 {
-
     /// <summary>
     /// MS Compound File을 쓰기 위한 객체. OpenMcdf 라이브러리를 사용함
     /// </summary>
@@ -206,5 +204,4 @@ namespace HwpLib.CompoundFile
             Dispose(false);
         }
     }
-
 }

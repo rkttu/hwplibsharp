@@ -6,18 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Bookmark;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// �Ķ���� ���� �б� ���� ��ü
+    /// 파라메터 셋을 읽기 위한 객체
     /// </summary>
     public static class ForParameterSet
     {
         /// <summary>
-        /// �Ķ���� ���� �д´�.
+        /// 파라메터 셋을 읽는다.
         /// </summary>
+        /// <param name="ps">파라메터 셋</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ParameterSet ps, CompoundStreamReader sr)
         {
             ps.Id = sr.ReadUInt2();
@@ -32,7 +32,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �Ķ���� �������� �д´�.
+        /// 파라미터 아이템을 읽는다.
         /// </summary>
         private static void ReadParameterItem(ParameterItem pi, CompoundStreamReader sr)
         {
@@ -42,7 +42,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �Ķ���� �������� ���� �д´�.
+        /// 파라미터 아이템의 값을 읽는다.
         /// </summary>
         private static void ReadParameterValue(ParameterItem pi, CompoundStreamReader sr)
         {
@@ -91,7 +91,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �迭 �Ķ���� �������� �д´�.
+        /// 배열 파라미터 아이템을 읽는다.
         /// </summary>
         private static void ReadParameterArray(ParameterItem pi, CompoundStreamReader sr)
         {
@@ -118,5 +118,4 @@ namespace HwpLib.Reader.BodyText.Control
             ReadParameterValue(pi, sr);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/control/ParameterSetCopier.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================

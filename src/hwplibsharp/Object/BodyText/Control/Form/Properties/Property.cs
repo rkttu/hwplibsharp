@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/form/properties/Property.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Form.Properties
 {
-
     /// <summary>
     /// 폼 속성의 추상 기본 클래스
     /// </summary>
@@ -34,5 +33,4 @@ namespace HwpLib.Object.BodyText.Control.Form.Properties
         /// <returns>복제된 속성</returns>
         public abstract Property Clone();
     }
-
 }

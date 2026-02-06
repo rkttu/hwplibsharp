@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/ColorEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 색상 효과 속성
     /// </summary>
@@ -51,11 +51,12 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
         /// <returns>복제된 객체</returns>
         public ColorEffect Clone()
         {
-            var cloned = new ColorEffect();
-            cloned._sort = _sort;
-            cloned._value = _value;
+            var cloned = new ColorEffect
+            {
+                _sort = _sort,
+                _value = _value
+            };
             return cloned;
         }
     }
-
 }

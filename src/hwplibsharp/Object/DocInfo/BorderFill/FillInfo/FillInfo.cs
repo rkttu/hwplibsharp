@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/FillInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 채우기 정보를 나타내는 객체
     /// </summary>
@@ -146,5 +145,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
             }
         }
     }
-
 }

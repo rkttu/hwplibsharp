@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/tbl/ForCell.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,10 +10,8 @@ using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.Bookmark;
 using HwpLib.Writer.BodyText.Paragraph;
 
-
 namespace HwpLib.Writer.BodyText.Control.Tbl
 {
-
     /// <summary>
     /// 표 컨트롤의 셀을 쓰기 위한 객체
     /// </summary>
@@ -94,5 +92,4 @@ namespace HwpLib.Writer.BodyText.Control.Tbl
             return size;
         }
     }
-
 }

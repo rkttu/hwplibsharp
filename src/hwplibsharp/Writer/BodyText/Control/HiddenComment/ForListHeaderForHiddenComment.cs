@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/hiddencomment/ForListHeaderForHiddenComment.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.HiddenComment;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.HiddenComment
 {
-
     /// <summary>
     /// 숨은 설명 컨트롤의 리스트 헤더 레코드를 쓰기 위한 객체
     /// </summary>
@@ -36,5 +34,4 @@ namespace HwpLib.Writer.BodyText.Control.HiddenComment
             sw.WriteRecordHeader(HWPTag.ListHeader, 16);
         }
     }
-
 }

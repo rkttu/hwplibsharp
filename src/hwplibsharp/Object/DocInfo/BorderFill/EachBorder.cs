@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/EachBorder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.Etc;
+
 namespace HwpLib.Object.DocInfo.BorderFill
 {
-
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 테두리/배경 객체에서 4방향의 각각의 선을 나타내는 객체
     /// </summary>
@@ -26,7 +25,7 @@ namespace HwpLib.Object.DocInfo.BorderFill
         /// <summary>
         /// 색상
         /// </summary>
-        private Color4Byte color;
+        private readonly Color4Byte color;
 
         /// <summary>
         /// 생성자
@@ -52,5 +51,4 @@ namespace HwpLib.Object.DocInfo.BorderFill
             color.Copy(from.color);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/part/ForCtrlHeaderGso.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,20 +7,18 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso.Part
 {
-
     /// <summary>
-    /// �׸��� ��ü�� ��Ʈ�� ��� ���ڵ带 �б� ���� ��ü
+    /// 그리기 개체의 컨트롤 헤더 레코드를 읽는다.
     /// </summary>
     public static class ForCtrlHeaderGso
     {
         /// <summary>
-        /// �׸��� ��ü�� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 그리기 개체의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="header">�׸��� ��ü�� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">그리기 개체의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(CtrlHeaderGso header, CompoundStreamReader sr)
         {
             header.Property.Value = sr.ReadUInt4();
@@ -53,5 +51,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
             }
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/secd/ForCtrlHeaderSecd.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,20 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 
-
 namespace HwpLib.Reader.BodyText.Control.Secd
 {
-
     /// <summary>
-    /// ���� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �б� ���� ��ü
+    /// 구역 정보 컨트롤의 컨트롤 헤더 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForCtrlHeaderSecd
     {
         /// <summary>
-        /// ���� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 구역 정보 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="header">���� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">구역 정보 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(CtrlHeaderSectionDefine header, CompoundStreamReader sr)
         {
             header.Property.Value = sr.ReadUInt4();
@@ -43,5 +41,4 @@ namespace HwpLib.Reader.BodyText.Control.Secd
             sr.SkipToEndRecord();
         }
     }
-
 }

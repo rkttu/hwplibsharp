@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/objectlinkline/LinkLineType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.ObjectLinkLine
 {
-
     /// <summary>
     /// 연결선 타입
     /// </summary>
@@ -85,5 +85,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.ObjectLinkLine
                 _ => LinkLineType.StraightNoArrow,
             };
     }
-
 }

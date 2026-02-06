@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlNewNumber.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,35 +7,32 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// �� ��ȣ ���� ��Ʈ���� �б� ���� ��ü
+    /// 새 번호 지정 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControlNewNumber
     {
         /// <summary>
-        /// �� ��ȣ ���� ��Ʈ���� �д´�.
+        /// 새 번호 지정 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="nwno">�� ��ȣ ���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="nwno">새 번호 지정 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ControlNewNumber nwno, CompoundStreamReader sr)
         {
             CtrlHeader(nwno.GetHeader()!, sr);
         }
 
         /// <summary>
-        /// �� ��ȣ ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 새 번호 지정 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="header">�� ��ȣ ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">새 번호 지정 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CtrlHeader(CtrlHeaderNewNumber header, CompoundStreamReader sr)
         {
             header.Property.Value = sr.ReadUInt4();
             header.Number = sr.ReadUInt2();
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/ForFileHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.FileHeader;
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Writer
 {
-
     /// <summary>
     /// 파일 헤더를 쓰기 위한 객체
     /// </summary>
@@ -86,5 +84,4 @@ namespace HwpLib.Writer
             sw.WriteZero(216);
         }
     }
-
 }

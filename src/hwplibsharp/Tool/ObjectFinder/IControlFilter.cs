@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/ControlFilter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Paragraph;
 
-
 namespace HwpLib.Tool.ObjectFinder
 {
-
     /// <summary>
     /// 원하는 컨트롤을 찾기 위한 조건을 입력할 수 있는 인터페이스
     /// </summary>
@@ -25,5 +23,4 @@ namespace HwpLib.Tool.ObjectFinder
         /// <returns>원하는 컨트롤을 찾기 위한 조건에 맞는지 여부</returns>
         bool IsMatched(Control control, Paragraph paragraph, Section section);
     }
-
 }

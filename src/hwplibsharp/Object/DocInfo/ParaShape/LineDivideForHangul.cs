@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/parashape/LineDivideForHangul.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.ParaShape
 {
-
     /// <summary>
     /// 줄 나눔 기준 한글 단위
     /// </summary>
@@ -48,5 +47,4 @@ namespace HwpLib.Object.DocInfo.ParaShape
             };
         }
     }
-
 }

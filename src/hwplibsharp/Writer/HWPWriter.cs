@@ -14,10 +14,8 @@ using HwpLib.Writer.DocInfo;
 using System;
 using System.IO;
 
-
 namespace HwpLib.Writer
 {
-
     /// <summary>
     /// 한글 파일을 쓰기 위한 객체
     /// </summary>
@@ -41,7 +39,7 @@ namespace HwpLib.Writer
             writer.WriteDocInfo();
             writer.WriteBodyText();
             writer.WriteBinData();
-            writer.WriteSummaryInformation();
+            //writer.WriteSummaryInformation();
             writer.WriteScripts();
             writer.WriteDocOptions();
             writer.WriteAndClose(filePath);
@@ -65,7 +63,7 @@ namespace HwpLib.Writer
             writer.WriteDocInfo();
             writer.WriteBodyText();
             writer.WriteBinData();
-            writer.WriteSummaryInformation();
+            //writer.WriteSummaryInformation();
             writer.WriteScripts();
             writer.WriteDocOptions();
             writer.WriteAndClose(outputStream);
@@ -169,6 +167,7 @@ namespace HwpLib.Writer
 
             ForSection.Write(section, sw);
 
+            /*
             // 마지막 섹션에 메모 쓰기
             if (IsLastSection(index) && _hwpFile.BodyText.MemoList != null)
             {
@@ -177,6 +176,7 @@ namespace HwpLib.Writer
                     // TODO: ForMemo.Write(memo, sw);
                 }
             }
+            */
 
             _cfw.CloseCurrentStream();
         }
@@ -248,6 +248,7 @@ namespace HwpLib.Writer
             };
         }
 
+        /*
         /// <summary>
         /// SummaryInformation을 쓴다.
         /// </summary>
@@ -265,6 +266,7 @@ namespace HwpLib.Writer
             //     }
             // }
         }
+        */
 
         /// <summary>
         /// Scripts 스토리지를 쓴다.
@@ -352,5 +354,4 @@ namespace HwpLib.Writer
             Dispose(false);
         }
     }
-
 }

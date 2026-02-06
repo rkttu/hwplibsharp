@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/parashape/ParaHeadShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.ParaShape
 {
-
     /// <summary>
     /// 문단 머리 모양의 종류
     /// </summary>
@@ -60,5 +59,4 @@ namespace HwpLib.Object.DocInfo.ParaShape
             };
         }
     }
-
 }

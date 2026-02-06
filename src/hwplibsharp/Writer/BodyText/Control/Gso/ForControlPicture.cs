@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/ForControlPicture.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -12,10 +12,8 @@ using HwpLib.Writer.BodyText.Control.Bookmark;
 using HwpLib.Writer.BodyText.Control.Gso.Part;
 using HwpLib.Writer.DocInfo.BorderFill;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso
 {
-
     /// <summary>
     /// 그림 컨트롤의 나머지 부분을 쓰기 위한 객체
     /// </summary>
@@ -107,5 +105,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso
             sw.WriteUInt2(im.Bottom);
         }
     }
-
 }

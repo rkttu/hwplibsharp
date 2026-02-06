@@ -1,20 +1,19 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlForm.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader;
+using HwpLib.Object.BodyText.Control.Form;
+
 namespace HwpLib.Object.BodyText.Control
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader;
-    using HwpLib.Object.BodyText.Control.Form;
-
     /// <summary>
     /// 양식 개체 컨트롤
     /// </summary>
     public class ControlForm : Control
     {
-        private FormObject formObject;
+        private readonly FormObject formObject;
 
         /// <summary>
         /// 생성자
@@ -59,5 +58,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

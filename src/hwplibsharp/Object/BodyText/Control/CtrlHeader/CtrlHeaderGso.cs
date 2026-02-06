@@ -1,16 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderGso.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.Gso;
+using HwpLib.Object.Etc;
 using System;
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.Gso;
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 그리기 개체을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -19,12 +17,12 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 속성
         /// </summary>
-        private GsoHeaderProperty property;
+        private readonly GsoHeaderProperty property;
 
         /// <summary>
         /// 개체 설명문
         /// </summary>
-        private HWPString explanation;
+        private readonly HWPString explanation;
 
         /// <summary>
         /// 생성자
@@ -149,5 +147,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             }
         }
     }
-
 }

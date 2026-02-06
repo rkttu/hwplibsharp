@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/text/HWPCharControlInline.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System;
 
 namespace HwpLib.Object.BodyText.Paragraph.Text
 {
-
     /// <summary>
     /// 인라인 컨트롤 Character
     /// </summary>
@@ -86,5 +85,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Text
             return cloned;
         }
     }
-
 }

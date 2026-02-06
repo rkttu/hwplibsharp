@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/FaceNameIds.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System;
 
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 언어별 참조된 글꼴 ID(FaceID)
     /// </summary>
@@ -122,5 +121,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             System.Array.Copy(from._array, _array, from._array.Length);
         }
     }
-
 }

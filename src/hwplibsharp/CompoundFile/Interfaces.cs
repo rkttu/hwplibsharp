@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // C# Specific Implementation (no direct Java equivalent)
 // Provides OpenMcdf abstractions (Java uses Apache POI)
 // Repository: https://github.com/neolord0/hwplib
@@ -8,7 +8,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.CompoundFile
 {
-
     /// <summary>
     /// 디렉토리(스토리지) 엔트리를 나타내는 인터페이스
     /// POI의 DirectoryEntry에 대응
@@ -83,5 +82,4 @@ namespace HwpLib.CompoundFile
         /// <returns>스트림 데이터</returns>
         byte[] GetData();
     }
-
 }

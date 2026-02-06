@@ -1,14 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/form/FormObjectType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
-using System;
-
-
 namespace HwpLib.Object.BodyText.Control.Form
 {
-
     /// <summary>
     /// 양식 개체 타입
     /// </summary>
@@ -75,5 +71,4 @@ namespace HwpLib.Object.BodyText.Control.Form
             return null;
         }
     }
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/binary/BitFlag.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Util.Binary
 {
-
     /// <summary>
     /// 이진 연산을 하는 클래스
     /// </summary>
@@ -58,13 +57,13 @@ namespace HwpLib.Util.Binary
         {
             if (flag)
             {
-                mask = mask | (0x1L << position);
+                mask |= (0x1L << position);
             }
             else
             {
                 if ((mask & (0x1L << position)) != 0)
                 {
-                    mask = mask ^ (0x1L << position);
+                    mask ^= (0x1L << position);
                 }
             }
             return mask;
@@ -81,13 +80,13 @@ namespace HwpLib.Util.Binary
         {
             if (flag)
             {
-                mask = mask | (0x1 << position);
+                mask |= (0x1 << position);
             }
             else
             {
                 if ((mask & (0x1 << position)) != 0)
                 {
-                    mask = mask ^ (0x1 << position);
+                    mask ^= (0x1 << position);
                 }
             }
             return mask;
@@ -130,11 +129,11 @@ namespace HwpLib.Util.Binary
             long temp = 0;
             for (int nIndex = 0; nIndex < end - start + 1; nIndex++)
             {
-                temp = temp << 1;
+                temp <<= 1;
                 temp += 1;
             }
 
-            ret = ret & temp;
+            ret &= temp;
 
             return ret;
         }
@@ -153,11 +152,11 @@ namespace HwpLib.Util.Binary
             int temp = 0;
             for (int nIndex = 0; nIndex < end - start + 1; nIndex++)
             {
-                temp = temp << 1;
+                temp <<= 1;
                 temp += 1;
             }
 
-            ret = ret & temp;
+            ret &= temp;
 
             return ret;
         }
@@ -176,7 +175,7 @@ namespace HwpLib.Util.Binary
             int temp = 0;
             for (int nIndex = 0; nIndex < end - start + 1; nIndex++)
             {
-                temp = temp << 1;
+                temp <<= 1;
                 temp += 1;
             }
 
@@ -262,13 +261,13 @@ namespace HwpLib.Util.Binary
         {
             if (flag)
             {
-                mask = mask | (0x1u << position);
+                mask |= (0x1u << position);
             }
             else
             {
                 if ((mask & (0x1u << position)) != 0)
                 {
-                    mask = mask ^ (0x1u << position);
+                    mask ^= (0x1u << position);
                 }
             }
             return mask;
@@ -288,11 +287,11 @@ namespace HwpLib.Util.Binary
             uint temp = 0;
             for (int nIndex = 0; nIndex < end - start + 1; nIndex++)
             {
-                temp = temp << 1;
+                temp <<= 1;
                 temp += 1;
             }
 
-            ret = ret & temp;
+            ret &= temp;
 
             return ret;
         }
@@ -315,5 +314,4 @@ namespace HwpLib.Util.Binary
             return mask;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/TableCellMerger.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -44,12 +44,12 @@ namespace HwpLib.Tool
             return merger.Merge();
         }
 
-        private ControlTable _table;
-        private int _startRow;
-        private int _startCol;
-        private int _rowSpan;
-        private int _colSpan;
-        private bool _check;
+        private readonly ControlTable _table;
+        private readonly int _startRow;
+        private readonly int _startCol;
+        private readonly int _rowSpan;
+        private readonly int _colSpan;
+        private readonly bool _check;
 
         private TableCellMerger(ControlTable table, int startRow, int startCol, int rowSpan, int colSpan, bool check)
         {

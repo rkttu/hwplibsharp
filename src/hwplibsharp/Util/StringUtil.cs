@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/StringUtil.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace HwpLib.Util
 {
-
     /// <summary>
     /// 문자열 관련 유틸리티 클래스
     /// </summary>
@@ -233,5 +231,4 @@ namespace HwpLib.Util
             return cs == null || cs.Length == 0;
         }
     }
-
 }

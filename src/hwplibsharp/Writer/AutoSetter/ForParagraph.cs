@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Paragraph.Header;
 using HwpLib.Object.BodyText.Paragraph.Text;
 using HwpLib.Writer.AutoSetter.Control;
 
-
 namespace HwpLib.Writer.AutoSetter
 {
-
     /// <summary>
     /// 문단 객체를 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -183,5 +181,4 @@ namespace HwpLib.Writer.AutoSetter
             }
         }
     }
-
 }

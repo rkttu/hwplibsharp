@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForCharShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.CharShape;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 글자 모양 레코드를 읽기 위한 객체
     /// </summary>
@@ -124,5 +122,4 @@ namespace HwpLib.Reader.DocInfo
             cos.SetArray(array);
         }
     }
-
 }

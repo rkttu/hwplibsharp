@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/TextBuffer.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Tool.ObjectFinder
 {
-
     /// <summary>
     /// 텍스트 버퍼
     /// </summary>
@@ -77,5 +76,4 @@ namespace HwpLib.Tool.ObjectFinder
             return _currentIndex == 0;
         }
     }
-
 }

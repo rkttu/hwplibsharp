@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/MemoShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 메모 모양
     /// </summary>
@@ -93,10 +91,12 @@ namespace HwpLib.Object.DocInfo
         /// <returns>복제된 <see cref="MemoShape"/> 인스턴스입니다.</returns>
         public MemoShape Clone()
         {
-            var cloned = new MemoShape();
-            cloned._width = _width;
-            cloned._lineType = _lineType;
-            cloned._lineWidth = _lineWidth;
+            var cloned = new MemoShape
+            {
+                _width = _width,
+                _lineType = _lineType,
+                _lineWidth = _lineWidth
+            };
             cloned._lineColor.Copy(_lineColor);
             cloned._fillColor.Copy(_fillColor);
             cloned._activeColor.Copy(_activeColor);
@@ -104,5 +104,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

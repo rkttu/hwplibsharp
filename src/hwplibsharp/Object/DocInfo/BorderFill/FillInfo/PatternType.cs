@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/PatternType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 채우기 무늬 종류
     /// </summary>
@@ -74,5 +73,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
                 _ => PatternType.None,
             };
     }
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/GradientType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 그러데이션 유형
     /// </summary>
@@ -56,5 +55,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
                 _ => GradientType.Stripe,
             };
     }
-
 }

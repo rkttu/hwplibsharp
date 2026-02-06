@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/PageBorderFill.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 쪽 테두리/배경 정보에 대한 레코드
     /// </summary>
@@ -113,5 +112,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             _borderFillId = from._borderFillId;
         }
     }
-
 }

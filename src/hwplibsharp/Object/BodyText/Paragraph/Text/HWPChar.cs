@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/text/HWPChar.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Paragraph.Text
 {
-
     /// <summary>
     /// ParaText에 저장되는 글자를 나타내는 추상 객체
     /// </summary>
@@ -121,5 +120,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Text
         /// </summary>
         public bool IsParaBreak => code == 13;
     }
-
 }

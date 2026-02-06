@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -366,5 +366,4 @@ namespace HwpLib.Object.BodyText.Control
                 || ctrlId == (uint)ControlType.FIELD_TABLEOFCONTENTS;
         }
     }
-
 }

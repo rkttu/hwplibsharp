@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/fieldform/FieldFormFinder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,10 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace HwpLib.Tool.ObjectFinder.FieldForm
 {
-
     /// <summary>
     /// 필드와 폼을 찾는 클래스
     /// </summary>
@@ -327,5 +325,4 @@ namespace HwpLib.Tool.ObjectFinder.FieldForm
         {
         }
     }
-
 }

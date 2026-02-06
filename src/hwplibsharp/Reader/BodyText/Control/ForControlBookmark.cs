@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlBookmark.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,30 +7,28 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// å���� ��Ʈ���� �б� ���� ��ü
+    /// 책갈피 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControlBookmark
     {
         /// <summary>
-        /// å���� ��Ʈ���� �д´�.
+        /// 책갈피 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="b">å���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="b">책갈피 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ControlBookmark b, CompoundStreamReader sr)
         {
             CtrlData(b, sr);
         }
 
         /// <summary>
-        /// ��Ʈ�� ������ ���ڵ带 �д´�.
+        /// 컨트롤 데이터 레코드를 읽는다.
         /// </summary>
-        /// <param name="b">å���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="b">컨트롤 데이터 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CtrlData(ControlBookmark b, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -42,5 +40,4 @@ namespace HwpLib.Reader.BodyText.Control
             }
         }
     }
-
 }

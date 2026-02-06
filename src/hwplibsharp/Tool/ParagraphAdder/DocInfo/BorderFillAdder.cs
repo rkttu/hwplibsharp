@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/BorderFillAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -14,8 +14,8 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class BorderFillInfoAdder
     {
-        private DocInfoAdder _docInfoAdder;
-        private Dictionary<int, int> _idMatchingMap;
+        private readonly DocInfoAdder _docInfoAdder;
+        private readonly Dictionary<int, int> _idMatchingMap;
 
         /// <summary>
         /// <see cref="BorderFillInfoAdder"/> 클래스의 새 인스턴스를 초기화합니다.
@@ -89,7 +89,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return -1;
         }
 
-        private bool Equal(BorderFillInfo? source, BorderFillInfo? target)
+        private static bool Equal(BorderFillInfo? source, BorderFillInfo? target)
         {
             if (source == null || target == null)
             {
@@ -105,7 +105,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
                 && ForFillInfo.Equal(source.FillInfo, target.FillInfo);
         }
 
-        private bool EqualEachBorder(EachBorder? source, EachBorder? target)
+        private static bool EqualEachBorder(EachBorder? source, EachBorder? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -133,7 +133,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return _docInfoAdder.GetTargetHWPFile()?.DocInfo?.BorderFillList?.Count ?? -1;
         }
 
-        private void CopyEachBorder(EachBorder? source, EachBorder? target)
+        private static void CopyEachBorder(EachBorder? source, EachBorder? target)
         {
             if (source == null || target == null) return;
 
@@ -163,7 +163,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return Equal(source, target);
         }
 
-        private BorderFillInfo? GetBorderFillInfo(IReadOnlyList<BorderFillInfo>? borderFillList, int index)
+        private static BorderFillInfo? GetBorderFillInfo(IReadOnlyList<BorderFillInfo>? borderFillList, int index)
         {
             if (borderFillList == null) return null;
 

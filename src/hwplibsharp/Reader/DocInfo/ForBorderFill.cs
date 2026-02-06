@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForBorderFill.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 using HwpLib.Reader.DocInfo.BorderFill;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 테두리/배경 레코드를 읽기 위한 객체
     /// </summary>
@@ -66,5 +64,4 @@ namespace HwpLib.Reader.DocInfo
             ForFillInfo.Read(fi, sr);
         }
     }
-
 }

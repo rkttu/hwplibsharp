@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/facename/FaceNameProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.FaceName
 {
-
     /// <summary>
     /// 글꼴에 대한 속성 객체
     /// </summary>
@@ -71,5 +69,4 @@ namespace HwpLib.Object.DocInfo.FaceName
             Value = from.Value;
         }
     }
-
 }

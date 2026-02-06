@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/DocumentProperties.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.DocumentProperties;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 문서 속성를 나타내는 레코드
     /// </summary>
@@ -57,5 +55,4 @@ namespace HwpLib.Object.DocInfo
             _caretPosition.Copy(from._caretPosition);
         }
     }
-
 }

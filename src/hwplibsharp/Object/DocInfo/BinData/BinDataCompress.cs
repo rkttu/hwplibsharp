@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/bindata/BinDataCompress.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BinData
 {
-
     /// <summary>
     /// 바이너리 데이터의 압축 방법
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.DocInfo.BinData
             };
         }
     }
-
 }

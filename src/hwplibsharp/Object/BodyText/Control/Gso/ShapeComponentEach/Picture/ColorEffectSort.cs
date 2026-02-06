@@ -1,12 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/ColorEffectSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
-using System;
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 색상 효과 종류
     /// </summary>
@@ -158,5 +156,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
             return ColorEffectSort.Alpha;
         }
     }
-
 }

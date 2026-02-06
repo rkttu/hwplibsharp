@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/style/StyleSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.Style
 {
-
     /// <summary>
     /// 스타일 종류
     /// </summary>
@@ -48,5 +47,4 @@ namespace HwpLib.Object.DocInfo.Style
             };
         }
     }
-
 }

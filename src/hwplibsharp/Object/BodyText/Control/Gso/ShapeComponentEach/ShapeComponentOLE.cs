@@ -1,15 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentOLE.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.LineInfo;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ole;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// OLE 개체 속성 레코드
     /// </summary>
@@ -149,5 +148,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             }
         }
     }
-
 }

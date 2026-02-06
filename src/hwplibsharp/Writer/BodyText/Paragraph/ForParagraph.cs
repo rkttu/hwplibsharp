@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForParagraph.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Writer.BodyText.Control;
 
-
 namespace HwpLib.Writer.BodyText.Paragraph
 {
-
     /// <summary>
     /// 문단을 쓰기 위한 객체
     /// </summary>
@@ -52,5 +50,4 @@ namespace HwpLib.Writer.BodyText.Paragraph
             }
         }
     }
-
 }

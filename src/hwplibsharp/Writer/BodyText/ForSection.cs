@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForSection.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText;
 using HwpLib.Writer.BodyText.Control.SectionDefine;
 using HwpLib.Writer.BodyText.Paragraph;
 
-
 namespace HwpLib.Writer.BodyText
 {
-
     /// <summary>
     /// 구역을 쓰기 위한 객체
     /// </summary>
@@ -34,5 +32,4 @@ namespace HwpLib.Writer.BodyText
             }
         }
     }
-
 }

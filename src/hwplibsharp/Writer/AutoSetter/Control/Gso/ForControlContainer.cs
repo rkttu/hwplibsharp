@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/control/gso/ForControlContainer.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 
-
 namespace HwpLib.Writer.AutoSetter.Control.Gso
 {
-
     /// <summary>
     /// 묶음 컨트롤을 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -53,5 +51,4 @@ namespace HwpLib.Writer.AutoSetter.Control.Gso
             }
         }
     }
-
 }

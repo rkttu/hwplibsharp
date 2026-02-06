@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/bookmark/ParameterItem.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Bookmark
 {
-
     /// <summary>
     /// 파라미터 아이탬 객체
     /// </summary>
@@ -210,5 +209,4 @@ namespace HwpLib.Object.BodyText.Control.Bookmark
             Value_BinData = from.Value_BinData;
         }
     }
-
 }

@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Paragraph.CharShape
 {
-
     /// <summary>
     /// 문단의 글자 모양에 대한 레코드.
     /// 예: (위치:0, 글자모양:1), (위치:5, 글자모양:3), (위치:9, 글자모양:2) 이럴 경우,
@@ -88,5 +87,4 @@ namespace HwpLib.Object.BodyText.Paragraph.CharShape
             return cloned;
         }
     }
-
 }

@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Paragraph.Text;
 
-
 namespace HwpLib.Reader.BodyText.Paragraph
 {
-
     /// <summary>
     /// 문단 텍스트 레코드를 읽기 위한 객체
     /// </summary>
@@ -84,5 +82,4 @@ namespace HwpLib.Reader.BodyText.Paragraph
             sr.ReadUInt2(); // 종료 코드 읽기
         }
     }
-
 }

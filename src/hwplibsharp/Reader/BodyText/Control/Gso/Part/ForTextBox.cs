@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/part/ForTextBox.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,20 +7,18 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Bookmark;
 using HwpLib.Object.BodyText.Control.Gso.TextBox;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso.Part
 {
-
     /// <summary>
-    /// �ۻ��ڸ� �б� ���� ��ü
+    /// 글상자를 읽기 위한 객체
     /// </summary>
     public static class ForTextBox
     {
         /// <summary>
-        /// �ۻ��ڸ� �д´�.
+        /// 글상자를 읽는다.
         /// </summary>
-        /// <param name="textBox">�ۻ���</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="textBox">글상자</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(TextBox textBox, CompoundStreamReader sr)
         {
             ListHeader(textBox.ListHeader, sr);
@@ -28,10 +26,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �ۻ����� ���� ����Ʈ ��� ���ڵ带 �д´�.
+        /// 글상자의 문단 리스트 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="lh">�ۻ����� ���� ����Ʈ ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="lh">글상자의 문단 리스트 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ListHeader(ListHeaderForTextBox lh, CompoundStreamReader sr)
         {
             lh.ParaCount = sr.ReadSInt4();
@@ -59,10 +57,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �ʵ� �̸��� �д´�.
+        /// 필드 이름을 읽는다.
         /// </summary>
-        /// <param name="lh">�ۻ����� ���� ����Ʈ ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="lh">글상자의 문단 리스트 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void FieldName(ListHeaderForTextBox lh, CompoundStreamReader sr)
         {
             var ps = new ParameterSet();
@@ -79,5 +77,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
             }
         }
     }
-
 }

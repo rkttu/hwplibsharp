@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/sectiondefine/TextDirection.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine
 {
-
     /// <summary>
     /// 텍스트 진행방향
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine
             };
         }
     }
-
 }

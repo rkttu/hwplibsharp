@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/pageoddeven/PageOddEvenAdjustHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Util.Binary;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageOddEvenAdjust
 {
-
-    using HwpLib.Util.Binary;
-
     /// <summary>
     /// 홀/짝수 조정(페이지 번호 제어) 컨트롤의 속성을 나타내는 객체
     /// </summary>
@@ -43,5 +42,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageOddEvenAdjust
             Value = from.Value;
         }
     }
-
 }

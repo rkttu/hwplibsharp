@@ -11,20 +11,18 @@ using HwpLib.Reader.BodyText.Control.Gso;
 using HwpLib.Reader.BodyText.Paragraph;
 using System;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ���� ����Ʈ�� �д� ��ü (ĸ��, ǥ, �Ӹ���/������, ����/���� ��� ��)
+    /// 문단 리스트를 읽는 객체
     /// </summary>
     public static class ForParagraphList
     {
         /// <summary>
-        /// ���� ����Ʈ�� �д´�.
+        /// 문단 리스트을 읽는다.
         /// </summary>
-        /// <param name="pli">���� ����Ʈ ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="pli">문단 리스트 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(IParagraphList pli, CompoundStreamReader sr)
         {
             var fp = new ForParagraph();
@@ -52,37 +50,37 @@ namespace HwpLib.Reader.BodyText.Control
     }
 
     /// <summary>
-    /// �ϳ��� ������ �б� ���� ��ü
+    /// 하나의 문단을 읽기 위한 객체
     /// </summary>
     public class ForParagraph
     {
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
         /// <summary>
-        /// ���� ����� level
+        /// 문단 헤더의 level
         /// </summary>
         private short _paraHeaderLevel;
 
         /// <summary>
-        /// ���� ��ü
+        /// 구역 객체
         /// </summary>
         private Object.BodyText.Paragraph.Paragraph? _paragraph;
 
         /// <summary>
-        /// ������
+        /// 생성자
         /// </summary>
         public ForParagraph()
         {
         }
 
         /// <summary>
-        /// �ϳ��� ������ �д´�.
+        /// 문단 리스트을 읽는다.
         /// </summary>
-        /// <param name="paragraph">���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="paragraph">문단 리스트 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(Object.BodyText.Paragraph.Paragraph paragraph, CompoundStreamReader sr)
         {
             if (sr.CurrentRecordHeader?.TagId != HWPTag.ParaHeader)
@@ -122,7 +120,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ��� ���ڵ带 �д´�.
+        /// 문단 헤더 레코드를 읽는다.
         /// </summary>
         private void ParaHeaderBody()
         {
@@ -130,7 +128,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ������ �ؽ�Ʈ ���ڵ带 �д´�.
+        /// 문단의 텍스트 레코드를 읽는다.
         /// </summary>
         private void ParaText()
         {
@@ -147,7 +145,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ������ ���� ��� ���ڵ带 �д´�.
+        /// 문단의 글자 모양 레코드를 읽는다.
         /// </summary>
         private void ParaCharShape()
         {
@@ -165,7 +163,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ������ ���̾ƿ� ���ڵ带 �д´�.
+        /// 문단의 레이아웃 레코드를 읽는다.
         /// </summary>
         private void ParaLineSeg()
         {
@@ -182,7 +180,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ������ ���� �±� ���ڵ带 �д´�.
+        /// 문단의 범위 태그 레코드를 읽는다.
         /// </summary>
         private void ParaRangeTag()
         {
@@ -200,7 +198,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ���ڵ� ����� ���� �ٱ������� ���θ� ��ȯ�Ѵ�.
+        /// 현재 레코드 다음에 다른 문단데이터의 여부를 반환한다.
         /// </summary>
         private bool IsOutOfParagraph()
         {
@@ -208,7 +206,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ������ ������ ������ �ڿ� �پ� �ִ��� ���θ� ��ȯ�Ѵ�.
+        /// 문단의 마지막 문단의 뒤에 붙어 있는지 여부를 반환한다.
         /// </summary>
         private bool IsFollowLastBatangPageInfo()
         {
@@ -218,7 +216,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �޸� ������ �ڿ� �پ� �ִ��� ���θ� ��ȯ�Ѵ�.
+        /// 메모 문단의 뒤에 붙어 있는지 여부를 반환한다.
         /// </summary>
         private bool IsFollowMemo()
         {
@@ -228,7 +226,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���ܿ� ���Ե� ��Ʈ���� �д´�.
+        /// 문단에 포함된 컨트롤을 읽는다.
         /// </summary>
         private void Control()
         {
@@ -242,7 +240,7 @@ namespace HwpLib.Reader.BodyText.Control
                 return;
             }
 
-            // Form ��Ʈ���� ��� (���� �������� ����)
+            // Form ��Ʈ���� ��� (현재 문단현재 문단)
             if (id == ControlType.Form.GetCtrlId())
             {
                 SkipControlWithSubRecords();
@@ -258,7 +256,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ���ڵ带 ���� ��Ʈ���� �ǳʶڴ�.
+        /// 하위 레코드를 가진 컨트롤을 건너뛴다.
         /// </summary>
         private void SkipControlWithSubRecords()
         {
@@ -280,12 +278,11 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ��Ÿ ���ڵ带 ��ŵ�Ѵ�.
+        /// 기타 레코드를 스킵한다.
         /// </summary>
         private void SkipETCRecord()
         {
             _sr!.SkipToEndRecord();
         }
     }
-
 }

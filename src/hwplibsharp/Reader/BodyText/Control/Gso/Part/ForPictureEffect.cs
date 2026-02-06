@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/part/ForPictureEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,20 +7,18 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture;
 using System;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso.Part
 {
-
     /// <summary>
-    /// �׸� ��ü �Ӽ� ���ڵ��� �׸� ȿ�� �κ��� �б� ���� ��ü
+    /// 그림 개체 속성 레코드의 그림 효과 부분을 읽기 위한 객체
     /// </summary>
     public static class ForPictureEffect
     {
         /// <summary>
-        /// �׸� ��ü �Ӽ� ���ڵ��� �׸� ȿ�� �κ��� �д´�.
+        /// 그림 개체 속성 레코드의 그림 효과 부분을 읽는다.
         /// </summary>
-        /// <param name="pe">�׸� ��ü �Ӽ� ���ڵ��� �׸� ȿ���� ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="pe">그림 개체 속성 레코드의 그림 효과를 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(PictureEffect pe, CompoundStreamReader sr)
         {
             pe.Property.Value = sr.ReadUInt4();
@@ -47,10 +45,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �׸��� ȿ�� �κ��� �д´�.
+        /// 그림자 효과 부분을 읽는다.
         /// </summary>
-        /// <param name="se">�׸��� ȿ�� �κ��� ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="se">그림자 효과 부분을 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShadowEffect(ShadowEffect se, CompoundStreamReader sr)
         {
             se.Style = sr.ReadSInt4();
@@ -69,10 +67,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// ���� �Ӽ� �κ��� �д´�.
+        /// 색상 속성 부분을 읽는다.
         /// </summary>
-        /// <param name="cp">���� �Ӽ��� ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="cp">색상 속성을 나타내는  객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ColorProperty(ColorWithEffect cp, CompoundStreamReader sr)
         {
             cp.Type = sr.ReadSInt4();
@@ -95,10 +93,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �׿� ȿ�� �κ��� �д´�.
+        /// 네온 효과 부분을 읽는다.
         /// </summary>
-        /// <param name="ne">�׿� ȿ���� ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="ne">네온 효과을 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void NeonEffect(NeonEffect ne, CompoundStreamReader sr)
         {
             ne.Transparency = sr.ReadFloat();
@@ -107,20 +105,20 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �ε巯�� �����ڸ� ȿ�� �κ��� �д´�.
+        /// 부드러운 가장자리 효과 부분을 읽는다.
         /// </summary>
-        /// <param name="see">�ε巯�� �����ڸ� ȿ���� ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="see">부드러운 가장자리 효과을 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void SoftEdgeEffect(SoftEdgeEffect see, CompoundStreamReader sr)
         {
             see.Radius = sr.ReadFloat();
         }
 
         /// <summary>
-        /// �ݻ� ȿ�� �κ��� �д´�.
+        /// 반사 효과 부분을 읽는다.
         /// </summary>
-        /// <param name="re">�ݻ� ȿ���� ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="re">반사 효과을 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ReflectionEffect(ReflectionEffect re, CompoundStreamReader sr)
         {
             re.Style = sr.ReadSInt4();
@@ -139,5 +137,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
             re.OffsetDirection = sr.ReadFloat();
         }
     }
-
 }

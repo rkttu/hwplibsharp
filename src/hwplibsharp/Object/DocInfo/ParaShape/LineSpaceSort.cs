@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/parashape/LineSpaceSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.ParaShape
 {
-
     /// <summary>
     /// 줄 간격 종류 (한글 2007 이하 버전에서만 사용)
     /// </summary>
@@ -60,5 +59,4 @@ namespace HwpLib.Object.DocInfo.ParaShape
             };
         }
     }
-
 }

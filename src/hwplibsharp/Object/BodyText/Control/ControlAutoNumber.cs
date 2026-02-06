@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlAutoNumber.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader;
+
 namespace HwpLib.Object.BodyText.Control
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader;
-
     /// <summary>
     /// 자동번호 컨트롤에 대한 객체
     /// </summary>
@@ -38,5 +37,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

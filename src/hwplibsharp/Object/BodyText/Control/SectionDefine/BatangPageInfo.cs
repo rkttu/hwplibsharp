@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/BatangPageInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText.Paragraph;
 
-
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 바탕 페이지 정보를 나타내는 객체
     /// </summary>
@@ -55,5 +53,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             return cloned;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/tbl/ForTable.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.Table;
 using HwpLib.Object.Etc;
 using HwpLib.Object.FileHeader;
 
-
 namespace HwpLib.Writer.BodyText.Control.Tbl
 {
-
     /// <summary>
     /// 표 정보 레코드를 쓰기 위한 객체
     /// </summary>
@@ -93,5 +91,4 @@ namespace HwpLib.Writer.BodyText.Control.Tbl
             }
         }
     }
-
 }

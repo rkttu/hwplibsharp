@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlIndexMark.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader;
+
 namespace HwpLib.Object.BodyText.Control
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader;
-
     /// <summary>
     /// 찾아보기 표식 컨트롤
     /// </summary>
@@ -38,5 +37,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

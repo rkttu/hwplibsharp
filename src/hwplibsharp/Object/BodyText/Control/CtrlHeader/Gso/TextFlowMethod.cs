@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/gso/TextFlowMethod.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
 {
-
     /// <summary>
     /// 오브젝트 주위를 텍스트가 어떻게 흘러갈지 지정하는 옵션
     /// </summary>
@@ -54,5 +53,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
             _ => TextFlowMethod.FitWithText
         };
     }
-
 }

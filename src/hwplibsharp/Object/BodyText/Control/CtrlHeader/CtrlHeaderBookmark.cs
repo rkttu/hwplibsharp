@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderBookmark.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
     /// <summary>
     /// 책갈피 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -27,5 +26,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         {
         }
     }
-
 }

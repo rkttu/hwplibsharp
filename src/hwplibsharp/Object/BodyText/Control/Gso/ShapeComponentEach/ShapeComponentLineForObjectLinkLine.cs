@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentLineForObjectLinkLine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.ObjectLinkLine;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// 객체 연결선 컨트롤을 위한 선 개체 속성 레코드
     /// </summary>
@@ -192,5 +191,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             }
         }
     }
-
 }

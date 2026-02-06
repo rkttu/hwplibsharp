@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForFaceName.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.DocInfo.FaceName;
 using HwpLib.Object.Etc;
 using HwpLib.Util;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 글꼴 레코드를 쓰기 위한 객체
     /// </summary>
@@ -106,5 +104,4 @@ namespace HwpLib.Writer.DocInfo
             sw.WriteUInt1(fti.XHeight);
         }
     }
-
 }

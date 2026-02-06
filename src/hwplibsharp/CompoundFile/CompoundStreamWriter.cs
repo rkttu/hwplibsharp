@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/compoundFile/writer/StreamWriter.java
 // Repository: https://github.com/neolord0/hwplib
 // Note: Adapted for OpenMcdf (C# uses OpenMcdf instead of Apache POI)
@@ -13,10 +13,8 @@ using System;
 using System.IO;
 using System.Text;
 
-
 namespace HwpLib.CompoundFile
 {
-
     /// <summary>
     /// MS Compound 파일의 스트림에 내용을 저장하기 위한 객체
     /// </summary>
@@ -430,5 +428,4 @@ namespace HwpLib.CompoundFile
         /// </summary>
         public bool Compress => _compress;
     }
-
 }

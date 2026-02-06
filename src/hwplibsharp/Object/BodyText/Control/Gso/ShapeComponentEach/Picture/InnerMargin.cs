@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/InnerMargin.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 안쪽 여백 정보
     /// </summary>
@@ -85,5 +85,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
             _bottom = from._bottom;
         }
     }
-
 }

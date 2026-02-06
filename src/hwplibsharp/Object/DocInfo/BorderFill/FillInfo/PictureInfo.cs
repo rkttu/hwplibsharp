@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/PictureInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 그림 정보 객체
     /// </summary>
@@ -87,5 +86,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
             _binItemID = from._binItemID;
         }
     }
-
 }

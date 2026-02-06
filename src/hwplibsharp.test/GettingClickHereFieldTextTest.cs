@@ -20,12 +20,12 @@ public class GettingClickHereFieldTextTest
         Assert.IsNotNull(hwpFile);
 
         // Act
-        var text1 = FieldFinder.GetClickHereText(hwpFile, "필드1", TextExtractMethod.OnlyMainParagraph);
-        var text2 = FieldFinder.GetClickHereText(hwpFile, "필드2", TextExtractMethod.OnlyMainParagraph);
-        var text3 = FieldFinder.GetClickHereText(hwpFile, "Table필드1", TextExtractMethod.OnlyMainParagraph);
-        var text4 = FieldFinder.GetClickHereText(hwpFile, "멀티라인누름틀", TextExtractMethod.OnlyMainParagraph);
-        var text5 = FieldFinder.GetClickHereText(hwpFile, "xxx", TextExtractMethod.OnlyMainParagraph);
-        var longText = FieldFinder.GetClickHereText(hwpFile, "long", TextExtractMethod.OnlyMainParagraph);
+        var text1 = FieldFinder.GetClickHereText(hwpFile, "필드1"/*, TextExtractMethod.OnlyMainParagraph*/);
+        var text2 = FieldFinder.GetClickHereText(hwpFile, "필드2"/*, TextExtractMethod.OnlyMainParagraph*/);
+        var text3 = FieldFinder.GetClickHereText(hwpFile, "Table필드1"/*, TextExtractMethod.OnlyMainParagraph*/);
+        var text4 = FieldFinder.GetClickHereText(hwpFile, "멀티라인누름틀"/*, TextExtractMethod.OnlyMainParagraph*/);
+        var text5 = FieldFinder.GetClickHereText(hwpFile, "xxx"/*, TextExtractMethod.OnlyMainParagraph*/);
+        var longText = FieldFinder.GetClickHereText(hwpFile, "long"/*, TextExtractMethod.OnlyMainParagraph*/);
 
         // Assert
         Console.WriteLine($"필드1 ==> {text1}");

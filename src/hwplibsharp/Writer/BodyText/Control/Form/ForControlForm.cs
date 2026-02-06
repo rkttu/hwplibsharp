@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/form/ForControlForm.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.BodyText.Control.Form;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Writer.BodyText.Control.Form
 {
-
     /// <summary>
     /// 양식 개체 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -35,7 +33,7 @@ namespace HwpLib.Writer.BodyText.Control.Form
         private static void FormObject(FormObject fo, CompoundStreamWriter sw)
         {
             HWPString propertiesString = fo.Properties.ToHWPString();
-            RecordHeader(fo, propertiesString, sw);
+            RecordHeader(/*fo, */propertiesString, sw);
             sw.WriteUInt4(fo.Type?.GetId() ?? 0);
             sw.WriteUInt4(fo.Type?.GetId() ?? 0);
             sw.WriteUInt2((ushort)propertiesString.GetWCharsSize());
@@ -43,15 +41,14 @@ namespace HwpLib.Writer.BodyText.Control.Form
             sw.WriteHWPString(propertiesString);
         }
 
-        private static void RecordHeader(FormObject fo, HWPString propertiesString, CompoundStreamWriter sw)
+        private static void RecordHeader(/*FormObject fo, */HWPString propertiesString, CompoundStreamWriter sw)
         {
-            sw.WriteRecordHeader(HWPTag.FormObject, GetSize(fo, propertiesString));
+            sw.WriteRecordHeader(HWPTag.FormObject, GetSize(/*fo, */propertiesString));
         }
 
-        private static long GetSize(FormObject fo, HWPString propertiesString)
+        private static long GetSize(/*FormObject fo, */HWPString propertiesString)
         {
             return 12 + propertiesString.GetWCharsSize();
         }
     }
-
 }

@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/FillType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 채우기 종류
     /// </summary>
@@ -71,5 +69,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
             _value = from._value;
         }
     }
-
 }

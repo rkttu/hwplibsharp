@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,61 +10,56 @@ using HwpLib.Object.BodyText.Control.HeaderFooter;
 using HwpLib.Object.Etc;
 using System;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// �Ӹ��� ��Ʈ���� �б� ���� ��ü
+    /// 머리말 컨트롤을 읽기 위한 객체
     /// </summary>
     public class ForControlHeader
     {
         /// <summary>
-        /// �Ӹ��� ��Ʈ��
+        /// 머리말 컨트롤
         /// </summary>
         private ControlHeader? _head;
 
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
         /// <summary>
-        /// ������
+        /// 생성자
         /// </summary>
         public ForControlHeader()
         {
         }
 
         /// <summary>
-        /// �Ӹ��� ��Ʈ���� �д´�.
+        /// 머리말 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="head">�Ӹ��� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="head">머리말 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(ControlHeader head, CompoundStreamReader sr)
         {
             _head = head;
             _sr = sr;
-
             CtrlHeader();
             ListHeader();
             ParagraphList();
         }
 
         /// <summary>
-        /// �Ӹ��� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 머리말 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
         private void CtrlHeader()
         {
             _head!.Header.ApplyPage = HeaderFooterApplyPageExtensions.FromValue((byte)_sr!.ReadUInt4());
-
             if (_sr.IsEndOfRecord()) return;
-
             _head.Header.CreateIndex = _sr.ReadSInt4();
         }
 
         /// <summary>
-        /// �Ӹ��� ��Ʈ���� ���� ����Ʈ ��� ���ڵ带 �д´�.
+        /// 머리말 컨트롤의 문단 리스트 헤더 레코드를 읽는다.
         /// </summary>
         private void ListHeader()
         {
@@ -85,12 +80,11 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ����Ʈ�� �д´�.
+        /// 문단 리스트를 읽는다.
         /// </summary>
         private void ParagraphList()
         {
             ForParagraphList.Read(_head!.ParagraphList, _sr!);
         }
     }
-
 }

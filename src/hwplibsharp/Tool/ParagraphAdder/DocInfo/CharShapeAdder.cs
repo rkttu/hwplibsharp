@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/CharShapeAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -14,8 +14,8 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class CharShapeInfoAdder
     {
-        private DocInfoAdder _docInfoAdder;
-        private Dictionary<int, int> _idMatchingMap;
+        private readonly DocInfoAdder _docInfoAdder;
+        private readonly Dictionary<int, int> _idMatchingMap;
 
         /// <summary>
         /// CharShapeInfoAdder 클래스의 새 인스턴스를 초기화합니다.
@@ -129,7 +129,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
                 && _docInfoAdder.ForFaceNameInfo().EqualByUserId(source.User, target.User);
         }
 
-        private bool EqualRatios(Ratios? source, Ratios? target)
+        private static bool EqualRatios(Ratios? source, Ratios? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -148,7 +148,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return true;
         }
 
-        private bool EqualCharSpaces(CharSpaces? source, CharSpaces? target)
+        private static bool EqualCharSpaces(CharSpaces? source, CharSpaces? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -167,7 +167,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return true;
         }
 
-        private bool EqualRelativeSizes(RelativeSizes? source, RelativeSizes? target)
+        private static bool EqualRelativeSizes(RelativeSizes? source, RelativeSizes? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -186,7 +186,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             return true;
         }
 
-        private bool EqualCharOffsets(CharOffsets? source, CharOffsets? target)
+        private static bool EqualCharOffsets(CharOffsets? source, CharOffsets? target)
         {
             if (source == null || target == null) return source == target;
 
@@ -256,7 +256,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             target.User = _docInfoAdder.ForFaceNameInfo().ProcessByUserId(source.User);
         }
 
-        private void CopyRatios(Ratios? source, Ratios? target)
+        private static void CopyRatios(Ratios? source, Ratios? target)
         {
             if (source == null || target == null) return;
 
@@ -269,7 +269,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             target.User = source.User;
         }
 
-        private void CopyCharSpaces(CharSpaces? source, CharSpaces? target)
+        private static void CopyCharSpaces(CharSpaces? source, CharSpaces? target)
         {
             if (source == null || target == null) return;
 
@@ -282,7 +282,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             target.User = source.User;
         }
 
-        private void CopyRelativeSizes(RelativeSizes? source, RelativeSizes? target)
+        private static void CopyRelativeSizes(RelativeSizes? source, RelativeSizes? target)
         {
             if (source == null || target == null) return;
 
@@ -295,7 +295,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
             target.User = source.User;
         }
 
-        private void CopyCharOffsets(CharOffsets? source, CharOffsets? target)
+        private static void CopyCharOffsets(CharOffsets? source, CharOffsets? target)
         {
             if (source == null || target == null) return;
 

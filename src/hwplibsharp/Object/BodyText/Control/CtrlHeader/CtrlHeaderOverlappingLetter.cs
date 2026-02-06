@@ -1,15 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderOverlappingLetter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.Etc;
 using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 글자 겹침 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -18,12 +16,12 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 겹침 글자 리스트
         /// </summary>
-        private List<HWPString> overlappingLetterList;
+        private readonly List<HWPString> overlappingLetterList;
 
         /// <summary>
         /// 테두리 내부 글자의 글자모양 id 리스트
         /// </summary>
-        private List<uint> charShapeIdList;
+        private readonly List<uint> charShapeIdList;
 
         /// <summary>
         /// 생성자
@@ -103,5 +101,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             }
         }
     }
-
 }

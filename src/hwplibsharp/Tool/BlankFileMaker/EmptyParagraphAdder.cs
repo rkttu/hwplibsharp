@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/blankfilemaker/EmptyParagraphAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Paragraph;
 using HwpLib.Object.BodyText.Paragraph.Header;
 
-
 namespace HwpLib.Tool.BlankFileMaker
 {
-
     /// <summary>
     /// 빈 HWP 파일 생성 시 빈 문단을 추가하는 클래스
     /// </summary>
@@ -104,5 +102,4 @@ namespace HwpLib.Tool.BlankFileMaker
             item.Tag.Value = 393216;
         }
     }
-
 }

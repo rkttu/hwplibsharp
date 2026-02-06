@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/documentproperties/StartNumber.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.DocumentProperties
 {
-
     /// <summary>
     /// 각종 시작번호에 대한 정보
     /// </summary>
@@ -62,5 +61,4 @@ namespace HwpLib.Object.DocInfo.DocumentProperties
             Equation = from.Equation;
         }
     }
-
 }

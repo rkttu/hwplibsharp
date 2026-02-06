@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/form/properties/PropertyNormal.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Form.Properties
 {
-
     /// <summary>
     /// 일반 폼 속성 (WString, Int, Bool 타입)
     /// </summary>
@@ -74,5 +73,4 @@ namespace HwpLib.Object.BodyText.Control.Form.Properties
             return sb.ToString();
         }
     }
-
 }

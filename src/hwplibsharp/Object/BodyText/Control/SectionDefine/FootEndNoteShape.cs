@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/FootEndNoteShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 미주/각주 모양 정보에 대한 레코드
     /// </summary>
@@ -180,5 +178,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             _unknown = from._unknown;
         }
     }
-
 }

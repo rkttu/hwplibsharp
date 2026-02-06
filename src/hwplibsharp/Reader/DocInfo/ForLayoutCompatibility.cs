@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForLayoutCompatibility.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 레이아웃 호환 레코드를 읽기 위한 객체
     /// </summary>
@@ -29,5 +27,4 @@ namespace HwpLib.Reader.DocInfo
             lc.FieldLevelFormat = sr.ReadUInt4();
         }
     }
-
 }

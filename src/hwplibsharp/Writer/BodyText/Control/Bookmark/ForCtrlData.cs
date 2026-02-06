@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/bookmark/ForCtrlData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Bookmark;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.Bookmark
 {
-
     /// <summary>
     /// 임의 데이터 레코드를 쓰기 위한 객체
     /// </summary>
@@ -46,5 +44,4 @@ namespace HwpLib.Writer.BodyText.Control.Bookmark
             return ForParameterSet.GetSize(cd.ParameterSet);
         }
     }
-
 }

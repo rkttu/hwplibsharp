@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderNewNumber.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.NewNumber;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.NewNumber;
-
     /// <summary>
     /// 새 번호 지정 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -16,7 +15,7 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 속성
         /// </summary>
-        private NewNumberHeaderProperty property;
+        private readonly NewNumberHeaderProperty property;
 
         /// <summary>
         /// 생성자
@@ -48,5 +47,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             Number = from2.Number;
         }
     }
-
 }

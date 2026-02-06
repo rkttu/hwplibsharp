@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/part/ForShapeComponent.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,20 +11,18 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.RenderingInfo;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.ShadowInfo;
 using HwpLib.Reader.DocInfo.BorderFill;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso.Part
 {
-
     /// <summary>
-    /// �׸��� ��ü�� ��ü ���� �Ӽ� ���ڵ带 �б� ���� ��ü
+    /// 그리기 개체의 객체 공통 속성 레코드을 읽기 위한 객체
     /// </summary>
     public static class ForShapeComponent
     {
         /// <summary>
-        /// �׸��� ��ü�� ��ü ���� �Ӽ� ���ڵ带 �д´�.
+        /// 그리기 개체의 객체 공통 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="gsoControl">�׸��� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="gsoControl">그리기 개체</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(GsoControl gsoControl, CompoundStreamReader sr)
         {
             if (gsoControl.GsoType == GsoControlType.Container)
@@ -38,10 +36,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ带 �д´�.
+        /// 일반 컨트롤을 위한 객체 공통 속성 레코드을 읽는다.
         /// </summary>
-        /// <param name="scn">��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scn">객체 공통 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentForNormal(ShapeComponentNormal scn, CompoundStreamReader sr)
         {
             CommonPart(scn, sr);
@@ -73,10 +71,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// ��ü ���� �Ӽ� ���ڵ��� ���� �κ��� �д´�.
+        /// 객체 공통 속성 레코드의 공통 부분을 읽는다.
         /// </summary>
-        /// <param name="sc">��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="sc">객체 공통 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CommonPart(ShapeComponent sc, CompoundStreamReader sr)
         {
             sc.OffsetX = sr.ReadSInt4();
@@ -96,10 +94,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// ��ü ���� �Ӽ� ���ڵ��� rendering ������ �д´�.
+        /// 객체 공통 속성 레코드의 rendering 정보를 읽는다.
         /// </summary>
-        /// <param name="ri">rendering ������ ��Ÿ���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="ri">rendering 정보를 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void RenderingInfo(RenderingInfo ri, CompoundStreamReader sr)
         {
             int scaleRotateMatrixCount = sr.ReadUInt2();
@@ -113,10 +111,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// ��ȯ ����� �д´�.
+        /// 변환 행렬을 읽는다.
         /// </summary>
-        /// <param name="m">��ȯ ��� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="m">변환 행렬 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void Matrix(Matrix m, CompoundStreamReader sr)
         {
             for (int index = 0; index < 6; index++)
@@ -126,10 +124,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ��� line ������ �д´�.
+        /// 일반 컨트롤을 위한 객체 공통 속성 레코드의 line 정보를 읽는다.
         /// </summary>
-        /// <param name="scn">�Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scn">일반 컨트롤을 위한 객체 공통 속성 레코드의 line 정보를 나타내는 객체</param>
+        /// <param name="sr">스트림 리더</param>
         private static void LineInfo(ShapeComponentNormal scn, CompoundStreamReader sr)
         {
             scn.CreateLineInfo();
@@ -141,10 +139,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ��� ��� ������ �д´�.
+        /// 일반 컨트롤을 위한 객체 공통 속성 레코드의 배경 정보를 읽는다.
         /// </summary>
-        /// <param name="scn">�Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scn">일반 컨트롤을 위한 객체 공통 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void FillInfo(ShapeComponentNormal scn, CompoundStreamReader sr)
         {
             scn.CreateFillInfo();
@@ -152,10 +150,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ��� �׸��� ������ �д´�.
+        /// 일반 컨트롤을 위한 객체 공통 속성 레코드의 그림자 정보를 읽는다.
         /// </summary>
-        /// <param name="scn">�Ϲ� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scn">일반 컨트롤을 위한 객체 공통 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShadowInfo(ShapeComponentNormal scn, CompoundStreamReader sr)
         {
             scn.CreateShadowInfo();
@@ -167,10 +165,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// ���� ��Ʈ���� ���� ��ü ���� �Ӽ� ���ڵ带 �д´�.
+        /// 묶음 컨트롤을 위한 객체 공통 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="scc">��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scc">객체 공통 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentForContainer(ShapeComponentContainer scc, CompoundStreamReader sr)
         {
             CommonPart(scc, sr);
@@ -182,10 +180,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
         }
 
         /// <summary>
-        /// �����ϰ� �ִ� ��Ʈ�ѿ� ���� ���� �κ��� �д´�.
+        /// 포함하고 있는 컨트롤에 대한 정보 부분을 읽는다.
         /// </summary>
-        /// <param name="scc">���� ��Ʈ���� ��ü ���� �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scc">묶음 컨트롤의 객체 공통 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ChildInfo(ShapeComponentContainer scc, CompoundStreamReader sr)
         {
             int count = sr.ReadUInt2();
@@ -196,5 +194,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
             }
         }
     }
-
 }

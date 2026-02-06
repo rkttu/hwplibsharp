@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/part/shapecomponent/ForShapeComponentForNormal.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,10 +11,8 @@ using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.DocInfo.BorderFill;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent
 {
-
     /// <summary>
     /// 묶음 컨트롤이 아닌 일반 컨트롤의 객체 공통 속성 레코드를 쓰기 위한 객체
     /// </summary>
@@ -156,5 +154,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent
             sw.WriteUInt4(scn.GsoId);
         }
     }
-
 }

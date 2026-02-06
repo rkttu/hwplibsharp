@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponent/lineinfo/LineArrowShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.LineInfo
 {
-
     /// <summary>
     /// 선 끝에 화살표 모양
     /// </summary>
@@ -78,5 +77,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.LineInfo
                 _ => LineArrowShape.None,
             };
     }
-
 }

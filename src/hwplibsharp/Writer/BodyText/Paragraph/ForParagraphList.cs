@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForParagraphList.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText;
 
-
 namespace HwpLib.Writer.BodyText.Paragraph
 {
-
     /// <summary>
     /// 문단 리스트를 쓰기 위한 객체
     /// </summary>
@@ -28,5 +26,4 @@ namespace HwpLib.Writer.BodyText.Paragraph
             }
         }
     }
-
 }

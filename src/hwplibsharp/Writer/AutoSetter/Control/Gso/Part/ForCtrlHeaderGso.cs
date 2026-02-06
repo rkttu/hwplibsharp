@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/control/gso/part/ForCtrlHeaderGso.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.BodyText.Control.Gso.Caption;
 
-
 namespace HwpLib.Writer.AutoSetter.Control.Gso.Part
 {
-
     /// <summary>
     /// 그리기 개체의 컨트롤 헤더 레코드를 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -39,5 +37,4 @@ namespace HwpLib.Writer.AutoSetter.Control.Gso.Part
             }
         }
     }
-
 }

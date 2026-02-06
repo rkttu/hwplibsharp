@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/Scripts.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object
 {
-
     /// <summary>
     /// 스크립트 정보
     /// </summary>
@@ -51,5 +50,4 @@ namespace HwpLib.Object
             _jScriptVersion = from._jScriptVersion;
         }
     }
-
 }

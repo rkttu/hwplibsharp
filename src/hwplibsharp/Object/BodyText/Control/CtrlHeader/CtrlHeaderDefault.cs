@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderDefault.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
     /// <summary>
     /// 기본 컨트롤 헤더 레코드
     /// </summary>
@@ -29,5 +28,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             // nothing
         }
     }
-
 }

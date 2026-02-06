@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlPolygon.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,20 +9,18 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// �ٰ��� ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 다각형 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlPolygon
     {
         /// <summary>
-        /// �ٰ��� ��Ʈ���� ������ �κ��� �д´�.
+        /// 다각형 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="polygon">�ٰ��� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="polygon">다각형 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlPolygon polygon, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -45,10 +43,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �ٰ��� ��ü �Ӽ� ���ڵ带 �д´�.
+        /// 다각형 개체 속성 레코드을 읽는다.
         /// </summary>
-        /// <param name="scp">�ٰ��� ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="scp">다각형 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentPolygon(ShapeComponentPolygon scp, CompoundStreamReader sr)
         {
             int positionCount = sr.ReadSInt4();
@@ -64,5 +62,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             }
         }
     }
-
 }

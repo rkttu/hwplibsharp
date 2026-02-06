@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/forfield/settext/ForControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -52,25 +52,17 @@ namespace HwpLib.Tool.ObjectFinder.ForField.SetText
             if (c.IsField)
                 return SetFieldResult.InProcess;
 
-            switch (c.Type)
+            return c.Type switch
             {
-                case ControlType.Table:
-                    return Table((ControlTable)c, fieldType, fieldName, textBuffer);
-                case ControlType.Gso:
-                    return ForGsoSetText.SetFieldText((GsoControl)c, fieldType, fieldName, textBuffer);
-                case ControlType.Header:
-                    return Header((ControlHeader)c, fieldType, fieldName, textBuffer);
-                case ControlType.Footer:
-                    return Footer((ControlFooter)c, fieldType, fieldName, textBuffer);
-                case ControlType.Footnote:
-                    return Footnote((ControlFootnote)c, fieldType, fieldName, textBuffer);
-                case ControlType.Endnote:
-                    return Endnote((ControlEndnote)c, fieldType, fieldName, textBuffer);
-                case ControlType.HiddenComment:
-                    return HiddenComment((ControlHiddenComment)c, fieldType, fieldName, textBuffer);
-                default:
-                    return SetFieldResult.InProcess;
-            }
+                ControlType.Table => Table((ControlTable)c, fieldType, fieldName, textBuffer),
+                ControlType.Gso => ForGsoSetText.SetFieldText((GsoControl)c, fieldType, fieldName, textBuffer),
+                ControlType.Header => Header((ControlHeader)c, fieldType, fieldName, textBuffer),
+                ControlType.Footer => Footer((ControlFooter)c, fieldType, fieldName, textBuffer),
+                ControlType.Footnote => Footnote((ControlFootnote)c, fieldType, fieldName, textBuffer),
+                ControlType.Endnote => Endnote((ControlEndnote)c, fieldType, fieldName, textBuffer),
+                ControlType.HiddenComment => HiddenComment((ControlHiddenComment)c, fieldType, fieldName, textBuffer),
+                _ => SetFieldResult.InProcess,
+            };
         }
 
         /// <summary>

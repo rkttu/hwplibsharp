@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderPageNumberPosition.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.PageNumberPosition;
+using HwpLib.Object.Etc;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.PageNumberPosition;
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 쪽 번호 위치 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -17,22 +16,22 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 속성
         /// </summary>
-        private PageNumberPositionHeaderProperty property;
+        private readonly PageNumberPositionHeaderProperty property;
 
         /// <summary>
         /// 사용자 기호
         /// </summary>
-        private HWPString userSymbol;
+        private readonly HWPString userSymbol;
 
         /// <summary>
         /// 앞 장식 문자
         /// </summary>
-        private HWPString beforeDecorationLetter;
+        private readonly HWPString beforeDecorationLetter;
 
         /// <summary>
         /// 뒤 장식 문자
         /// </summary>
-        private HWPString afterDecorationLetter;
+        private readonly HWPString afterDecorationLetter;
 
         /// <summary>
         /// 생성자
@@ -98,5 +97,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             afterDecorationLetter.Copy(from2.afterDecorationLetter);
         }
     }
-
 }

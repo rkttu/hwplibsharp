@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/UnderLineSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 밑줄 종류
     /// </summary>
@@ -47,5 +46,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             _ => UnderLineSort.None
         };
     }
-
 }

@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/ParaShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.ParaShape;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 문단 모양에 대한 레코드
     /// </summary>
@@ -222,5 +220,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

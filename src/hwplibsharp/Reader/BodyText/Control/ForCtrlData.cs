@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForCtrlData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,20 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Bookmark;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ���� ����Ÿ ���ڵ带 �б� ���� ��ü
+    /// 임의 데이타 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForCtrlData
     {
         /// <summary>
-        /// ���� ������ ��ü�� �д´�.
+        /// 임의 데이터 객체를 읽는다.
         /// </summary>
-        /// <param name="sr">��Ʈ�� ����</param>
-        /// <returns>���� ���� ������ ��ü</returns>
+        /// <param name="sr">스트림 리더</param>
+        /// <returns>임의 데이터 객체</returns>
         public static CtrlData Read(CompoundStreamReader sr)
         {
             var ctrlData = new CtrlData();
@@ -27,5 +25,4 @@ namespace HwpLib.Reader.BodyText.Control
             return ctrlData;
         }
     }
-
 }

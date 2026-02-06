@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/IDMappings.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 아이디 매핑 헤더를 나타내는 레코드. "DocInfo" stream 안에 있는 다른 객체들의 개수를 저장한다.
     /// </summary>
@@ -225,5 +224,4 @@ namespace HwpLib.Object.DocInfo
             _trackChangeAuthorCount = from._trackChangeAuthorCount;
         }
     }
-
 }

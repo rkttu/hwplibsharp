@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/compoundFile/reader/StreamReader.java
 // Repository: https://github.com/neolord0/hwplib
 // Note: Adapted for OpenMcdf (C# uses OpenMcdf instead of Apache POI)
@@ -11,10 +11,8 @@ using System;
 using System.IO;
 using System.Text;
 
-
 namespace HwpLib.CompoundFile
 {
-
     /// <summary>
     /// 레코드 헤더를 나타내는 클래스
     /// </summary>
@@ -537,5 +535,4 @@ namespace HwpLib.CompoundFile
             Dispose(false);
         }
     }
-
 }

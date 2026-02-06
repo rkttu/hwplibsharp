@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/SoftEdgeEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 부드러운 가장자리 효과 속성
     /// </summary>
@@ -40,5 +40,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
             _radius = from._radius;
         }
     }
-
 }

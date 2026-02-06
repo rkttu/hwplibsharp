@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/part/ForCtrlHeaderGso.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.Etc;
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso.Part
 {
-
     /// <summary>
     /// 그리기 개체의 컨트롤 헤더 레코드를 쓰기 위한 객체
     /// </summary>
@@ -69,5 +67,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso.Part
             return size;
         }
     }
-
 }

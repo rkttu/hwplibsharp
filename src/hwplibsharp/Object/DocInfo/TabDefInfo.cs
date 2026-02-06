@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/TabDef.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.DocInfo.TabDef;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 탭 정의에 대한 레코드
     /// </summary>
@@ -66,5 +64,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

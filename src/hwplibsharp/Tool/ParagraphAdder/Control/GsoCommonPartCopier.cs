@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/control/GsoCommonPartCopier.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -36,9 +36,8 @@ namespace HwpLib.Tool.ParagraphAdder.Control
 
             if (source.GsoType == GsoControlType.Container)
             {
-                var sourceComp = source.ShapeComponent as ShapeComponentContainer;
                 var targetComp = target.ShapeComponent as ShapeComponentContainer;
-                if (sourceComp != null)
+                if (source.ShapeComponent is ShapeComponentContainer sourceComp)
                 {
                     targetComp?.Copy(sourceComp);
                 }

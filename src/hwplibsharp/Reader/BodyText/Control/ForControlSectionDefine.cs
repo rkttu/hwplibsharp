@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlSectionDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,42 +8,40 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Secd;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ���� ���� ��Ʈ���� �б� ���� ��ü
+    /// 구역 정의 컨트롤을 읽기 위한 객체
     /// </summary>
     public class ForControlSectionDefine
     {
         /// <summary>
-        /// ���� ���� ��Ʈ��
+        /// 수식 컨트롤
         /// </summary>
         private ControlSectionDefine? _secd;
 
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
         /// <summary>
-        /// ��Ʈ������� ����
+        /// 컨트롤데이터의 유무
         /// </summary>
         private short _ctrlHeaderLevel;
 
         /// <summary>
-        /// ��/���ָ�� ���ڵ� �ε���
+        /// 각/미주모양 레코드 인덱스
         /// </summary>
         private int _endFootnoteShapeIndex;
 
         /// <summary>
-        /// �� �׵θ�/��� ���ڵ� �ε���
+        /// 쪽 테두리/배경 레코드 인덱스
         /// </summary>
         private int _pageBorderFillIndex;
 
         /// <summary>
-        /// ������
+        /// 생성자
         /// </summary>
         public ForControlSectionDefine()
         {
@@ -52,25 +50,22 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ���� ��Ʈ���� �д´�.
+        /// 구역 정의 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="secd">���� ���� ��Ʈ�� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="secd">구역 정의 컨트롤 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(ControlSectionDefine secd, CompoundStreamReader sr)
         {
             _secd = secd;
             _sr = sr;
             _ctrlHeaderLevel = (short)sr.CurrentRecordHeader!.Level;
-
             CtrlHeader();
-
             while (!sr.IsEndOfStream())
             {
                 if (!sr.IsImmediatelyAfterReadingHeader)
                 {
                     sr.ReadRecordHeader();
                 }
-
                 if (_ctrlHeaderLevel >= sr.CurrentRecordHeader!.Level)
                 {
                     break;
@@ -80,7 +75,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 구역 정의 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
         private void CtrlHeader()
         {
@@ -88,12 +83,11 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �̹� ���� ���ڵ� ����� ���� ���ڵ� ������ �д´�.
+        /// 이미 읽은 레코드 헤더에 따른 레코드 내용을 읽는다.
         /// </summary>
         private void ReadBody()
         {
             var tagId = _sr!.CurrentRecordHeader!.TagId;
-
             if (tagId == HWPTag.PageDef)
             {
                 PageDef();
@@ -121,7 +115,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ���� ���ڵ带 �д´�.
+        /// 용지 설정 레코드를 읽는다.
         /// </summary>
         private void PageDef()
         {
@@ -129,7 +123,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ����/���� ��� ���ڵ带 �д´�.
+        /// 각주/미주 모양 레코드를 읽는다.
         /// </summary>
         private void EndFootnoteShapes()
         {
@@ -145,7 +139,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ��� ���ڵ带 �д´�.
+        /// 각주 모양 레코드를 읽는다.
         /// </summary>
         private void FootNoteShape()
         {
@@ -153,7 +147,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ��� ���ڵ带 �д´�.
+        /// 미주 모양 레코드를 읽는다.
         /// </summary>
         private void EndNoteShape()
         {
@@ -161,7 +155,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �� �׵θ�/��� ���ڵ带 �д´�.
+        /// 쪽 테두리/배경 레코드를 읽는다.
         /// </summary>
         private void PageBorderFills()
         {
@@ -181,7 +175,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� �������� ���� �� �׵θ�/��� ���ڵ带 �д´�.
+        /// 양쪽 페이지를 위한 쪽 테두리/배경 레코드를 읽느다.
         /// </summary>
         private void BothPageBorderFill()
         {
@@ -189,7 +183,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ¦���� �������� ���� �� �׵θ�/��� ���ڵ带 �д´�.
+        /// 짝수쪽 페이지를 위한 쪽 테두리/배경 레코드를 읽느다.
         /// </summary>
         private void EvenPageBorderFill()
         {
@@ -197,7 +191,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// Ȧ���� �������� ���� �� �׵θ�/��� ���ڵ带 �д´�.
+        /// 홀수쪽 페이지를 위한 쪽 테두리/배경 레코드를 읽느다.
         /// </summary>
         private void OddPageBorderFill()
         {
@@ -205,7 +199,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ������ ������ �д´�.
+        /// 바탕쪽 정보를 읽는다.
         /// </summary>
         private void BatangPageInfo()
         {
@@ -213,7 +207,7 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ��Ʈ�� �����͸� �д´�.
+        /// 컨트롤 데이터를 읽는다.
         /// </summary>
         private void CtrlData()
         {
@@ -222,5 +216,4 @@ namespace HwpLib.Reader.BodyText.Control
             _secd.SetCtrlData(ctrlData);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/autonumber/AutoNumberHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,7 +9,6 @@ using HwpLib.Util.Binary;
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.AutoNumber
 {
-
     /// <summary>
     /// 자동번호 컨트롤의 속성 객체
     /// </summary>

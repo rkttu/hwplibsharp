@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/ForParagraphList.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText;
 
-
 namespace HwpLib.Writer.AutoSetter
 {
-
     /// <summary>
     /// 문단 리스트 객체를 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -36,5 +34,4 @@ namespace HwpLib.Writer.AutoSetter
             }
         }
     }
-
 }

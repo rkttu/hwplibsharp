@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/OutterLineSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 외곽선 종류
     /// </summary>
@@ -56,5 +55,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             _ => OutterLineSort.None
         };
     }
-
 }

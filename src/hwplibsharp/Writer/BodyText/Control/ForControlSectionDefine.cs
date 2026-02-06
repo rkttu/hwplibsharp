@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlSectionDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,10 +10,8 @@ using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.Bookmark;
 using HwpLib.Writer.BodyText.Control.Secd;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 구역 정의 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -45,7 +43,7 @@ namespace HwpLib.Writer.BodyText.Control
         /// </summary>
         private static void CtrlHeader(CtrlHeaderSectionDefine h, CompoundStreamWriter sw)
         {
-            RecordHeader(h, sw);
+            RecordHeader(/*h, */sw);
             sw.WriteUInt4(h.CtrlId);
 
             sw.WriteUInt4(h.Property.Value);
@@ -68,7 +66,7 @@ namespace HwpLib.Writer.BodyText.Control
         /// <summary>
         /// 컨트롤 헤더 레코드의 레코드 헤더를 쓴다.
         /// </summary>
-        private static void RecordHeader(CtrlHeaderSectionDefine h, CompoundStreamWriter sw)
+        private static void RecordHeader(/*CtrlHeaderSectionDefine h, */CompoundStreamWriter sw)
         {
             int size = sw.FileVersion.IsOver(5, 0, 1, 2) ? 38 : 36;
             sw.WriteRecordHeader(HWPTag.CtrlHeader, size);
@@ -96,5 +94,4 @@ namespace HwpLib.Writer.BodyText.Control
             }
         }
     }
-
 }

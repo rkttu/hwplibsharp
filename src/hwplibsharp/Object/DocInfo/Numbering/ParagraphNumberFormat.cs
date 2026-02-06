@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/numbering/ParagraphNumberFormat.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.Numbering
 {
-
     /// <summary>
     /// 문단 번호 형식
     /// </summary>
@@ -138,5 +137,4 @@ namespace HwpLib.Object.DocInfo.Numbering
             };
         }
     }
-
 }

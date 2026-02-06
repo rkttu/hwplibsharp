@@ -21,7 +21,7 @@ public class FindingAllFieldTest
         Assert.IsNotNull(hwpFile);
 
         // Act - 필드A의 모든 누름틀 텍스트 찾기
-        var result = FieldFinder.GetAllClickHereText(hwpFile, "필드A", TextExtractMethod.OnlyMainParagraph);
+        var result = FieldFinder.GetAllClickHereText(hwpFile, "필드A"/*, TextExtractMethod.OnlyMainParagraph*/);
 
         // Assert
         Assert.IsNotNull(result);
@@ -41,7 +41,7 @@ public class FindingAllFieldTest
         Assert.IsNotNull(hwpFile);
 
         // Act - 필드B의 모든 누름틀 텍스트 찾기
-        var result = FieldFinder.GetAllFieldText(hwpFile, ControlType.FIELD_CLICKHERE, "필드B", TextExtractMethod.OnlyMainParagraph);
+        var result = FieldFinder.GetAllFieldText(hwpFile, ControlType.FIELD_CLICKHERE, "필드B"/*, TextExtractMethod.OnlyMainParagraph*/);
 
         // Assert
         Assert.IsNotNull(result);

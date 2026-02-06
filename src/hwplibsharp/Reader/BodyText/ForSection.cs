@@ -12,55 +12,53 @@ using HwpLib.Reader.BodyText.Control.Gso;
 using HwpLib.Reader.BodyText.Paragraph;
 using ControlNS = HwpLib.Object.BodyText.Control;
 
-
 namespace HwpLib.Reader.BodyText
 {
-
     /// <summary>
-    /// ����(Section)�� �б� ���� ��ü
+    /// 구역 스트림을 읽기 위한 객체
     /// </summary>
     public class ForSection
     {
         /// <summary>
-        /// ���� ��ü
+        /// 구역 객체
         /// </summary>
         private Section? _section;
 
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
+        /*
         /// <summary>
-        /// ���� ����
+        /// 현재 문단
         /// </summary>
-        private Object.BodyText.Paragraph.Paragraph? _currentParagraph;
+        private readonly Object.BodyText.Paragraph.Paragraph? _currentParagraph;
 
         /// <summary>
-        /// ���������� ���� ��Ʈ��
+        /// 가장마지막 컨트롤
         /// </summary>
-        private ControlNS.Control? _lastControl;
+        private readonly ControlNS.Control? _lastControl;
+        */
 
         /// <summary>
-        /// ������
+        /// 구역 스트림을 읽기 위한 객체
         /// </summary>
         public ForSection()
         {
         }
 
         /// <summary>
-        /// ������ �д´�.
+        /// 구역 스트림을 읽는다.
         /// </summary>
-        /// <param name="section">���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="section">구역 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(Section section, CompoundStreamReader sr)
         {
             _section = section;
             _sr = sr;
-
             // Java 원본과 동일한 구조: ForParagraphList를 사용하여 문단 읽기
             ForParagraphList.Read(section, sr);
-
             // 마지막 바탕쪽 정보 처리
             if (sr.IsEndOfStream() || sr.CurrentRecordHeader?.TagId != HWPTag.ListHeader)
             {
@@ -68,7 +66,6 @@ namespace HwpLib.Reader.BodyText
             }
             section.CreateLastBatangPageInfo();
             Control.Secd.ForBatangPageInfo.Read(section.LastBatangPageInfo!, sr);
-
             // 임의의 바탕쪽 정보 처리
             if (!sr.IsImmediatelyAfterReadingHeader)
             {
@@ -83,16 +80,15 @@ namespace HwpLib.Reader.BodyText
             Control.Secd.ForBatangPageInfo.Read(section.AnyBatangPageInfo!, sr);
         }
 
+        /*
         /// <summary>
-        /// �̹� ���� ���ڵ� ����� ���� ���ڵ� ������ �д´�.
+        /// 이미 읽은 레코드 다음에 오는 레코드 데이터를 읽는다.
         /// </summary>
         private void ReadRecordBody()
         {
             if (_sr == null || _section == null || _sr.CurrentRecordHeader == null)
                 return;
-
             var tagId = (short)_sr.CurrentRecordHeader.TagId;
-
             if (tagId == HWPTag.ParaHeader)
             {
                 ReadParaHeader();
@@ -123,13 +119,13 @@ namespace HwpLib.Reader.BodyText
             }
             else
             {
-                // �� �� ���� �±״� �ǳʶڴ�
+                // 알 수 없는 태그는 건너뛴다
                 _sr.SkipToEndRecord();
             }
         }
-
+        
         /// <summary>
-        /// ���� ��� ���ڵ带 �д´�.
+        /// 문단 헤더 레코드를 읽는다.
         /// </summary>
         private void ReadParaHeader()
         {
@@ -138,7 +134,7 @@ namespace HwpLib.Reader.BodyText
         }
 
         /// <summary>
-        /// ���� �ؽ�Ʈ ���ڵ带 �д´�.
+        /// 문단 텍스트 레코드를 읽는다.
         /// </summary>
         private void ReadParaText()
         {
@@ -147,7 +143,7 @@ namespace HwpLib.Reader.BodyText
         }
 
         /// <summary>
-        /// ���� ���� ��� ���ڵ带 �д´�.
+        /// 문단 헤더를 읽는다.
         /// </summary>
         private void ReadParaCharShape()
         {
@@ -160,7 +156,7 @@ namespace HwpLib.Reader.BodyText
         }
 
         /// <summary>
-        /// ���� ���̾ƿ� ���ڵ带 �д´�.
+        /// 문단 레이아웃 레코드를 읽는다.
         /// </summary>
         private void ReadParaLineSeg()
         {
@@ -169,7 +165,7 @@ namespace HwpLib.Reader.BodyText
         }
 
         /// <summary>
-        /// ���� ���� �±� ���ڵ带 �д´�.
+        /// 문단 범위 태그 레코드를 읽는다.
         /// </summary>
         private void ReadParaRangeTag()
         {
@@ -182,7 +178,7 @@ namespace HwpLib.Reader.BodyText
         }
 
         /// <summary>
-        /// ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
         private void ReadCtrlHeader()
         {
@@ -191,11 +187,9 @@ namespace HwpLib.Reader.BodyText
                 _sr!.SkipToEndRecord();
                 return;
             }
-
-            // ��Ʈ�� ID�� �д´� (4����Ʈ)
+            // 컨트롤 ID를 읽는다 (4바이트)
             uint ctrlId = _sr.ReadUInt4();
-
-            // �ʵ� ��Ʈ���� ���
+            // 필드 컨트롤인 경우
             if (ControlTypeExtensions.IsField(ctrlId))
             {
                 var field = new ControlField(ctrlId);
@@ -203,7 +197,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(field);
                 _lastControl = field;
             }
-            // ǥ ��Ʈ���� ���
+            // 표 컨트롤인 경우
             else if (ctrlId == ControlType.Table.GetCtrlId())
             {
                 var table = new ControlTable();
@@ -212,7 +206,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(table);
                 _lastControl = table;
             }
-            // ���� ��Ʈ���� ���
+            // 수식 컨트롤인 경우
             else if (ctrlId == ControlType.Equation.GetCtrlId())
             {
                 var eqed = new ControlEquation();
@@ -221,14 +215,14 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(eqed);
                 _lastControl = eqed;
             }
-            // Gso ��Ʈ���� ���
+            // Gso 컨트롤인 경우
             else if (ctrlId == ControlType.Gso.GetCtrlId())
             {
                 var fgc = new ForGsoControl();
                 fgc.Read(_currentParagraph, _sr);
-                // ForGsoControl.Read() �޼��� ���ο��� _currentParagraph.AddNewGsoControl()�� ȣ���Ͽ�
-                // ��Ʈ���� �߰��ϹǷ� ���⼭�� ������ AddControl()�� ȣ������ �ʽ��ϴ�.
-                // ControlList�� ������ �׸��� _lastControl�� �����մϴ�.
+                // ForGsoControl.Read() 메서드 내부에서 _currentParagraph.AddNewGsoControl()을 호출하여
+                // 컨트롤을 추가하므로 여기서는 AddControl()을 호출하지 않습니다.
+                // ControlList의 마지막 컨트롤을 _lastControl에 설정합니다.
                 if (_currentParagraph.ControlList != null && _currentParagraph.ControlList.Count > 0)
                 {
                     _lastControl = _currentParagraph.ControlList[_currentParagraph.ControlList.Count - 1];
@@ -238,13 +232,13 @@ namespace HwpLib.Reader.BodyText
                     _lastControl = null;
                 }
             }
-            // Form ��Ʈ���� ��� (���� �������� ���� - ��ŵ)
+            // Form 컨트롤인 경우 (현재 미지원 - 스킵)
             else if (ctrlId == ControlType.Form.GetCtrlId())
             {
                 SkipControlWithSubRecords();
                 _lastControl = null;
             }
-            // ���� ���� ��Ʈ���� ���
+            // 구역 정의 컨트롤인 경우
             else if (ctrlId == ControlType.SectionDefine.GetCtrlId())
             {
                 var secd = new ControlSectionDefine();
@@ -253,7 +247,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(secd);
                 _lastControl = secd;
             }
-            // �� ���� ��Ʈ���� ���
+            // 단 정의 컨트롤인 경우
             else if (ctrlId == ControlType.ColumnDefine.GetCtrlId())
             {
                 var cold = new ControlColumnDefine();
@@ -261,7 +255,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(cold);
                 _lastControl = cold;
             }
-            // �Ӹ��� ��Ʈ���� ���
+            // 머리말 컨트롤인 경우
             else if (ctrlId == ControlType.Header.GetCtrlId())
             {
                 var head = new ControlHeader();
@@ -270,7 +264,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(head);
                 _lastControl = head;
             }
-            // ������ ��Ʈ���� ���
+            // 꼬리말 컨트롤인 경우
             else if (ctrlId == ControlType.Footer.GetCtrlId())
             {
                 var foot = new ControlFooter();
@@ -279,7 +273,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(foot);
                 _lastControl = foot;
             }
-            // ���� ��Ʈ���� ���
+            // 각주 컨트롤인 경우
             else if (ctrlId == ControlType.Footnote.GetCtrlId())
             {
                 var fn = new ControlFootnote();
@@ -288,7 +282,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(fn);
                 _lastControl = fn;
             }
-            // ���� ��Ʈ���� ���
+            // 미주 컨트롤인 경우
             else if (ctrlId == ControlType.Endnote.GetCtrlId())
             {
                 var en = new ControlEndnote();
@@ -297,7 +291,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(en);
                 _lastControl = en;
             }
-            // �ڵ� ��ȣ ��Ʈ���� ���
+            // 자동 번호 컨트롤인 경우
             else if (ctrlId == ControlType.AutoNumber.GetCtrlId())
             {
                 var an = new ControlAutoNumber();
@@ -305,7 +299,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(an);
                 _lastControl = an;
             }
-            // �� ��ȣ ���� ��Ʈ���� ���
+            // 새 번호 지정 컨트롤인 경우
             else if (ctrlId == ControlType.NewNumber.GetCtrlId())
             {
                 var nwno = new ControlNewNumber();
@@ -313,7 +307,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(nwno);
                 _lastControl = nwno;
             }
-            // ���߱� ��Ʈ���� ���
+            // 감추기 컨트롤인 경우
             else if (ctrlId == ControlType.PageHide.GetCtrlId())
             {
                 var pghd = new ControlPageHide();
@@ -321,7 +315,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(pghd);
                 _lastControl = pghd;
             }
-            // Ȧ/¦�� ���� ��Ʈ���� ���
+            // 홀/짝수 조정 컨트롤인 경우
             else if (ctrlId == ControlType.PageOddEvenAdjust.GetCtrlId())
             {
                 var pgoea = new ControlPageOddEvenAdjust();
@@ -329,7 +323,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(pgoea);
                 _lastControl = pgoea;
             }
-            // �� ��ȣ ��ġ ��Ʈ���� ���
+            // 쪽 번호 위치 컨트롤인 경우
             else if (ctrlId == ControlType.PageNumberPosition.GetCtrlId())
             {
                 var pgnp = new ControlPageNumberPosition();
@@ -337,7 +331,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(pgnp);
                 _lastControl = pgnp;
             }
-            // ã�ƺ��� ǥ�� ��Ʈ���� ���
+            // 찾아보기 표식 컨트롤인 경우
             else if (ctrlId == ControlType.IndexMark.GetCtrlId())
             {
                 var idxm = new ControlIndexMark();
@@ -345,7 +339,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(idxm);
                 _lastControl = idxm;
             }
-            // å���� ��Ʈ���� ���
+            // 책갈피 컨트롤인 경우
             else if (ctrlId == ControlType.Bookmark.GetCtrlId())
             {
                 var bkmk = new ControlBookmark();
@@ -353,7 +347,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(bkmk);
                 _lastControl = bkmk;
             }
-            // ���� ��ħ ��Ʈ���� ���
+            // 겹침 글자 컨트롤인 경우
             else if (ctrlId == ControlType.OverlappingLetter.GetCtrlId())
             {
                 var tcps = new ControlOverlappingLetter();
@@ -361,7 +355,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(tcps);
                 _lastControl = tcps;
             }
-            // ���� ��Ʈ���� ���
+            // 덧말 컨트롤인 경우
             else if (ctrlId == ControlType.AdditionalText.GetCtrlId())
             {
                 var at = new ControlAdditionalText();
@@ -369,7 +363,7 @@ namespace HwpLib.Reader.BodyText
                 _currentParagraph.AddControl(at);
                 _lastControl = at;
             }
-            // ���� ���� ��Ʈ���� ���
+            // 숨은 설명 컨트롤인 경우
             else if (ctrlId == ControlType.HiddenComment.GetCtrlId())
             {
                 var tcmt = new ControlHiddenComment();
@@ -380,20 +374,20 @@ namespace HwpLib.Reader.BodyText
             }
             else
             {
-                // �ٸ� ������ ��Ʈ���� ���� �������� ����
+                // 다른 컨트롤은 건너뛴다
                 _sr.SkipToEndRecord();
                 _lastControl = null;
             }
         }
+        */
 
         /// <summary>
-        /// ���� ���ڵ带 ���� ��Ʈ���� �ǳʶڴ�.
+        /// 하위 레코드를 가진 컨트롤을 건너뛴다.
         /// </summary>
         private void SkipControlWithSubRecords()
         {
             var ctrlHeaderLevel = _sr!.CurrentRecordHeader!.Level;
             _sr.SkipToEndRecord();
-
             while (!_sr.IsEndOfStream())
             {
                 if (!_sr.IsImmediatelyAfterReadingHeader)
@@ -409,8 +403,9 @@ namespace HwpLib.Reader.BodyText
             }
         }
 
+        /*
         /// <summary>
-        /// ��Ʈ�� ������ ���ڵ带 �д´�.
+        /// 컨트롤 데이터 레코드를 읽는다.
         /// </summary>
         private void ReadCtrlData()
         {
@@ -419,11 +414,10 @@ namespace HwpLib.Reader.BodyText
                 _sr!.SkipToEndRecord();
                 return;
             }
-
             var ctrlData = ForCtrlData.Read(_sr);
             _lastControl.SetCtrlData(ctrlData);
             _sr.SkipToEndRecord();
         }
+        */
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/ArrayUtil.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System;
 
 namespace HwpLib.Util
 {
-
     /// <summary>
     /// 배열 관련 유틸리티 클래스
     /// </summary>
@@ -219,5 +218,4 @@ namespace HwpLib.Util
             return GetLength(array) == 0;
         }
     }
-
 }

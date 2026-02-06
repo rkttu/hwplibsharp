@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/ForDocInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Writer.AutoSetter
 {
-
     /// <summary>
     /// DocInfo 스트림을 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -59,5 +58,4 @@ namespace HwpLib.Writer.AutoSetter
             im.TrackChangeAuthorCount = di.TrackChangeAuthorList.Count;
         }
     }
-
 }

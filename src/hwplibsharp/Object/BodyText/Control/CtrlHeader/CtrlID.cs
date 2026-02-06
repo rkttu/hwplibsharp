@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlID.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Util.Binary;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Util.Binary;
-
     /// <summary>
     /// 컨트롤 id을 생성하기 위한 객체
     /// </summary>
@@ -41,5 +40,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             return ret;
         }
     }
-
 }

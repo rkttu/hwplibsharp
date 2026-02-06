@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlFootnote.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,49 +11,46 @@ using HwpLib.Object.BodyText.Control.SectionDefine;
 using HwpLib.Object.Etc;
 using System;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ���� ��Ʈ���� �б� ���� ��ü
+    /// 각주 컨트롤을 읽기 위한 객체
     /// </summary>
     public class ForControlFootnote
     {
         /// <summary>
-        /// ���� ��Ʈ��
+        /// 수식 컨트롤
         /// </summary>
         private ControlFootnote? _fn;
 
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
         /// <summary>
-        /// ������
+        /// 생성자
         /// </summary>
         public ForControlFootnote()
         {
         }
 
         /// <summary>
-        /// ���� ��Ʈ���� �д´�.
+        /// 각주 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="fn">���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="fn">각주 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(ControlFootnote fn, CompoundStreamReader sr)
         {
             _fn = fn;
             _sr = sr;
-
             CtrlHeader();
             ListHeader();
             ParagraphList();
         }
 
         /// <summary>
-        /// ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 각주 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
         private void CtrlHeader()
         {
@@ -62,14 +59,12 @@ namespace HwpLib.Reader.BodyText.Control
             h.BeforeDecorationLetter.Bytes = _sr.ReadWChar();
             h.AfterDecorationLetter.Bytes = _sr.ReadWChar();
             h.NumberShape = NumberShapeExtensions.FromValue((short)_sr.ReadUInt4());
-
             if (_sr.IsEndOfRecord()) return;
-
             h.InstanceId = _sr.ReadUInt4();
         }
 
         /// <summary>
-        /// ���� ��Ʈ���� ���� ����Ʈ ��� ���ڵ带 �д´�.
+        /// 각주 컨트롤의 문단 리스트 헤더 레코드를 읽는다.
         /// </summary>
         private void ListHeader()
         {
@@ -88,12 +83,11 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ���� ����Ʈ�� �д´�.
+        /// 문단 리스트를 읽는다.
         /// </summary>
         private void ParagraphList()
         {
             ForParagraphList.Read(_fn!.ParagraphList, _sr!);
         }
     }
-
 }

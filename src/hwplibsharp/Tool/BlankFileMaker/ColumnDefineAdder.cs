@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/blankfilemaker/ColumnDefineAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.BodyText.Paragraph;
 using HwpLib.Object.DocInfo.BorderFill;
 
-
 namespace HwpLib.Tool.BlankFileMaker
 {
-
     /// <summary>
     /// 빈 HWP 파일 생성 시 단 정의 컨트롤을 추가하는 클래스
     /// </summary>
@@ -41,5 +39,4 @@ namespace HwpLib.Tool.BlankFileMaker
             header.DivideLine.Color.Value = 0;
         }
     }
-
 }

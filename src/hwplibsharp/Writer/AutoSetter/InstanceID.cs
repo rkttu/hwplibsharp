@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/InstanceID.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Writer.AutoSetter
 {
-
     /// <summary>
     /// 인스턴스 ID를 구하기 위한 객체
     /// </summary>
@@ -32,5 +31,4 @@ namespace HwpLib.Writer.AutoSetter
             return _id++;
         }
     }
-
 }

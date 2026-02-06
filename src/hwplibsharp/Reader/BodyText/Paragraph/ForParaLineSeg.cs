@@ -1,24 +1,22 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForParaLineSeg.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.CompoundFile;
 
-
 namespace HwpLib.Reader.BodyText.Paragraph
 {
-
     /// <summary>
-    /// ������ ���̾ƿ� ���ڵ带 �б� ���� ��ü
+    /// 문단의 레이아웃 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForParaLineSeg
     {
         /// <summary>
-        /// ������ ���̾ƿ� ���ڵ带 �д´�.
+        /// 문단의 레이아웃 레코드를 읽는다.
         /// </summary>
-        /// <param name="p">���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="p">문단 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(HwpLib.Object.BodyText.Paragraph.Paragraph p, CompoundStreamReader sr)
         {
             p.CreateLineSeg();
@@ -35,14 +33,16 @@ namespace HwpLib.Reader.BodyText.Paragraph
             else
             {
                 sr.SkipToEndRecord();
+
             }
+
         }
 
         /// <summary>
-        /// �� ������ ���̾ƿ� ������ �д´�.
+        /// 한 라인의 레이아웃 정보를 읽는다.
         /// </summary>
-        /// <param name="item">�� ������ ���̾ƿ� ����</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="item">한 라인의 레이아웃 정보</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ParaLineSegItem(HwpLib.Object.BodyText.Paragraph.LineSeg.LineSegItem item, CompoundStreamReader sr)
         {
             item.TextStartPosition = sr.ReadUInt4();
@@ -56,6 +56,4 @@ namespace HwpLib.Reader.BodyText.Paragraph
             item.Tag.Value = sr.ReadUInt4();
         }
     }
-
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/header/ParaHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Paragraph.Header
 {
-
     /// <summary>
     /// 문단 헤더 레코드
     /// </summary>
@@ -94,5 +93,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Header
             IsMergedByTrack = from.IsMergedByTrack;
         }
     }
-
 }

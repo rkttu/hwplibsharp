@@ -1,27 +1,25 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForParaHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.CompoundFile;
 
-
 namespace HwpLib.Reader.BodyText.Paragraph
 {
-
     /// <summary>
-    /// ���� ��� ���ڵ带 �б� ���� ��ü
+    /// 문단 헤더 레코드를 읽는 객체
     /// </summary>
     public static class ForParaHeader
     {
         /// <summary>
-        /// ���� ��� ���ڵ带 �д´�.
+        /// 문단 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="ph">���� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="ph">문단 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(HwpLib.Object.BodyText.Paragraph.Header.ParaHeader ph, CompoundStreamReader sr)
         {
-            // ���� ����Ʈ���� ������ ���ܿ��ο� ���ڼ��� �д´�.
+            // 현재 문단Ʈ현재 문단�� ���ܿ��ο� ���ڼ��� �д´�.
             uint value = sr.ReadUInt4();
             ph.LastInList = (value & 0x80000000) != 0;
             ph.CharacterCount = value & 0x7fffffff;
@@ -40,10 +38,8 @@ namespace HwpLib.Reader.BodyText.Paragraph
                 ph.IsMergedByTrack = sr.ReadUInt2();
             }
 
-            // ���� ����Ʈ�� ������ �ǳʶڴ�
+            // 현재 문단Ʈ�� 생성자 �ǳʶڴ�
             sr.SkipToEndRecord();
         }
     }
-
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/BinDataAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -12,7 +12,7 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class BinDataAdder
     {
-        private DocInfoAdder _docInfoAdder;
+        private readonly DocInfoAdder _docInfoAdder;
 
         /// <summary>
         /// <see cref="BinDataAdder"/> 클래스의 새 인스턴스를 초기화합니다.

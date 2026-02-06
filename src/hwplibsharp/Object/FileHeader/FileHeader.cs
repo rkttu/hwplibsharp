@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/fileheader/FileHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.FileHeader
 {
-
     /// <summary>
     /// 파일 인식 정보를 나타내는 객체. HWP 파일내의 "FileHeader" stream에 저장된다.
     /// </summary>
@@ -233,5 +232,4 @@ namespace HwpLib.Object.FileHeader
             _isCclDocument = from._isCclDocument;
         }
     }
-
 }

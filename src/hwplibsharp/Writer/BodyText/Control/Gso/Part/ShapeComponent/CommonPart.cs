@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/part/shapecomponent/CommonPart.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.CompoundFile;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent
 {
-
     /// <summary>
     /// 그리기 개체의 객체 공통 속성 레코드의 공통 부분을 쓰기 위한 객체
     /// </summary>
@@ -75,5 +73,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent
             return size;
         }
     }
-
 }

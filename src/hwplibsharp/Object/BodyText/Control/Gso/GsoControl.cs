@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/GsoControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso
 {
-
     /// <summary>
     /// 그리기 개체 컨트롤
     /// </summary>
@@ -122,5 +121,4 @@ namespace HwpLib.Object.BodyText.Control.Gso
             ShapeComponentInternal.Copy(from.ShapeComponentInternal);
         }
     }
-
 }

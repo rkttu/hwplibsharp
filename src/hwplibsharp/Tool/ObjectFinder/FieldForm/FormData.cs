@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/fieldform/FormData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText.Control.Form;
 
-
 namespace HwpLib.Tool.ObjectFinder.FieldForm
 {
-
     /// <summary>
     /// 폼 데이터
     /// </summary>
@@ -42,5 +40,4 @@ namespace HwpLib.Tool.ObjectFinder.FieldForm
             Value = value;
         }
     }
-
 }

@@ -1,14 +1,13 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlField.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.Bookmark;
+using HwpLib.Object.BodyText.Control.CtrlHeader;
+
 namespace HwpLib.Object.BodyText.Control
 {
-
-    using HwpLib.Object.BodyText.Control.Bookmark;
-    using HwpLib.Object.BodyText.Control.CtrlHeader;
-
     /// <summary>
     /// 필드 컨트롤
     /// </summary>
@@ -52,7 +51,7 @@ namespace HwpLib.Object.BodyText.Control
             return CommandToName(GetHeader()?.Command.ToUTF16LEString());
         }
 
-        private string? CommandToName(string? command)
+        private static string? CommandToName(string? command)
         {
             if (command == null)
             {
@@ -105,5 +104,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

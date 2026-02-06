@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponent/shadowinfo/ShadowInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.ShadowInfo
 {
-
     /// <summary>
     /// 그림자 정보
     /// </summary>
@@ -101,5 +99,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.ShadowInfo
             _transparent = from._transparent;
         }
     }
-
 }

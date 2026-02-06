@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/PaperDirection.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 용지 방향
     /// </summary>
@@ -52,5 +51,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             };
         }
     }
-
 }

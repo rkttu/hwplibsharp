@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/CharShapeProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 글자 모양 객체의 속성
     /// </summary>
@@ -218,5 +216,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             }
         }
     }
-
 }

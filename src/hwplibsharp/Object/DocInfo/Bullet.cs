@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/Bullet.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 using HwpLib.Object.DocInfo.Numbering;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 글머리표에 대한 레코드
     /// </summary>
@@ -78,5 +76,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

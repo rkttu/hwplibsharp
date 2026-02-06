@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForParaShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.Etc;
 using HwpLib.Object.FileHeader;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 문단 모양 레코드를 쓰기 위한 객체
     /// </summary>
@@ -24,7 +22,7 @@ namespace HwpLib.Writer.DocInfo
         /// <param name="sw">스트림 라이터</param>
         public static void Write(ParaShapeInfo ps, CompoundStreamWriter sw)
         {
-            RecordHeader(ps, sw);
+            RecordHeader(/*ps, */sw);
 
             sw.WriteUInt4(ps.Property1.Value);
             sw.WriteSInt4(ps.LeftMargin);
@@ -61,9 +59,8 @@ namespace HwpLib.Writer.DocInfo
         /// <summary>
         /// 문단 모양 레코드의 레코드 헤더를 쓴다.
         /// </summary>
-        /// <param name="ps">문단 모양 레코드</param>
         /// <param name="sw">스트림 라이터</param>
-        private static void RecordHeader(ParaShapeInfo ps, CompoundStreamWriter sw)
+        private static void RecordHeader(/*ParaShapeInfo ps, */CompoundStreamWriter sw)
         {
             sw.WriteRecordHeader(HWPTag.ParaShape, GetSize(sw.FileVersion));
         }
@@ -96,5 +93,4 @@ namespace HwpLib.Writer.DocInfo
             return size;
         }
     }
-
 }

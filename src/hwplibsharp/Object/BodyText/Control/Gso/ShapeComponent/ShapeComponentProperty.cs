@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponent/ShapeComponentProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent
 {
-
     /// <summary>
     /// 객체 공통 속성의 속성을 나타내는 객체
     /// </summary>
@@ -71,5 +69,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent
             set => _value = (uint)BitFlag.Set(_value, 24, value);
         }
     }
-
 }

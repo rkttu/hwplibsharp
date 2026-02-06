@@ -1,6 +1,5 @@
 using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Paragraph;
-using HwpLib.Object.BodyText.Paragraph.CharShape;
 using HwpLib.Object.BodyText.Paragraph.Text;
 using HwpLib.Reader;
 using HwpLib.Writer;

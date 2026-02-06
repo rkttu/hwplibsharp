@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlPageOddEvenAdjust.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,24 +6,21 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// Ȧ/¦�� ���� ��Ʈ���� �б� ���� ��ü
+    /// 홀/짝수 페이지 조정 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControlPageOddEvenAdjust
     {
         /// <summary>
-        /// Ȧ/¦�� ���� ��Ʈ���� �д´�.
+        /// 홀/짝수 페이지 조정 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="pgoea">Ȧ/¦�� ���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="pgoea">홀/짝수 페이지 조정 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ControlPageOddEvenAdjust pgoea, CompoundStreamReader sr)
         {
             pgoea.GetHeader()!.Property.Value = sr.ReadUInt4();
         }
     }
-
 }

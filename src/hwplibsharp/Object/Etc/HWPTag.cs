@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/etc/HWPTag.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.Etc
 {
-
     /// <summary>
     /// Record의 테그 리스트
     /// </summary>
@@ -265,5 +264,4 @@ namespace HwpLib.Object.Etc
         /// </summary>
         public const short ShapeComponentUnknown = Begin + 99;
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/blankfilemaker/BorderFillAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 
-
 namespace HwpLib.Tool.BlankFileMaker
 {
-
     /// <summary>
     /// 빈 HWP 파일 생성 시 테두리/배경 정보를 추가하는 클래스
     /// </summary>
@@ -62,5 +60,4 @@ namespace HwpLib.Tool.BlankFileMaker
             pf.PatternType = PatternType.None;
         }
     }
-
 }

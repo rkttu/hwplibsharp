@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlTable.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.Gso.Caption;
 using HwpLib.Object.BodyText.Control.Table;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText.Control
 {
-
     /// <summary>
     /// 표 컨트롤
     /// </summary>
@@ -137,5 +135,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

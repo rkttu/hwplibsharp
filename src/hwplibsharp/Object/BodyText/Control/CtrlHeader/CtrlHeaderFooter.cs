@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderFooter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.Header;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.Header;
-
     /// <summary>
     /// 꼬리말 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -52,5 +51,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             CreateIndex = from2.CreateIndex;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForIDMappings.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.Etc;
 using HwpLib.Object.FileHeader;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 아이디 매핑 레코드를 쓰기 위한 객체
     /// </summary>
@@ -83,5 +81,4 @@ namespace HwpLib.Writer.DocInfo
             }
         }
     }
-
 }

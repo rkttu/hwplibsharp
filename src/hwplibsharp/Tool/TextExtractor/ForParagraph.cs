@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/textextractor/ForParagraph.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -92,7 +92,7 @@ namespace HwpLib.Tool.TextExtractor
                 var head = paraHeadMaker.ParaHeadString(p);
                 if (!string.IsNullOrEmpty(head))
                 {
-                    sb.Append(head).Append(" ");
+                    sb.Append(head).Append(' ');
                 }
             }
 
@@ -131,7 +131,7 @@ namespace HwpLib.Tool.TextExtractor
                                 {
                                     if (option.GetMethod() == TextExtractMethod.InsertControlTextBetweenParagraphText)
                                     {
-                                        sb.Append("\n");
+                                        sb.Append('\n');
                                         var ctrlList = p.ControlList;
                                         if (ctrlList != null && controlIndex < ctrlList.Count)
                                         {
@@ -158,7 +158,7 @@ namespace HwpLib.Tool.TextExtractor
 
             if (appendLF && option.IsAppendEndingLF())
             {
-                sb.Append("\n");
+                sb.Append('\n');
             }
 
             if (option.GetMethod() == TextExtractMethod.AppendControlTextAfterParagraphText)
@@ -183,13 +183,13 @@ namespace HwpLib.Tool.TextExtractor
             switch (ch.Code)
             {
                 case 9:
-                    sb.Append("\t");
+                    sb.Append('\t');
                     break;
                 case 10:
-                    sb.Append("\n");
+                    sb.Append('\n');
                     break;
                 case 24:
-                    sb.Append("_");
+                    sb.Append('_');
                     break;
             }
         }

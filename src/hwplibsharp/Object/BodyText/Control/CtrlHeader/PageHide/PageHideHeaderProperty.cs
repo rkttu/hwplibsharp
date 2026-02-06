@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/pagehide/PageHideHeaderProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Util.Binary;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageHide
 {
-
-    using HwpLib.Util.Binary;
-
     /// <summary>
     /// 감추기 컨트롤의 속성을 나타내는 객체
     /// </summary>
@@ -88,5 +87,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageHide
             Value = from.Value;
         }
     }
-
 }

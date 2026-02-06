@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bindata/BinData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.DocInfo.BinData;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BinData
 {
-
     /// <summary>
     /// 바이너리 데이터를 나타내는 객체
     /// HWP파일 내의 "BinData" storage에 저장된다.
@@ -73,5 +71,4 @@ namespace HwpLib.Object.BinData
             }
         }
     }
-
 }

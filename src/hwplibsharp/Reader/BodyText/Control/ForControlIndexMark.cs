@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlIndexMark.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,30 +7,28 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ã�ƺ��� ǥ�� ��Ʈ���� �б� ���� ��ü
+    /// 찾아보기 표식 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControlIndexMark
     {
         /// <summary>
-        /// ã�ƺ��� ǥ�� ��Ʈ���� �д´�.
+        /// 찾아보기 표식 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="idxm">ã�ƺ��� ǥ�� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="idxm">찾아보기 표식 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ControlIndexMark idxm, CompoundStreamReader sr)
         {
             CtrlHeader(idxm.GetHeader()!, sr);
         }
 
         /// <summary>
-        /// ã�ƺ��� ǥ�� ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 찾아보기 표시 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="header">ã�ƺ��� ǥ�� ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">찾아보기 표시 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CtrlHeader(CtrlHeaderIndexMark header, CompoundStreamReader sr)
         {
             header.Keyword1.Bytes = sr.ReadHWPString();
@@ -41,5 +39,4 @@ namespace HwpLib.Reader.BodyText.Control
             }
         }
     }
-
 }

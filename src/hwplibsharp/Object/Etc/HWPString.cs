@@ -1,16 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/etc/HWPString.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using System;
 using System.Linq;
+using System.Text;
 
 namespace HwpLib.Object.Etc
 {
-
-    using System.Text;
-
     /// <summary>
     /// HWP 문자열을 나타내는 클래스
     /// </summary>
@@ -120,5 +118,4 @@ namespace HwpLib.Object.Etc
             return bytes.SequenceEqual(other.bytes);
         }
     }
-
 }

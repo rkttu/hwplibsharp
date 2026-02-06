@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/facename/FontTypeInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.FaceName
 {
-
     /// <summary>
     /// 글꼴 유형 정보에 대한 객체
     /// </summary>
@@ -86,5 +85,4 @@ namespace HwpLib.Object.DocInfo.FaceName
             XHeight = from.XHeight;
         }
     }
-
 }

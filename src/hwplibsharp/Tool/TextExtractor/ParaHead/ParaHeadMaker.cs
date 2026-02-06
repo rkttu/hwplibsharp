@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/textextractor/parahead/ParaHeadMaker.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -22,9 +22,9 @@ namespace HwpLib.Tool.TextExtractor.ParaHead
     {
         private readonly HWPFile _hwpFile;
         private ControlSectionDefine? _sectionDefine;
-        private ParaNumber _paraNumberForNumbering;
+        private readonly ParaNumber _paraNumberForNumbering;
         private ParaNumber? _paraNumberForOutline;
-        private NumberingInfo _defaultNumbering = new NumberingInfo();
+        private readonly NumberingInfo _defaultNumbering = new NumberingInfo();
 
         /// <summary>
         /// ParaHeadMaker 클래스의 새 인스턴스를 초기화합니다.
@@ -64,7 +64,7 @@ namespace HwpLib.Tool.TextExtractor.ParaHead
             }
         }
 
-        private string GetDefaultFormat(int level)
+        private static string GetDefaultFormat(int level)
         {
             var parts = new List<string>();
             for (int i = 2; i <= level; i++)
@@ -135,18 +135,14 @@ namespace HwpLib.Tool.TextExtractor.ParaHead
             var headShape = paraShape.Property1?.ParaHeadShape;
             var paraLevel = paraShape.Property1?.ParaLevel ?? 0;
 
-            switch (headShape)
+            return headShape switch
             {
-                case ParaHeadShape.None:
-                    return "";
-                case ParaHeadShape.Outline:
-                    return Outline(paragraph.Header?.StyleId ?? 0, (byte)paraLevel);
-                case ParaHeadShape.Numbering:
-                    return NumberingText(paraShape.ParaHeadId, (byte)paraLevel);
-                case ParaHeadShape.Bullet:
-                    return BulletText(paraShape.ParaHeadId, (byte)paraLevel);
-            }
-            return null;
+                ParaHeadShape.None => "",
+                ParaHeadShape.Outline => Outline(paragraph.Header?.StyleId ?? 0, (byte)paraLevel),
+                ParaHeadShape.Numbering => NumberingText(paraShape.ParaHeadId, (byte)paraLevel),
+                ParaHeadShape.Bullet => BulletText(paraShape.ParaHeadId/*, (byte)paraLevel*/),
+                _ => null,
+            };
         }
 
         private string? Outline(int styleID, byte paraLevel)
@@ -229,7 +225,7 @@ namespace HwpLib.Tool.TextExtractor.ParaHead
             return null;
         }
 
-        private string? NumberText(LevelNumbering lv, ParaNumber paraNumber, int paraLevel)
+        private static string? NumberText(LevelNumbering lv, ParaNumber paraNumber, int paraLevel)
         {
             var format = lv.NumberFormat?.ToUTF16LEString();
             if (format == null) return null;
@@ -247,7 +243,7 @@ namespace HwpLib.Tool.TextExtractor.ParaHead
             return StringUtil.ReplaceEach(format, tokens, values);
         }
 
-        private string? BulletText(int paraHeadId, byte paraLevel)
+        private string? BulletText(int paraHeadId/*, byte paraLevel*/)
         {
             if (paraHeadId > 0)
             {

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/FieldFinder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Tool.TextExtractor;
 using System.Collections.Generic;
 using ForParagraphListField = HwpLib.Tool.ObjectFinder.ForField.ForParagraphList;
 
-
 namespace HwpLib.Tool.ObjectFinder
 {
-
     /// <summary>
     /// 필드 객체를 찾는 기능을 포함하는 클래스
     /// </summary>
@@ -23,9 +21,8 @@ namespace HwpLib.Tool.ObjectFinder
         /// </summary>
         /// <param name="hwpFile">한글 파일 객체</param>
         /// <param name="fieldName">필드 이름</param>
-        /// <param name="temInField">필드 안에 텍스트의 텍스트 추출 방법</param>
         /// <returns>필드 텍스트</returns>
-        public static string? GetClickHereText(HWPFile hwpFile, string fieldName, TextExtractMethod temInField)
+        public static string? GetClickHereText(HWPFile hwpFile, string fieldName/*, TextExtractMethod temInField*/)
         {
             string? strText = null;
             foreach (var s in hwpFile.BodyText.SectionList)
@@ -44,9 +41,8 @@ namespace HwpLib.Tool.ObjectFinder
         /// </summary>
         /// <param name="hwpFile">한글 파일 객체</param>
         /// <param name="fieldName">필드 이름</param>
-        /// <param name="temInField">필드 안에 텍스트의 텍스트 추출 방법</param>
         /// <returns>필드 텍스트 리스트</returns>
-        public static List<string> GetAllClickHereText(HWPFile hwpFile, string fieldName, TextExtractMethod temInField)
+        public static List<string> GetAllClickHereText(HWPFile hwpFile, string fieldName/*, TextExtractMethod temInField*/)
         {
             var textList = new List<string>();
             foreach (var s in hwpFile.BodyText.SectionList)
@@ -95,9 +91,8 @@ namespace HwpLib.Tool.ObjectFinder
         /// <param name="hwpFile">한글 파일 객체</param>
         /// <param name="fieldType">필드 타입</param>
         /// <param name="fieldName">필드 이름</param>
-        /// <param name="temInField">필드 안에 텍스트의 텍스트 추출 방법</param>
         /// <returns>필드 텍스트</returns>
-        public static string? GetFieldText(HWPFile hwpFile, ControlType fieldType, string fieldName, TextExtractMethod temInField)
+        public static string? GetFieldText(HWPFile hwpFile, ControlType fieldType, string fieldName/*, TextExtractMethod temInField*/)
         {
             string? strText = null;
             foreach (var s in hwpFile.BodyText.SectionList)
@@ -117,9 +112,8 @@ namespace HwpLib.Tool.ObjectFinder
         /// <param name="hwpFile">한글 파일 객체</param>
         /// <param name="fieldType">필드 타입</param>
         /// <param name="fieldName">필드 이름</param>
-        /// <param name="temInField">필드 안에 텍스트의 텍스트 추출 방법</param>
         /// <returns>필드 텍스트 리스트</returns>
-        public static List<string> GetAllFieldText(HWPFile hwpFile, ControlType fieldType, string fieldName, TextExtractMethod temInField)
+        public static List<string> GetAllFieldText(HWPFile hwpFile, ControlType fieldType, string fieldName/*, TextExtractMethod temInField*/)
         {
             var textList = new List<string>();
             foreach (var s in hwpFile.BodyText.SectionList)
@@ -163,5 +157,4 @@ namespace HwpLib.Tool.ObjectFinder
             return SetFieldResult.TextRemains;
         }
     }
-
 }

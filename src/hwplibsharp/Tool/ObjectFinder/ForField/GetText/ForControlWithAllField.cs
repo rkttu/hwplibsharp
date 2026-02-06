@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/forfield/gettext/ForControlWithAllField.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================

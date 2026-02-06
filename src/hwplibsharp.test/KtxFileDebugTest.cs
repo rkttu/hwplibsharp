@@ -1,10 +1,8 @@
 using HwpLib.CompoundFile;
-using HwpLib.Object;
-using HwpLib.Object.FileHeader;
-using HwpLib.Object.DocInfo;
 using HwpLib.Object.BodyText;
-using HwpLib.Reader.DocInfo;
+using HwpLib.Object.DocInfo;
 using HwpLib.Reader.BodyText;
+using HwpLib.Reader.DocInfo;
 
 namespace HwpLibSharp.Test;
 
@@ -27,12 +25,12 @@ public class KtxFileDebugTest
         var filePath = GetContributeSamplePath("KTX.hwp");
         using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
         using var cfr = new CompoundFileReader(stream);
-        
+
         // FileHeader 읽기
         using var sr = cfr.GetChildStreamReader("FileHeader", false, null);
         var fileHeader = new HwpLib.Object.FileHeader.FileHeader();
         HwpLib.Reader.ForFileHeader.Read(fileHeader, sr);
-        
+
         // Assert
         Assert.IsNotNull(fileHeader);
         Console.WriteLine($"Version: {fileHeader.Version}");
@@ -52,12 +50,12 @@ public class KtxFileDebugTest
         using var srHeader = cfr.GetChildStreamReader("FileHeader", false, null);
         var fileHeader = new HwpLib.Object.FileHeader.FileHeader();
         HwpLib.Reader.ForFileHeader.Read(fileHeader, srHeader);
-        
+
         // DocInfo 읽기
         using var sr = cfr.GetChildStreamReader("DocInfo", fileHeader.Compressed, fileHeader.Version);
         var docInfo = new DocInfo();
         new ForDocInfo().Read(docInfo, sr);
-        
+
         // Assert
         Assert.IsNotNull(docInfo);
         Console.WriteLine($"FaceNames: {docInfo.HangulFaceNameList.Count}");
@@ -81,7 +79,7 @@ public class KtxFileDebugTest
         if (cfr.IsChildStorage("BodyText"))
         {
             cfr.MoveChildStorage("BodyText");
-            
+
             var sectionNames = cfr.ListChildNames()
                 .Where(name => name.StartsWith("Section"))
                 .OrderBy(name =>
@@ -98,17 +96,17 @@ public class KtxFileDebugTest
                 Console.WriteLine($"Reading section: {sectionName}");
                 using var sr = cfr.GetChildStreamReader(sectionName, fileHeader.Compressed, fileHeader.Version);
                 Console.WriteLine($"Section stream size: {sr.Size}");
-                
+
                 // 레코드 수 카운트
                 int recordCount = 0;
                 while (!sr.IsEndOfStream())
                 {
                     if (!sr.ReadRecordHeader())
                         break;
-                    
+
                     recordCount++;
                     sr.SkipToEndRecord();
-                    
+
                     // 무한 루프 방지
                     if (recordCount > 100000)
                     {
@@ -118,7 +116,7 @@ public class KtxFileDebugTest
                 }
                 Console.WriteLine($"Section {sectionName} has {recordCount} records");
             }
-            
+
             cfr.MoveParentStorage();
         }
     }
@@ -150,7 +148,7 @@ public class KtxFileDebugTest
             forSection.Read(section, sr);
 
             Console.WriteLine($"Paragraphs in section: {section.ParagraphCount}");
-            
+
             cfr.MoveParentStorage();
         }
     }

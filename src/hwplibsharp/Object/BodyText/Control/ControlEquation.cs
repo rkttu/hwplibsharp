@@ -1,15 +1,14 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ControlEquation.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader;
+using HwpLib.Object.BodyText.Control.Equation;
+using HwpLib.Object.BodyText.Control.Gso.Caption;
+
 namespace HwpLib.Object.BodyText.Control
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader;
-    using HwpLib.Object.BodyText.Control.Equation;
-    using HwpLib.Object.BodyText.Control.Gso.Caption;
-
     /// <summary>
     /// 수식 컨트롤
     /// </summary>
@@ -23,7 +22,7 @@ namespace HwpLib.Object.BodyText.Control
         /// <summary>
         /// 수식 정보
         /// </summary>
-        private EQEdit eqEdit;
+        private readonly EQEdit eqEdit;
 
         /// <summary>
         /// 생성자
@@ -92,5 +91,4 @@ namespace HwpLib.Object.BodyText.Control
             return cloned;
         }
     }
-
 }

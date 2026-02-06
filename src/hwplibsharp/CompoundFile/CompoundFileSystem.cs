@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/util/compoundFile/
 // Repository: https://github.com/neolord0/hwplib
 // Note: OpenMcdf RootStorage wrapper (C# uses OpenMcdf instead of Apache POI)
@@ -8,10 +8,8 @@ using OpenMcdf;
 using System;
 using System.IO;
 
-
 namespace HwpLib.CompoundFile
 {
-
     /// <summary>
     /// OpenMcdf 3.x의 RootStorage를 래핑하는 클래스
     /// POI의 POIFSFileSystem에 대응
@@ -94,5 +92,4 @@ namespace HwpLib.CompoundFile
             Dispose(false);
         }
     }
-
 }

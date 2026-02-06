@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/ForControlObjectLinkLine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso
 {
-
     /// <summary>
     /// 객체 연결선 컨트롤의 나머지 부분을 쓰기 위한 객체
     /// </summary>
@@ -73,5 +71,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso
             return 40 + scl.ControlPoints.Count * 10 + 4;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/eqed/ForEQEdit.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,20 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Equation;
 
-
 namespace HwpLib.Reader.BodyText.Control.Eqed
 {
-
     /// <summary>
-    /// ���� ���� ���ڵ带 �б� ���� ��ü
+    /// 수식 정보 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForEQEdit
     {
         /// <summary>
-        /// ���� ���� ���ڵ带 �д´�.
+        /// 수식 정보 레코드를 읽는다.
         /// </summary>
-        /// <param name="eqEdit">���� ���� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="eqEdit">수식 정보 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(EQEdit eqEdit, CompoundStreamReader sr)
         {
             eqEdit.Property = sr.ReadUInt4();
@@ -44,5 +42,4 @@ namespace HwpLib.Reader.BodyText.Control.Eqed
             eqEdit.FontName.Bytes = sr.ReadHWPString();
         }
     }
-
 }

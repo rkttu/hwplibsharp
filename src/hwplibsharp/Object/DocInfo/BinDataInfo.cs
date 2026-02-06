@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/BinData.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.BinData;
 
-
 namespace HwpLib.Object.DocInfo
 {
-
     /// <summary>
     /// 바이너리 데이터를 나타내는 레코드
     /// </summary>
@@ -84,5 +82,4 @@ namespace HwpLib.Object.DocInfo
             return cloned;
         }
     }
-
 }

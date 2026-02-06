@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForTabDef.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.DocInfo.TabDef;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 탭 정의 레코드를 읽기 위한 객체
     /// </summary>
@@ -50,5 +48,4 @@ namespace HwpLib.Reader.DocInfo
             }
         }
     }
-
 }

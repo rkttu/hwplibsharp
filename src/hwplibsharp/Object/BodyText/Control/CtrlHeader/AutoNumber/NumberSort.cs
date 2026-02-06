@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/autonumber/NumberSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.AutoNumber
 {
-
     /// <summary>
     /// 번호 종류
     /// </summary>
@@ -76,5 +75,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.AutoNumber
             };
         }
     }
-
 }

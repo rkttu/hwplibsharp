@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/Section.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText.Control.SectionDefine;
 using System.Collections;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText
 {
-
     /// <summary>
     /// 문단 구역(섹션)을 나타내는 객체. HWP 파일내의 "BodyText" storage 안에 "Section[번호]" stream에 저장된다.
     /// </summary>
@@ -203,5 +201,4 @@ namespace HwpLib.Object.BodyText
             return cloned;
         }
     }
-
 }

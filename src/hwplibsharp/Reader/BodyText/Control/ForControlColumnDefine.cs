@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlColumnDefine.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,30 +9,28 @@ using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine;
 using HwpLib.Object.DocInfo.BorderFill;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// �� ���� ��Ʈ���� �б� ���� ��ü
+    /// 단 정의 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControlColumnDefine
     {
         /// <summary>
-        /// �� ���� ��Ʈ���� �д´�.
+        /// 단 정의 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="cd">�� ���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="cd">단 정의 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ControlColumnDefine cd, CompoundStreamReader sr)
         {
             CtrlHeader(cd.GetHeader()!, sr);
         }
 
         /// <summary>
-        /// �� ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 단 정의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
-        /// <param name="h">�� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="h">단 정의 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CtrlHeader(CtrlHeaderColumnDefine h, CompoundStreamReader sr)
         {
             h.Property.Value = sr.ReadUInt2();
@@ -59,10 +57,10 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// �� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ��� �� ���� �κ��� �д´�.
+        /// 단 정의 컨트롤의 컨트롤 헤더 레코드의 단 정보 부분를 읽는다.
         /// </summary>
-        /// <param name="h">�� ���� ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="h">단 정의 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ColumnInfos(CtrlHeaderColumnDefine h, CompoundStreamReader sr)
         {
             int count = h.Property.GetColumnCount();
@@ -74,5 +72,4 @@ namespace HwpLib.Reader.BodyText.Control
             }
         }
     }
-
 }

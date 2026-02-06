@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/rangetag/RangeTagItem.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System;
 
 namespace HwpLib.Object.BodyText.Paragraph.RangeTag
 {
-
     /// <summary>
     /// 영역 태그 정보에 대한 객체
     /// </summary>
@@ -75,5 +74,4 @@ namespace HwpLib.Object.BodyText.Paragraph.RangeTag
             return cloned;
         }
     }
-
 }

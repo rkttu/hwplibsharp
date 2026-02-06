@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/ParaTextSetter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -76,8 +76,10 @@ namespace HwpLib.Tool.ParagraphAdder
             int len = text.Length;
             for (int index = 0; index < len; index++)
             {
-                var ch = new HWPCharNormal();
-                ch.Code = (short)text[index];
+                var ch = new HWPCharNormal
+                {
+                    Code = (short)text[index]
+                };
                 paraText.InsertChar(startIndex + index, ch);
             }
         }
@@ -209,7 +211,7 @@ namespace HwpLib.Tool.ParagraphAdder
 
             if (p.ControlList != null)
             {
-                var controlList = p.ControlList!;
+                //var controlList = p.ControlList!;
                 for (int index = 0; index < deleteCtrlCount; index++)
                 {
                     p.RemoveControlAt(0);
@@ -231,7 +233,7 @@ namespace HwpLib.Tool.ParagraphAdder
                         }
                         else
                         {
-                            cpsip.Position = cpsip.Position - deleteCharSize;
+                            cpsip.Position -= deleteCharSize;
                         }
                     }
                 }
@@ -287,7 +289,7 @@ namespace HwpLib.Tool.ParagraphAdder
                 }
                 foreach (var cpsip in para2.CharShape!.PositionShapeIdPairList)
                 {
-                    cpsip.Position = cpsip.Position + para1CharSize;
+                    cpsip.Position += para1CharSize;
                     para1.CharShape!.AddParaCharShape(cpsip);
                 }
             }

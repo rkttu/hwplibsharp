@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/SetFieldResult.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Tool.ObjectFinder
 {
-
     /// <summary>
     /// SetField 처리 결과상태
     /// </summary>
@@ -41,5 +40,4 @@ namespace HwpLib.Tool.ObjectFinder
         /// </summary>
         ETCError
     }
-
 }

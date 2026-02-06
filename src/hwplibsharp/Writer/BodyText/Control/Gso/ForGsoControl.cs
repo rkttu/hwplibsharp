@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/ForGsoControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 using HwpLib.Writer.BodyText.Control.Gso.Part;
 using HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso
 {
-
     /// <summary>
     /// 그리기 개체 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -124,5 +122,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso
             }
         }
     }
-
 }

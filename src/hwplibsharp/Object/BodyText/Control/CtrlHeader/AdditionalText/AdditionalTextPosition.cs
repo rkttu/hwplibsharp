@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/additionaltext/AdditionalTextPosition.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.AdditionalText
 {
-
     /// <summary>
     /// 덧말의 위치
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.AdditionalText
             };
         }
     }
-
 }

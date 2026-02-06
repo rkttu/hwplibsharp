@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/memo/MemoList.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Paragraph.Memo
 {
-
     /// <summary>
     /// 메모 리스트 레코드
     /// </summary>
@@ -33,5 +32,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Memo
             MemoIndex = from.MemoIndex;
         }
     }
-
 }

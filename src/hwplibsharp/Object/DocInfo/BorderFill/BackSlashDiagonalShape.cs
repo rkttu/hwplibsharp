@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/BackSlashDiagonalShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill
 {
-
     /// <summary>
     /// BackSlash의 대각선 모양
     /// </summary>
@@ -70,5 +69,4 @@ namespace HwpLib.Object.DocInfo.BorderFill
             };
         }
     }
-
 }

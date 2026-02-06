@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/pagenumberposition/NumberPosition.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageNumberPosition
 {
-
     /// <summary>
     /// 번호의 표시 위치
     /// </summary>
@@ -106,5 +105,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.PageNumberPosition
             };
         }
     }
-
 }

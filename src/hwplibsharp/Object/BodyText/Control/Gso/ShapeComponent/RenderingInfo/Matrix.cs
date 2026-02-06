@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponent/renderinginfo/Matrix.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.RenderingInfo
 {
-
     /// <summary>
     /// 행렬을 나타내는 객체. 각 행렬는 원소가 double로 표현되는 3 X 3 matrix로 구현된다.
     /// 마지막 행은 항상 [0,0,1]이기 떄문에 생략되어 실제 6개의 원소만 저장한다.
@@ -59,5 +58,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.RenderingInfo
             _values = (double[])from._values.Clone();
         }
     }
-
 }

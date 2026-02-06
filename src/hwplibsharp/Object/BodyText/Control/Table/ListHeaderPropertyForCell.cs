@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/table/ListHeaderPropertyForCell.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine;
 using HwpLib.Object.BodyText.Control.Gso.TextBox;
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.Table
 {
-
     /// <summary>
     /// 셀의 문단 리스트 헤더의 속성을 나타내는 객체
     /// </summary>
@@ -109,5 +107,4 @@ namespace HwpLib.Object.BodyText.Control.Table
             _value = from._value;
         }
     }
-
 }

@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/NeonEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 네온 효과 속성
     /// </summary>
@@ -67,5 +67,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
             _color.Copy(from._color);
         }
     }
-
 }

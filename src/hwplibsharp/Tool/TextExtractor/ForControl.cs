@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/textextractor/ForControl.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -128,7 +128,7 @@ namespace HwpLib.Tool.TextExtractor
             var script = equation.EQEdit?.Script?.ToUTF16LEString();
             if (script != null)
             {
-                sb.Append(script).Append("\n");
+                sb.Append(script).Append('\n');
             }
         }
 
@@ -183,8 +183,8 @@ namespace HwpLib.Tool.TextExtractor
         {
             var mainText = additionalText.GetHeader()?.MainText?.ToUTF16LEString();
             var subText = additionalText.GetHeader()?.SubText?.ToUTF16LEString();
-            if (mainText != null) sb.Append(mainText).Append("\n");
-            if (subText != null) sb.Append(subText).Append("\n");
+            if (mainText != null) sb.Append(mainText).Append('\n');
+            if (subText != null) sb.Append(subText).Append('\n');
         }
 
         /// <summary>

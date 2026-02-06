@@ -1,10 +1,8 @@
 using System;
 using System.Reflection;
 
-
 namespace HwpLib
 {
-
     /// <summary>
     /// 라이브러리 정보를 제공하는 클래스
     /// </summary>
@@ -44,5 +42,4 @@ namespace HwpLib
             Console.WriteLine($"\tported by = {PortedBy}");
         }
     }
-
 }

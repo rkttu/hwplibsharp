@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/RecordHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object
 {
-
     /// <summary>
     /// 레코드 헤더
     /// </summary>
@@ -75,5 +74,4 @@ namespace HwpLib.Object
             return cloned;
         }
     }
-
 }

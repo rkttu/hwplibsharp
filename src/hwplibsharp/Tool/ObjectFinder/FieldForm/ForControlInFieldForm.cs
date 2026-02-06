@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/fieldform/ForControlInFieldForm.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -11,10 +11,8 @@ using HwpLib.Object.BodyText.Control.Gso.TextBox;
 using HwpLib.Object.BodyText.Paragraph;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Tool.ObjectFinder.FieldForm
 {
-
     /// <summary>
     /// 컨트롤에서 필드를 찾는 클래스
     /// </summary>
@@ -200,5 +198,4 @@ namespace HwpLib.Tool.ObjectFinder.FieldForm
             }
         }
     }
-
 }

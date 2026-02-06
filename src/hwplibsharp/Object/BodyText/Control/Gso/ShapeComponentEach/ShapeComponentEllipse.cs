@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ShapeComponentEllipse.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
-using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ellipse;
 
+using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ellipse;
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
 {
-
     /// <summary>
     /// 타원 개체 속성 레코드
     /// </summary>
@@ -250,5 +249,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach
             _endY2 = from._endY2;
         }
     }
-
 }

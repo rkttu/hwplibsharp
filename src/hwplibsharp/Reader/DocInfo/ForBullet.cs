@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForBullet.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Reader.DocInfo.BorderFill;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 글머리표 레코드를 읽기 위한 객체
     /// </summary>
@@ -38,5 +36,4 @@ namespace HwpLib.Reader.DocInfo
             b.CheckBulletChar.Bytes = sr.ReadWChar();
         }
     }
-
 }

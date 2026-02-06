@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/part/shapecomponent/ForShapeComponentForContainer.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,7 +6,6 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 using HwpLib.Object.Etc;
-
 
 namespace HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent
 {
@@ -113,5 +112,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso.Part.ShapeComponent
             sw.WriteUInt4(scc.GsoId);
         }
     }
-
 }

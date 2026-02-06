@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForBorderFill.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo.BorderFill;
 using HwpLib.Object.Etc;
 using HwpLib.Writer.DocInfo.BorderFill;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 테두리/배경 레코드를 쓰기 위한 객체
     /// </summary>
@@ -73,5 +71,4 @@ namespace HwpLib.Writer.DocInfo
             sw.WriteUInt4(eb.Color.Value);
         }
     }
-
 }

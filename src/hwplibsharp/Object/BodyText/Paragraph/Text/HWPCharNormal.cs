@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/text/HWPCharNormal.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using System.Text;
 
-
 namespace HwpLib.Object.BodyText.Paragraph.Text
 {
-
     /// <summary>
     /// 일반 Character
     /// </summary>
@@ -70,5 +68,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Text
             };
         }
     }
-
 }

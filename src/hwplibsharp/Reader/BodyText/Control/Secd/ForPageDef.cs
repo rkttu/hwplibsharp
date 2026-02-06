@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/secd/ForPageDef.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,20 +6,18 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.SectionDefine;
 
-
 namespace HwpLib.Reader.BodyText.Control.Secd
 {
-
     /// <summary>
-    /// ���� ���� ���ڵ带 �б� ���� ��ü
+    /// 용지 설정 레코드를 읽기 위한 객체
     /// </summary>
     public static class ForPageDef
     {
         /// <summary>
-        /// ���� ���� ���ڵ带 �д´�.
+        /// 용지 설정 레코드를 읽는다.
         /// </summary>
-        /// <param name="pd">���� ���� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="pd">용지 설정 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(PageDef pd, CompoundStreamReader sr)
         {
             pd.PaperWidth = sr.ReadUInt4();
@@ -34,5 +32,4 @@ namespace HwpLib.Reader.BodyText.Control.Secd
             pd.Property.Value = sr.ReadUInt4();
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForDocumentProperties.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.DocumentProperties;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 문서 속성 레코드를 쓰기 위한 객체
     /// </summary>
@@ -67,5 +65,4 @@ namespace HwpLib.Writer.DocInfo
             sw.WriteUInt4(cp.PositionInParagraph);
         }
     }
-
 }

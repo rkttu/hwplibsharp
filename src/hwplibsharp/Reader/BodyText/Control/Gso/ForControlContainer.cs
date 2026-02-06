@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlContainer.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,20 +7,18 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// ���� ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 묶은 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlContainer
     {
         /// <summary>
-        /// ���� ��Ʈ���� ������ �κ��� �д´�.
+        /// 묶은 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="container">���� ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="container">묶은 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlContainer container, CompoundStreamReader sr)
         {
             var scc = (ShapeComponentContainer)container.ShapeComponent;
@@ -33,5 +31,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             }
         }
     }
-
 }

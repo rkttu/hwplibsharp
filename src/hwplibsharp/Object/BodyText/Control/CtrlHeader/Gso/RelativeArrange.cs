@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/gso/RelativeArrange.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
 {
-
     /// <summary>
     /// 상대적인 배열 방식
     /// </summary>
@@ -60,5 +59,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
             _ => RelativeArrange.TopOrLeft
         };
     }
-
 }

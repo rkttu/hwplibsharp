@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/blankfilemaker/SectionDefineAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.BodyText.Control.SectionDefine;
 using HwpLib.Object.BodyText.Paragraph;
 using HwpLib.Object.DocInfo.BorderFill;
 
-
 namespace HwpLib.Tool.BlankFileMaker
 {
-
     /// <summary>
     /// 빈 HWP 파일 생성 시 구역 정의 컨트롤을 추가하는 클래스
     /// </summary>
@@ -24,8 +22,8 @@ namespace HwpLib.Tool.BlankFileMaker
         /// <param name="paragraph">문단</param>
         public static void Add(Paragraph paragraph)
         {
-            var sectionDefine = paragraph.AddNewControl(ControlType.SectionDefine) as ControlSectionDefine;
-            if (sectionDefine == null) return;
+            if (!(paragraph.AddNewControl(ControlType.SectionDefine) is ControlSectionDefine sectionDefine))
+                return;
 
             Header(sectionDefine.Header);
             PageDef(sectionDefine.PageDef);
@@ -109,5 +107,4 @@ namespace HwpLib.Tool.BlankFileMaker
             pageBorderFillInfo.BorderFillId = 1;
         }
     }
-
 }

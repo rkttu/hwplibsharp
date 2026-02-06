@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/blankfilemaker/CharShapeAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo;
 
-
 namespace HwpLib.Tool.BlankFileMaker
 {
-
     /// <summary>
     /// 빈 HWP 파일 생성 시 문자 모양 정보를 추가하는 클래스
     /// </summary>
@@ -122,5 +120,4 @@ namespace HwpLib.Tool.BlankFileMaker
             charShape.StrikeLineColor.Value = 0;
         }
     }
-
 }

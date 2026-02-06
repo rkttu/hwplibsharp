@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/textextractor/parahead/ParaNumber.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -12,7 +12,7 @@ namespace HwpLib.Tool.TextExtractor.ParaHead
     {
         private const int LevelCount = 10;
 
-        private int[] _levelNumbers;
+        private readonly int[] _levelNumbers;
         private int _currentHeadID;
 
         /// <summary>

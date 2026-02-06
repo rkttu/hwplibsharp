@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/form/properties/PropertySet.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.Etc;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.BodyText.Control.Form.Properties
 {
-
     /// <summary>
     /// 속성 집합 (Set 타입)
     /// </summary>
@@ -185,5 +183,4 @@ namespace HwpLib.Object.BodyText.Control.Form.Properties
             return ret;
         }
     }
-
 }

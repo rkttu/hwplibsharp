@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForParaRangeTag.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Paragraph.RangeTag;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.BodyText.Paragraph
 {
-
     /// <summary>
     /// 문서의 영역 테그 레코드를 쓰기 위한 객체
     /// </summary>
@@ -63,5 +61,4 @@ namespace HwpLib.Writer.BodyText.Paragraph
             sw.WriteUInt1(rti.Sort);
         }
     }
-
 }

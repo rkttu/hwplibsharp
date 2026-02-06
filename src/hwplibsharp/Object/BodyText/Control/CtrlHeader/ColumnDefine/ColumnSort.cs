@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/columndefine/ColumnSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine
 {
-
     /// <summary>
     /// 단 종류
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine
             };
         }
     }
-
 }

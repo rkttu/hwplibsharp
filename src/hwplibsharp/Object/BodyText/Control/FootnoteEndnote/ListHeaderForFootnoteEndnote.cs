@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/footnoteendnote/ListHeaderForFootnoteEndnote.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================

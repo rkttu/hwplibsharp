@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForParaShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 문단 모양 레코드를 읽기 위한 객체
     /// </summary>
@@ -53,5 +51,4 @@ namespace HwpLib.Reader.DocInfo
             ps.ParaLevel = sr.ReadUInt4();
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlHiddenComment.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -9,10 +9,8 @@ using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.HiddenComment;
 using HwpLib.Writer.BodyText.Paragraph;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 숨은 설명 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -50,5 +48,4 @@ namespace HwpLib.Writer.BodyText.Control
             sw.WriteRecordHeader(HWPTag.CtrlHeader, 4);
         }
     }
-
 }

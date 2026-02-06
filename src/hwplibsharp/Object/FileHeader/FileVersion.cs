@@ -5,7 +5,6 @@
 
 namespace HwpLib.Object.FileHeader
 {
-
     /// <summary>
     /// 파일 버전를 나타내는 객체
     /// </summary>
@@ -145,5 +144,4 @@ namespace HwpLib.Object.FileHeader
             _rr = from._rr;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForLayoutCompatibility.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 레이아웃 호환 레코드를 쓰기 위한 객체
     /// </summary>
@@ -41,5 +39,4 @@ namespace HwpLib.Writer.DocInfo
             sw.WriteRecordHeader(HWPTag.LayoutCompatibility, 20);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/Obfuscation.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,7 +8,6 @@ using System.IO;
 
 namespace HwpLib.Binary
 {
-
     /// <summary>
     /// 배포용 문서의 난독화/복호화를 위한 유틸리티 클래스
     /// </summary>
@@ -125,5 +124,4 @@ namespace HwpLib.Binary
             }
         }
     }
-
 }

@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/caption/ListHeaderForCaption.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
-using HwpLib.Object.BodyText.Control.Gso.TextBox;
 
+using HwpLib.Object.BodyText.Control.Gso.TextBox;
 
 namespace HwpLib.Object.BodyText.Control.Gso.Caption
 {
-
     /// <summary>
     /// 캡션을 위한 문단 리스트 헤더 레코드
     /// </summary>
@@ -112,5 +111,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.Caption
             _textWidth = from._textWidth;
         }
     }
-
 }

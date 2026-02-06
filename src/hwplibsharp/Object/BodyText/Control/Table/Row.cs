@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/table/Row.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Control.Table
 {
-
     /// <summary>
     /// 표의 행을 나타내는 객체
     /// </summary>
@@ -66,5 +65,4 @@ namespace HwpLib.Object.BodyText.Control.Table
             return cloned;
         }
     }
-
 }

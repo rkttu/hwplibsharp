@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/autosetter/control/gso/part/ForCaption.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.BodyText.Control.Gso.Caption;
 
-
 namespace HwpLib.Writer.AutoSetter.Control.Gso.Part
 {
-
     /// <summary>
     /// 캡션 정보를 쓰기 전에 자동 설정하기 위한 객체
     /// </summary>
@@ -38,5 +36,4 @@ namespace HwpLib.Writer.AutoSetter.Control.Gso.Part
             c.ListHeader.ParaCount = c.ParagraphList.ParagraphCount;
         }
     }
-
 }

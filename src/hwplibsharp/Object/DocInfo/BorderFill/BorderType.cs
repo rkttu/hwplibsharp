@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/BorderType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.BorderFill
 {
-
     /// <summary>
     /// 테두리선 종류
     /// </summary>
@@ -148,5 +147,4 @@ namespace HwpLib.Object.DocInfo.BorderFill
             };
         }
     }
-
 }

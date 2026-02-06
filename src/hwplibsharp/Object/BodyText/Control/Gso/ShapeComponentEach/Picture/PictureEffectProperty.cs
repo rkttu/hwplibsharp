@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/picture/PictureEffectProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
-using HwpLib.Util.Binary;
 
+using HwpLib.Util.Binary;
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
 {
-
     /// <summary>
     /// 그림 효과의 속성을 나타내는 객체
     /// </summary>
@@ -79,5 +78,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture
             _value = from._value;
         }
     }
-
 }

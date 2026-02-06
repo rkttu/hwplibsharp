@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/docinfo/ForStyle.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,10 +8,8 @@ using HwpLib.Object.DocInfo;
 using HwpLib.Object.Etc;
 using HwpLib.Util;
 
-
 namespace HwpLib.Writer.DocInfo
 {
-
     /// <summary>
     /// 스타일 레코드를 쓰기 위한 객체
     /// </summary>
@@ -60,5 +58,4 @@ namespace HwpLib.Writer.DocInfo
             return size;
         }
     }
-
 }

@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/facename/FontType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.FaceName
 {
-
     /// <summary>
     /// 대체 글꼴 유형
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.DocInfo.FaceName
             };
         }
     }
-
 }

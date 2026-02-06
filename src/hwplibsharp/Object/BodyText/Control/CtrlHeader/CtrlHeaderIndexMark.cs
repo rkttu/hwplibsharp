@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderIndexMark.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.Etc;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.Etc;
-
     /// <summary>
     /// 찾아보기 표식 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -16,12 +15,12 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 키워드 1
         /// </summary>
-        private HWPString keyword1;
+        private readonly HWPString keyword1;
 
         /// <summary>
         /// 키워드 2
         /// </summary>
-        private HWPString keyword2;
+        private readonly HWPString keyword2;
 
         /// <summary>
         /// 생성자
@@ -54,5 +53,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             keyword2.Copy(from2.keyword2);
         }
     }
-
 }

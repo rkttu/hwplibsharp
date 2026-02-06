@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/FootNoteDisplayMethod.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 한 페이지 내에서 각주를 다단에 위치시킬 방법
     /// </summary>
@@ -58,5 +57,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             };
         }
     }
-
 }

@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/text/HWPCharControlChar.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using System.Text;
 
-
 namespace HwpLib.Object.BodyText.Paragraph.Text
 {
-
     /// <summary>
     /// 문자 컨트롤 Character
     /// </summary>
@@ -74,5 +72,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Text
             };
         }
     }
-
 }

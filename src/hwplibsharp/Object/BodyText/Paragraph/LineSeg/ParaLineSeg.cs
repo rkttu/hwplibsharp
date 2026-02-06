@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/lineseg/ParaLineSeg.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Paragraph.LineSeg
 {
-
     /// <summary>
     /// 문단의 레이아웃 레코드
     /// </summary>
@@ -67,5 +66,4 @@ namespace HwpLib.Object.BodyText.Paragraph.LineSeg
             return cloned;
         }
     }
-
 }

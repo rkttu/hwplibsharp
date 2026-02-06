@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/textbox/TextBox.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
-using HwpLib.Object.BodyText.Paragraph;
 
+using HwpLib.Object.BodyText.Paragraph;
 
 namespace HwpLib.Object.BodyText.Control.Gso.TextBox
 {
-
     /// <summary>
     /// 글상자를 나타내는 객체
     /// </summary>
@@ -52,5 +51,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.TextBox
             _paragraphList.Copy(from._paragraphList);
         }
     }
-
 }

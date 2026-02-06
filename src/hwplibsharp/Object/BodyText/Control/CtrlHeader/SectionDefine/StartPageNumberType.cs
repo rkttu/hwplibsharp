@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/sectiondefine/StartPageNumberType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine
 {
-
     /// <summary>
     /// 시작 쪽번호 타입
     /// </summary>
@@ -64,5 +63,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.SectionDefine
             };
         }
     }
-
 }

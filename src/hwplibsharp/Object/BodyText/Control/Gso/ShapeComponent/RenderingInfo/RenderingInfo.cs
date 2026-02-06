@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponent/renderinginfo/RenderingInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.RenderingInfo
 {
-
     /// <summary>
     /// Rendering 정보
     /// </summary>
@@ -68,5 +67,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponent.RenderingInfo
             }
         }
     }
-
 }

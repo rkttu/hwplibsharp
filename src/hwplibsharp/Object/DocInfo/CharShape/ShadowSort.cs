@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/ShadowSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 그림자 종류
     /// </summary>
@@ -44,5 +43,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             _ => ShadowSort.None
         };
     }
-
 }

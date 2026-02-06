@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/CtrlHeaderPageHide.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Object.BodyText.Control.CtrlHeader.PageHide;
+
 namespace HwpLib.Object.BodyText.Control.CtrlHeader
 {
-
-    using HwpLib.Object.BodyText.Control.CtrlHeader.PageHide;
-
     /// <summary>
     /// 감추기 컨트롤을 위한 컨트롤 헤더 레코드
     /// </summary>
@@ -16,7 +15,7 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
         /// <summary>
         /// 속성
         /// </summary>
-        private PageHideHeaderProperty property;
+        private readonly PageHideHeaderProperty property;
 
         /// <summary>
         /// 생성자
@@ -51,5 +50,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader
             property.Copy(from2.property);
         }
     }
-
 }

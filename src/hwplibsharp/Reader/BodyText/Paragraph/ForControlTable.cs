@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlTable.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,37 +10,35 @@ using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 using HwpLib.Reader.BodyText.Control.Tbl;
 
-
 namespace HwpLib.Reader.BodyText.Paragraph
 {
-
     /// <summary>
-    /// ǥ ��Ʈ���� �б� ���� ��ü
+    /// 표 컨트롤을 읽기 위한 객체
     /// </summary>
     public class ForControlTable
     {
         /// <summary>
-        /// ǥ ��Ʈ��
+        /// 표 컨트롤
         /// </summary>
         private ControlTable? _table;
 
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
         /// <summary>
-        /// ������
+        /// 생성자
         /// </summary>
         public ForControlTable()
         {
         }
 
         /// <summary>
-        /// ǥ ��Ʈ���� �д´�.
+        /// 표 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="table">ǥ ��Ʈ�� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="table">표 컨트롤 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(ControlTable table, CompoundStreamReader sr)
         {
             _table = table;
@@ -54,7 +52,7 @@ namespace HwpLib.Reader.BodyText.Paragraph
         }
 
         /// <summary>
-        /// ǥ ��Ʈ���� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 표 컨트롤의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
         private void CtrlHeader()
         {
@@ -62,7 +60,7 @@ namespace HwpLib.Reader.BodyText.Paragraph
         }
 
         /// <summary>
-        /// ��Ʈ�� �����͸� �д´�.
+        /// 컨트롤 데이터를 읽는다.
         /// </summary>
         private void CtrlData()
         {
@@ -76,7 +74,7 @@ namespace HwpLib.Reader.BodyText.Paragraph
         }
 
         /// <summary>
-        /// ĸ�� ������ �д´�.
+        /// 캡션 정보를 읽는다.
         /// </summary>
         private void Caption()
         {
@@ -92,7 +90,7 @@ namespace HwpLib.Reader.BodyText.Paragraph
         }
 
         /// <summary>
-        /// ǥ ���� ���ڵ带 �д´�.
+        /// 표 정보 레코드를 읽는다.
         /// </summary>
         private void Table()
         {
@@ -107,7 +105,7 @@ namespace HwpLib.Reader.BodyText.Paragraph
         }
 
         /// <summary>
-        /// ����� �д´�.
+        /// 행들을 읽는다.
         /// </summary>
         private void Rows()
         {
@@ -121,10 +119,10 @@ namespace HwpLib.Reader.BodyText.Paragraph
         }
 
         /// <summary>
-        /// �ϳ��� �� �ȿ� ������ �д´�.
+        /// 하나의 행 안에 셀들을 읽는다.
         /// </summary>
-        /// <param name="r">��</param>
-        /// <param name="cellCount">�࿡ ���Ե� �� ����</param>
+        /// <param name="r">행</param>
+        /// <param name="cellCount">행에 포함된 셀 개수</param>
         private void Row(Row r, int cellCount)
         {
             for (int cellIndex = 0; cellIndex < cellCount; cellIndex++)
@@ -134,5 +132,4 @@ namespace HwpLib.Reader.BodyText.Paragraph
             }
         }
     }
-
 }

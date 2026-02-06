@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ole/ShapeComponentOLEProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
-using HwpLib.Util.Binary;
 
+using HwpLib.Util.Binary;
 
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ole
 {
-
     /// <summary>
     /// OLE 개체의 속성에 대한 객체
     /// </summary>
@@ -81,5 +80,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ole
             _value = from._value;
         }
     }
-
 }

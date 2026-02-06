@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/table/TableProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.Table
 {
-
     /// <summary>
     /// 표의 속성을 나타내는 객체
     /// </summary>
@@ -62,5 +60,4 @@ namespace HwpLib.Object.BodyText.Control.Table
             _value = from._value;
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/bookmark/ParameterSet.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace HwpLib.Object.BodyText.Control.Bookmark
 {
-
     /// <summary>
     /// 파라미터 셋 객체
     /// </summary>
@@ -77,12 +76,16 @@ namespace HwpLib.Object.BodyText.Control.Bookmark
                 return null;
             }
 
-            var ps = new ParameterSet();
-            ps.Id = 0x21b;
+            var ps = new ParameterSet
+            {
+                Id = 0x21b
+            };
+
             var pi = ps.AddNewParameterItem();
             pi.Id = 0x4000;
             pi.Type = ParameterType.String;
             pi.Value_BSTR = fieldName;
+
             return ps;
         }
 
@@ -93,13 +96,12 @@ namespace HwpLib.Object.BodyText.Control.Bookmark
         public void Copy(ParameterSet from)
         {
             Id = from.Id;
-
             _parameterItemList.Clear();
+
             foreach (var parameterItem in from._parameterItemList)
             {
                 _parameterItemList.Add(parameterItem.Clone());
             }
         }
     }
-
 }

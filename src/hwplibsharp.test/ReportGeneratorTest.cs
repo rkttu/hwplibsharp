@@ -1,19 +1,16 @@
 using HwpLib.Object;
-using HwpLib.Object.BodyText;
 using HwpLib.Object.BodyText.Control.CtrlHeader.Gso;
 using HwpLib.Object.BodyText.Control.Gso;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.LineInfo;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponent.ShadowInfo;
 using HwpLib.Object.BodyText.Paragraph;
-using HwpLib.Object.BodyText.Paragraph.Text;
 using HwpLib.Object.DocInfo.BinData;
 using HwpLib.Object.DocInfo.BorderFill.FillInfo;
 using HwpLib.Reader;
 using HwpLib.Tool.BlankFileMaker;
 using HwpLib.Writer;
 using System.Drawing;
-using System.IO;
 using Section = HwpLib.Object.BodyText.Section;
 
 namespace HwpLibSharp.Test
@@ -113,7 +110,7 @@ namespace HwpLibSharp.Test
             using (var stream2 = new MemoryStream(bytes2))
             {
                 // AutoSize는 기본 true
-                report.AddContent(stream2, "Gradient Descent Optimization Steps", autoSize:false);
+                report.AddContent(stream2, "Gradient Descent Optimization Steps", autoSize: false);
             }
 
             // 3. 저장

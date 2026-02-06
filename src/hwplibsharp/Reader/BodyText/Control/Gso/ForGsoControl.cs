@@ -13,27 +13,25 @@ using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 using System;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// �׸��� ��ü ��Ʈ�ѵ��� �д´�.
+    /// 그리기 개체 컨트롤들을 읽는다.
     /// </summary>
     public class ForGsoControl
     {
         /// <summary>
-        /// ���� ��ü
+        /// 구역 객체
         /// </summary>
         private Object.BodyText.Paragraph.Paragraph? _paragraph;
 
         /// <summary>
-        /// ��Ʈ�� ����
+        /// 스트림 리더
         /// </summary>
         private CompoundStreamReader? _sr;
 
         /// <summary>
-        /// ������ �׸��� ��ü ��Ʈ��
+        /// 마지막 그리기 객체 컨트롤
         /// </summary>
         private GsoControl? _gsoControl;
 
@@ -42,25 +40,23 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         private CtrlData? _ctrlData;
 
         /// <summary>
-        /// ������
+        /// 생성자
         /// </summary>
         public ForGsoControl()
         {
         }
 
         /// <summary>
-        /// �׸��� ��ü ��Ʈ���� �д´�.
+        /// 그리기 개체 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="paragraph">���� ��ü</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="paragraph">문단 객체</param>
+        /// <param name="sr">스트림 리더</param>
         public void Read(Object.BodyText.Paragraph.Paragraph paragraph, CompoundStreamReader sr)
         {
             _paragraph = paragraph;
             _sr = sr;
-
             CtrlHeader();
             CaptionAndCtrlData();
-
             long gsoId = GsoIDFromShapeComponent();
             _gsoControl = CreateGsoControl(gsoId);
             RestPartOfShapeComponent();
@@ -68,8 +64,9 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �׸��� ��ü�� ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 그리기 개체의 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
+        /// <returns>그리기 개체의 컨트롤 헤더 레코드</returns>
         private void CtrlHeader()
         {
             _header = new CtrlHeaderGso();
@@ -77,13 +74,12 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ĸ�ǰ� ��Ʈ�� �����͸� �д´�.
+        /// 캡션과 컨트롤 데이터를 읽는다.
         /// </summary>
         private void CaptionAndCtrlData()
         {
             _caption = null;
             _ctrlData = null;
-
             _sr!.ReadRecordHeader();
             while (_sr.CurrentRecordHeader?.TagId != HWPTag.ShapeComponent)
             {
@@ -91,7 +87,6 @@ namespace HwpLib.Reader.BodyText.Control.Gso
                 {
                     break;
                 }
-
                 if (_sr.CurrentRecordHeader?.TagId == HWPTag.ListHeader)
                 {
                     _caption = new Caption();
@@ -123,9 +118,9 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ��ü ���� �Ӽ� ���ڵ�κ��� �׸��� ��ü�� id�� �д´�.
+        /// 객체 공통 속성 레코드로 부터 그리기 개체의 id를 읽는다.
         /// </summary>
-        /// <returns>�׸��� ��ü�� id</returns>
+        /// <returns>그리기 개체의 id</returns>
         private long GsoIDFromShapeComponent()
         {
             if (!_sr!.IsImmediatelyAfterReadingHeader)
@@ -145,10 +140,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// �׸��� ��ü ��Ʈ���� �����Ѵ�.
+        /// 그리기 개체 컨트롤을 생성한다.
         /// </summary>
-        /// <param name="gsoId">�׸��� ��ü ���̵�</param>
-        /// <returns>������ �׸��� ��ü ��Ʈ��</returns>
+        /// <param name="gsoId">그리기 개체 아이디</param>
+        /// <returns>생성된 그리기 개체 컨트롤</returns>
         private GsoControl CreateGsoControl(long gsoId)
         {
             var gc = _paragraph!.AddNewGsoControl((uint)gsoId, _header!);
@@ -158,7 +153,7 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ��ü ���� �Ӽ� ���ڵ��� ������ �κ��� �д´�.
+        /// 객체 공통 속성 레코드의 나머지 부분을 읽는다.
         /// </summary>
         private void RestPartOfShapeComponent()
         {
@@ -166,7 +161,7 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ��Ʈ���� ������ �κ��� �д´�.
+        /// 컨트롤의 너머지 부분을 읽는다.
         /// </summary>
         private void RestPartOfControl()
         {
@@ -209,10 +204,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ���� ��Ʈ�� �ȿ� ���Ե� ��Ʈ���� �д´�.
+        /// 묶음 컨트롤 안에 포함된 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="sr">��Ʈ�� ����</param>
-        /// <returns>���� ��Ʈ�� �ȿ� ���Ե� ��Ʈ��</returns>
+        /// <param name="sr">스트림 리더</param>
+        /// <returns>묶음 컨트롤 안에 포함된 컨트롤</returns>
         public GsoControl ReadInContainer(CompoundStreamReader sr)
         {
             _sr = sr;
@@ -222,7 +217,7 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ���� ��Ʈ�� �ȿ� ���Ե� ��Ʈ���� ���� �׸��� ��ü ��Ʈ�� ��� ���ڵ带 �д´�.
+        /// 묶음 컨트롤 안에 포함된 컨트롤을 위한 그리기 개체 컨트롤 헤더 레코드를 읽는다.
         /// </summary>
         private void ShapeComponentInContainer()
         {
@@ -239,5 +234,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             }
         }
     }
-
 }

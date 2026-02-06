@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/columndefine/ColumnInfo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine
 {
-
     /// <summary>
     /// 하나의 단에 대한 정보를 나타내는 객체
     /// </summary>
@@ -41,5 +40,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.ColumnDefine
             };
         }
     }
-
 }

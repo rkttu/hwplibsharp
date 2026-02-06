@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/paragraph/memo/Memo.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Paragraph.Memo
 {
-
     /// <summary>
     /// 메모 정보를 나타내는 객체
     /// </summary>
@@ -64,5 +63,4 @@ namespace HwpLib.Object.BodyText.Paragraph.Memo
             return cloned;
         }
     }
-
 }

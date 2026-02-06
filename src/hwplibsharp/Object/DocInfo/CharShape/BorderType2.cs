@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/BorderType2.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.DocInfo.BorderFill;
 
-
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 문자선(밑줄 or 취소선) 종류
     /// </summary>
@@ -116,5 +114,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             _ => BorderType.None
         };
     }
-
 }

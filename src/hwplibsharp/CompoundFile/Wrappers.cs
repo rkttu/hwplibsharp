@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // C# Specific Implementation (no direct Java equivalent)
 // Provides OpenMcdf wrappers (Java uses Apache POI)
 // Repository: https://github.com/neolord0/hwplib
@@ -8,10 +8,8 @@ using OpenMcdf;
 using System.Collections.Generic;
 using System.IO;
 
-
 namespace HwpLib.CompoundFile
 {
-
     /// <summary>
     /// OpenMcdf 3.x의 Storage를 IDirectoryEntry로 래핑하는 클래스
     /// POI의 DirectoryNode에 대응
@@ -160,5 +158,4 @@ namespace HwpLib.CompoundFile
         /// </summary>
         internal CfbStream InternalStream => _stream;
     }
-
 }

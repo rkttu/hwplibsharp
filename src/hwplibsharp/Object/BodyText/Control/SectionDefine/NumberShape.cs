@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/NumberShape.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 번호 모양
     /// </summary>
@@ -154,5 +153,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             };
         }
     }
-
 }

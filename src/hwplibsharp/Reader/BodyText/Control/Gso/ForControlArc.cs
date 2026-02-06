@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/ForControlArc.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,20 +10,18 @@ using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Arc;
 using HwpLib.Object.Etc;
 using HwpLib.Reader.BodyText.Control.Gso.Part;
 
-
 namespace HwpLib.Reader.BodyText.Control.Gso
 {
-
     /// <summary>
-    /// ȣ ��Ʈ���� ������ �κ��� �б� ���� ��ü
+    /// 호 컨트롤의 나머지 부분을 읽기 위한 객체
     /// </summary>
     public static class ForControlArc
     {
         /// <summary>
-        /// ȣ ��Ʈ���� ������ �κ��� �д´�.
+        /// 호 컨트롤의 나머지 부분을 읽는다.
         /// </summary>
-        /// <param name="arc">ȣ ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="arc">호 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void ReadRest(ControlArc arc, CompoundStreamReader sr)
         {
             sr.ReadRecordHeader();
@@ -46,10 +44,10 @@ namespace HwpLib.Reader.BodyText.Control.Gso
         }
 
         /// <summary>
-        /// ȣ ��ü �Ӽ� ���ڵ带 �д´�.
+        /// 호 개체 속성 레코드를 읽는다.
         /// </summary>
-        /// <param name="sca">ȣ ��ü �Ӽ� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="sca">호 개체 속성 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void ShapeComponentArc(ShapeComponentArc sca, CompoundStreamReader sr)
         {
             sca.ArcType = ArcTypeExtensions.FromValue(sr.ReadUInt1());
@@ -61,5 +59,4 @@ namespace HwpLib.Reader.BodyText.Control.Gso
             sca.Axis2Y = sr.ReadSInt4();
         }
     }
-
 }

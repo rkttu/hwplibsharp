@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/charshape/EmphasisSort.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.DocInfo.CharShape
 {
-
     /// <summary>
     /// 강조점 종류
     /// </summary>
@@ -74,5 +73,4 @@ namespace HwpLib.Object.DocInfo.CharShape
             _ => EmphasisSort.None
         };
     }
-
 }

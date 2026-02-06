@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/ctrlheader/gso/TextHorzArrange.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
 {
-
     /// <summary>
     /// 오브젝트의 좌/우 어느 쪽에 글을 배치할지 지정하는 옵션
     /// </summary>
@@ -54,5 +53,4 @@ namespace HwpLib.Object.BodyText.Control.CtrlHeader.Gso
             _ => TextHorzArrange.BothSides
         };
     }
-
 }

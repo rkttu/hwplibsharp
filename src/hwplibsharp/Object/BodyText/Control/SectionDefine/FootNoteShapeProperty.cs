@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/sectiondefine/FootNoteShapeProperty.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Util.Binary;
 
-
 namespace HwpLib.Object.BodyText.Control.SectionDefine
 {
-
     /// <summary>
     /// 각주 모양에 대한 속성을 나타내는 객체
     /// </summary>
@@ -98,5 +96,4 @@ namespace HwpLib.Object.BodyText.Control.SectionDefine
             _value = from._value;
         }
     }
-
 }

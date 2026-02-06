@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/objectfinder/forfield/ForParagraphList.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -14,7 +14,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Para = HwpLib.Object.BodyText.Paragraph.Paragraph;
 
 namespace HwpLib.Tool.ObjectFinder.ForField
@@ -310,8 +309,7 @@ namespace HwpLib.Tool.ObjectFinder.ForField
 
                     if (findPosition.FindEndPosition)
                     {
-                        int deletedCount;
-                        if (!ChangeText(paraList, findPosition, textBuffer, out deletedCount))
+                        if (!ChangeText(paraList, findPosition, textBuffer, out int deletedCount))
                         {
                             return SetFieldResult.NotEnoughText;
                         }

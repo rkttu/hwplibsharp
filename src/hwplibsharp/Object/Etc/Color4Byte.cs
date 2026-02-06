@@ -1,13 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/etc/Color4Byte.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
+using HwpLib.Util.Binary;
+
 namespace HwpLib.Object.Etc
 {
-
-    using HwpLib.Util.Binary;
-
     /// <summary>
     /// 4byte 색상 객체. windows API의 COLORREF에 대응하는 객체
     /// </summary>
@@ -119,5 +118,4 @@ namespace HwpLib.Object.Etc
             value = from.value;
         }
     }
-
 }

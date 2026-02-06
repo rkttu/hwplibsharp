@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForCompatibleDocument.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.CompatibleDocument;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 호환 문서 레코드를 읽기 위한 객체
     /// </summary>
@@ -26,5 +24,4 @@ namespace HwpLib.Reader.DocInfo
             cd.TargetProgram = CompatibleDocumentSortExtensions.FromValue((byte)sr.ReadUInt4());
         }
     }
-
 }

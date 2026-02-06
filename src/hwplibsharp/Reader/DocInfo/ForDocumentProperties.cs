@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/docinfo/ForDocumentProperties.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.DocInfo;
 using HwpLib.Object.DocInfo.DocumentProperties;
 
-
 namespace HwpLib.Reader.DocInfo
 {
-
     /// <summary>
     /// 문서 속성 레코드를 읽기 위한 객체
     /// </summary>
@@ -65,5 +63,4 @@ namespace HwpLib.Reader.DocInfo
             cp.PositionInParagraph = sr.ReadUInt4();
         }
     }
-
 }

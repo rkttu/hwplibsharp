@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/tool/paragraphadder/docinfo/NumberingAdder.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -14,8 +14,8 @@ namespace HwpLib.Tool.ParagraphAdder.DocInfo
     /// </summary>
     public class NumberingAdder
     {
-        private DocInfoAdder _docInfoAdder;
-        private Dictionary<int, int> _idMatchingMap;
+        private readonly DocInfoAdder _docInfoAdder;
+        private readonly Dictionary<int, int> _idMatchingMap;
 
         /// <summary>
         /// NumberingAdder 클래스의 새 인스턴스를 초기화합니다.

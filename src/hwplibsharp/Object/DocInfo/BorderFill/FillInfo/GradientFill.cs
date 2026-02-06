@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/docinfo/borderfill/fillinfo/GradientFill.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -6,10 +6,8 @@
 using HwpLib.Object.Etc;
 using System.Collections.Generic;
 
-
 namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
 {
-
     /// <summary>
     /// 그러데이션 채우기 객체
     /// </summary>
@@ -175,5 +173,4 @@ namespace HwpLib.Object.DocInfo.BorderFill.FillInfo
             _blurringCenter = from._blurringCenter;
         }
     }
-
 }

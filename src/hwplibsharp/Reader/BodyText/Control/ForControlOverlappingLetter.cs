@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/reader/bodytext/ForControlOverlappingLetter.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -8,30 +8,28 @@ using HwpLib.Object.BodyText.Control;
 using HwpLib.Object.BodyText.Control.CtrlHeader;
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Reader.BodyText.Control
 {
-
     /// <summary>
-    /// ���� ��ħ ��Ʈ���� �б� ���� ��ü
+    /// 글자 겹침 컨트롤을 읽기 위한 객체
     /// </summary>
     public static class ForControlOverlappingLetter
     {
         /// <summary>
-        /// ���� ��ħ ��Ʈ���� �д´�.
+        /// 글자 겹침 컨트롤을 읽는다.
         /// </summary>
-        /// <param name="tcps">���� ��ħ ��Ʈ��</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="tcps">글자 겹침 컨트롤</param>
+        /// <param name="sr">스트림 리더</param>
         public static void Read(ControlOverlappingLetter tcps, CompoundStreamReader sr)
         {
             CtrlHeader(tcps.GetHeader()!, sr);
         }
 
         /// <summary>
-        /// ���� ��ħ ��Ʈ���� ��Ʈ�� ��� ���ڵ��� �д´�.
+        /// 글자 겹침 컨트롤의 컨트롤 헤더 레코드을 읽는다.
         /// </summary>
-        /// <param name="header">���� ��ħ ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">글자 겹침 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CtrlHeader(CtrlHeaderOverlappingLetter header, CompoundStreamReader sr)
         {
             OverlappingLetters(header, sr);
@@ -46,26 +44,28 @@ namespace HwpLib.Reader.BodyText.Control
         }
 
         /// <summary>
-        /// ��ħ ���� �κ��� �д´�.
+        /// 겹침 글자 부분을 읽는다.
         /// </summary>
-        /// <param name="header">���� ��ħ ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">글자 겹침 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void OverlappingLetters(CtrlHeaderOverlappingLetter header, CompoundStreamReader sr)
         {
             int count = sr.ReadUInt2();
             for (int index = 0; index < count; index++)
             {
-                var letter = new HWPString();
-                letter.Bytes = sr.ReadWChar();
+                var letter = new HWPString
+                {
+                    Bytes = sr.ReadWChar()
+                };
                 header.AddOverlappingLetter(letter);
             }
         }
 
         /// <summary>
-        /// ���� ��� �κ��� �д´�.
+        /// 글자 모양 부분을 읽는다.
         /// </summary>
-        /// <param name="header">���� ��ħ ��Ʈ���� ��Ʈ�� ��� ���ڵ�</param>
-        /// <param name="sr">��Ʈ�� ����</param>
+        /// <param name="header">글자 겹침 컨트롤의 컨트롤 헤더 레코드</param>
+        /// <param name="sr">스트림 리더</param>
         private static void CharShapeIds(CtrlHeaderOverlappingLetter header, CompoundStreamReader sr)
         {
             short count = sr.ReadUInt1();
@@ -76,5 +76,4 @@ namespace HwpLib.Reader.BodyText.Control
             }
         }
     }
-
 }

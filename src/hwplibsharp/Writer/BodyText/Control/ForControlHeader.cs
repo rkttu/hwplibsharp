@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/ForControlHeader.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -10,10 +10,8 @@ using HwpLib.Object.Etc;
 using HwpLib.Writer.BodyText.Control.HeaderFooter;
 using HwpLib.Writer.BodyText.Paragraph;
 
-
 namespace HwpLib.Writer.BodyText.Control
 {
-
     /// <summary>
     /// 머리말 컨트롤을 쓰기 위한 객체
     /// </summary>
@@ -54,5 +52,4 @@ namespace HwpLib.Writer.BodyText.Control
             sw.WriteRecordHeader(HWPTag.CtrlHeader, 12);
         }
     }
-
 }

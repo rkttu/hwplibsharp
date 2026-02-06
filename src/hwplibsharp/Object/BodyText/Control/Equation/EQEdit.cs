@@ -1,14 +1,12 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/equation/EQEdit.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 using HwpLib.Object.Etc;
 
-
 namespace HwpLib.Object.BodyText.Control.Equation
 {
-
     /// <summary>
     /// 수식 컨트롤의 수식 정보를 나타내는 레코드
     /// </summary>
@@ -81,5 +79,4 @@ namespace HwpLib.Object.BodyText.Control.Equation
             FontName.Copy(from.FontName);
         }
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/hiddencomment/ListHeaderForHiddenComment.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================

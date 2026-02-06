@@ -1,11 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/form/properties/PropertyType.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
 namespace HwpLib.Object.BodyText.Control.Form.Properties
 {
-
     /// <summary>
     /// 폼 속성 타입
     /// </summary>
@@ -71,5 +70,4 @@ namespace HwpLib.Object.BodyText.Control.Form.Properties
             _ => PropertyType.Null,
         };
     }
-
 }

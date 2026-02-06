@@ -1,10 +1,10 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/object/bodytext/control/gso/shapecomponenteach/ole/DVASPECT.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
+
 namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ole
 {
-
     /// <summary>
     /// Windows API DVASPECT enumeration
     /// </summary>
@@ -55,5 +55,4 @@ namespace HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Ole
                 _ => DVASPECT.Content,
             };
     }
-
 }

@@ -1,4 +1,4 @@
-﻿// =====================================================================
+// =====================================================================
 // Java Original: kr/dogfoot/hwplib/writer/bodytext/gso/part/ForPictureEffect.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
@@ -7,10 +7,8 @@ using HwpLib.CompoundFile;
 using HwpLib.Object.BodyText.Control.Gso.ShapeComponentEach.Picture;
 using System;
 
-
 namespace HwpLib.Writer.BodyText.Control.Gso.Part
 {
-
     /// <summary>
     /// 그림 개체 속성 레코드의 그림 효과 부분을 쓰기 위한 객체
     /// </summary>
@@ -168,5 +166,4 @@ namespace HwpLib.Writer.BodyText.Control.Gso.Part
             return size;
         }
     }
-
 }
