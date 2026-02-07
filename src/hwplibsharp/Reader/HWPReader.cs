@@ -76,7 +76,7 @@ namespace HwpLib.Reader
             reader.ReadBodyText();
             reader.ReadBinData();
             // reader.ReadSummaryInformation();
-            // reader.ReadScripts();
+            reader.ReadScripts();
 
             return reader._hwpFile;
         }
@@ -144,6 +144,7 @@ namespace HwpLib.Reader
             return _hwpFile!.FileHeader.HasPassword;
         }
 
+        /*
         /// <summary>
         /// 배포용 문서 파일인지 여부를 반환한다.
         /// </summary>
@@ -152,6 +153,7 @@ namespace HwpLib.Reader
         {
             return _hwpFile!.FileHeader.IsDistribution;
         }
+        */
 
         /// <summary>
         /// 압축된 파일인지 여부를 반환한다.
@@ -298,6 +300,39 @@ namespace HwpLib.Reader
                 BinDataCompress.NoCompress => false,
                 _ => false
             };
+        }
+
+        /// <summary>
+        /// Scripts 스토리지를 읽는다.
+        /// </summary>
+        private void ReadScripts()
+        {
+            if (_cfr!.IsChildStorage("Scripts"))
+            {
+                _cfr.MoveChildStorage("Scripts");
+
+                try
+                {
+                    using var defaultJScriptReader = _cfr.GetChildStreamReader("DefaultJScript", IsCompressed(), GetVersion());
+                    _hwpFile!.Scripts.DefaultJScript = defaultJScriptReader.ReadBytes((int)defaultJScriptReader.Size);
+                }
+                catch
+                {
+                    // DefaultJScript 스트림이 없을 수 있음
+                }
+
+                try
+                {
+                    using var jScriptVersionReader = _cfr.GetChildStreamReader("JScriptVersion", IsCompressed(), GetVersion());
+                    _hwpFile!.Scripts.JScriptVersion = jScriptVersionReader.ReadBytes((int)jScriptVersionReader.Size);
+                }
+                catch
+                {
+                    // JScriptVersion 스트림이 없을 수 있음
+                }
+
+                _cfr.MoveParentStorage();
+            }
         }
 
         /// <summary>
