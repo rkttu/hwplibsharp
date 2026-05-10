@@ -414,3 +414,6 @@ $RECYCLE.BIN/
 # HWP test result files
 /sample_hwp/result/
 /sample_hwp/basic/result-setting-필드-누름틀.hwp
+
+# Visual Studio language service cache
+*.lscache
