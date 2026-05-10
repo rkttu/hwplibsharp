@@ -21,7 +21,7 @@
 | 원본 라이브러리 | [neolord0/hwplib](https://github.com/neolord0/hwplib) (Java) |
 | 원 저작자 | neolord0 |
 | .NET 포팅 | rkttu (AI 기반 번역) |
-| 주요 의존성 | OpenMcdf 3.1.0 |
+| 주요 의존성 | OpenMcdf 3.1.3 |
 
 ---
 
