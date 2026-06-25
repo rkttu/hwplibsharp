@@ -41,7 +41,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OpenMcdf" Version="3.1.3" />
+		<PackageReference Include="OpenMcdf" Version="3.1.4" />
 	</ItemGroup>
 
 	<!-- .NET Framework 4.7.2 specific references -->
