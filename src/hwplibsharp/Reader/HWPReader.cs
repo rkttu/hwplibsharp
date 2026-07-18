@@ -6,6 +6,7 @@
 using HwpLib.CompoundFile;
 using HwpLib.Object;
 using HwpLib.Object.DocInfo.BinData;
+using HwpLib.Object.Etc;
 using HwpLib.Object.FileHeader;
 using HwpLib.Reader.DocInfo;
 using System;
@@ -202,10 +203,10 @@ namespace HwpLib.Reader
                     })
                     .ToList();
 
-                foreach (var sectionName in sectionNames)
+                for (int i = 0; i < sectionNames.Count; i++)
                 {
                     var section = _hwpFile!.BodyText.AddNewSection();
-                    ReadSection(sectionName, section);
+                    ReadSection(sectionNames[i], section, i == sectionNames.Count - 1);
                 }
 
                 _cfr.MoveParentStorage();
@@ -217,12 +218,51 @@ namespace HwpLib.Reader
         /// </summary>
         /// <param name="sectionName">섹션 스트림 이름</param>
         /// <param name="section">섹션 객체</param>
-        private void ReadSection(string sectionName, HwpLib.Object.BodyText.Section section)
+        /// <param name="isLastSection">마지막 섹션인지 여부</param>
+        private void ReadSection(string sectionName, HwpLib.Object.BodyText.Section section, bool isLastSection)
         {
             using var sr = _cfr!.GetChildStreamReader(sectionName, IsCompressed(), GetVersion());
 
             // Section 스트림 읽기
             new BodyText.ForSection().Read(section, sr);
+
+            // 메모 레코드는 마지막 섹션 스트림의 끝에 붙어 있다
+            if (isLastSection)
+            {
+                ReadMemos(sr);
+            }
+        }
+
+        /// <summary>
+        /// 섹션 스트림 끝에 붙어 있는 메모 레코드들을 읽는다.
+        /// </summary>
+        /// <param name="sr">스트림 리더</param>
+        private void ReadMemos(CompoundStreamReader sr)
+        {
+            while (!sr.IsEndOfStream())
+            {
+                if (!sr.IsImmediatelyAfterReadingHeader)
+                {
+                    if (!sr.ReadRecordHeader())
+                    {
+                        break;
+                    }
+                }
+
+                if (sr.CurrentRecordHeader?.TagId == HWPTag.MemoList)
+                {
+                    BodyText.Memo.ForMemo.Read(_hwpFile!.BodyText.AddNewMemo(), sr);
+                }
+                else
+                {
+                    sr.SkipToEndRecord();
+                    if (sr.IsImmediatelyAfterReadingHeader)
+                    {
+                        // 크기가 0인 알 수 없는 레코드 - 무한 루프 방지
+                        break;
+                    }
+                }
+            }
         }
 
         /// <summary>

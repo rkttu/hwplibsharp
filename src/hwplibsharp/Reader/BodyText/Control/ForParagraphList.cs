@@ -115,6 +115,15 @@ namespace HwpLib.Reader.BodyText.Control
                 else
                 {
                     SkipETCRecord();
+                    if (sr.IsImmediatelyAfterReadingHeader)
+                    {
+                        // 크기가 0인 레코드는 본문 읽기가 없어 헤더 플래그가 유지되므로,
+                        // 다음 헤더를 읽지 않으면 무한 루프에 빠진다
+                        if (!sr.ReadRecordHeader())
+                        {
+                            break;
+                        }
+                    }
                 }
             }
         }

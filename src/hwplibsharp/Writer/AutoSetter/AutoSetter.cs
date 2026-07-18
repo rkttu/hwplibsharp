@@ -43,6 +43,14 @@ namespace HwpLib.Writer.AutoSetter
             {
                 ForParagraphList.AutoSet(section, iid);
             }
+
+            if (bodyText.MemoList != null)
+            {
+                foreach (var memo in bodyText.MemoList)
+                {
+                    ForParagraphList.AutoSet(memo.ParagraphList, iid);
+                }
+            }
         }
     }
 }
