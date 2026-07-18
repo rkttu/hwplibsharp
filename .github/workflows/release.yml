@@ -9,6 +9,11 @@ jobs:
     # Windows runner is required for .NET Framework 4.7.2 target
     runs-on: windows-latest
 
+    permissions:
+      # NuGet Trusted Publishing(OIDC)을 위한 GitHub OIDC 토큰 발급 권한
+      id-token: write
+      contents: read
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -30,9 +35,16 @@ jobs:
     - name: Pack
       run: dotnet pack --no-build --configuration Release --output ./nupkgs
 
+    # OIDC 토큰을 1시간 유효한 임시 API 키로 교환 (푸시 직전에 실행해야 함)
+    - name: NuGet login (Trusted Publishing)
+      uses: NuGet/login@v1
+      id: nuget-login
+      with:
+        user: rkttu
+
     - name: Push to NuGet
       run: |
         foreach ($pkg in Get-ChildItem -Path ./nupkgs -Filter *.nupkg) {
-          dotnet nuget push $pkg.FullName --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+          dotnet nuget push $pkg.FullName --api-key ${{ steps.nuget-login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
         }
       shell: pwsh
