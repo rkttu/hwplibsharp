@@ -9,6 +9,9 @@ jobs:
     # Windows runner is required for .NET Framework 4.7.2 target
     runs-on: windows-latest
 
+    # nuget.org Trusted Publishing 정책의 Environment 설정과 일치해야 함
+    environment: production
+
     permissions:
       # NuGet Trusted Publishing(OIDC)을 위한 GitHub OIDC 토큰 발급 권한
       id-token: write
