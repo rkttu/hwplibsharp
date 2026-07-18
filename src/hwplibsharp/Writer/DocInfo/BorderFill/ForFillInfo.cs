@@ -108,8 +108,8 @@ namespace HwpLib.Writer.DocInfo.BorderFill
         /// <param name="sw">스트림 라이터</param>
         public static void PictureInfo(PictureInfo pi, CompoundStreamWriter sw)
         {
-            sw.WriteSInt1(pi.Brightness);
             sw.WriteSInt1(pi.Contrast);
+            sw.WriteSInt1(pi.Brightness);
             sw.WriteUInt1((byte)pi.Effect);
             sw.WriteUInt2(pi.BinItemID);
         }

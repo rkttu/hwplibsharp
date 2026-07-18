@@ -109,8 +109,8 @@ namespace HwpLib.Reader.DocInfo.BorderFill
         /// <param name="sr">스트림 리더</param>
         public static void ReadPictureInfo(PictureInfo pi, CompoundStreamReader sr)
         {
-            pi.Brightness = sr.ReadSInt1();
             pi.Contrast = sr.ReadSInt1();
+            pi.Brightness = sr.ReadSInt1();
             pi.Effect = PictureEffectExtensions.FromValue(sr.ReadUInt1());
             pi.BinItemID = sr.ReadUInt2();
         }
