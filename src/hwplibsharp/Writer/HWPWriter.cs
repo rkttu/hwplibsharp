@@ -167,16 +167,14 @@ namespace HwpLib.Writer
 
             ForSection.Write(section, sw);
 
-            /*
             // 마지막 섹션에 메모 쓰기
             if (IsLastSection(index) && _hwpFile.BodyText.MemoList != null)
             {
                 foreach (var memo in _hwpFile.BodyText.MemoList)
                 {
-                    // TODO: ForMemo.Write(memo, sw);
+                    BodyText.Paragraph.Memo.ForMemo.Write(memo, sw);
                 }
             }
-            */
 
             _cfw.CloseCurrentStream();
         }
