@@ -102,7 +102,7 @@ namespace HwpLib.Writer.DocInfo.BorderFill
         }
 
         /// <summary>
-        /// 그림 정보를 쓴다.
+        /// ImageFill과 Bullet 내부의 그림 정보를 쓴다.
         /// </summary>
         /// <param name="pi">그림 정보</param>
         /// <param name="sw">스트림 라이터</param>

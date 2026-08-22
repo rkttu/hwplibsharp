@@ -17,7 +17,7 @@
 |------|-----|
 | 대상 프레임워크 | .NET 8.0 (`net8.0`) |
 | 프로젝트 이름 | hwplibsharp |
-| 버전 | 1.1.7 (원본 Java 라이브러리와 동일) |
+| 버전 | 1.1.10.8 (Java 1.1.10 기반) |
 | 원본 라이브러리 | [neolord0/hwplib](https://github.com/neolord0/hwplib) (Java) |
 | 원 저작자 | neolord0 |
 | .NET 포팅 | rkttu (AI 기반 번역) |
@@ -530,4 +530,4 @@ dotnet test  # (테스트 프로젝트 추가 시)
 
 ---
 
-마지막 업데이트: 2025-12-15
+마지막 업데이트: 2026-08-22
