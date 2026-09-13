@@ -2,6 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net8.0;net472</TargetFrameworks>
+		<!-- Both target frameworks write the same sample_hwp/result files. -->
+		<TestTfmsInParallel>false</TestTfmsInParallel>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>

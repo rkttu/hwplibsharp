@@ -58,6 +58,17 @@ C#은 해당 의존성을 사용하지 않아 추가 구현 변경이 없습니�
 - `net472` 전체 테스트: 172개 성공, 1개 건너뜀, 0개 실패
 - 건너뛴 테스트: 외부 네트워크 접근 제한에 따른 `ReadHwpFromUrl_ShouldSucceed`
 
+### 릴리스 테스트의 결과 파일 경합 방지
+
+[첫 릴리스 실행](https://github.com/rkttu/hwplibsharp/actions/runs/34743019926)에서는
+`net8.0`과 `net472` 테스트가 같은 `result-issue18-short-table-rewrite.hwp`에 동시에 접근해
+파일 사용 중 예외가 발생했습니다. 두 대상은 기존 생성 테스트의 결과 경로도 공유합니다.
+테스트 프로젝트에 `TestTfmsInParallel=false`를 지정해 대상 프레임워크를 순서대로 실행합니다.
+각 프레임워크 안의 MSTest 병렬 실행과 테스트 검증 조건은 유지합니다.
+설정의 동작은 [.NET CLI 문서](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test-vstest)를 따릅니다.
+수정 후 두 대상을 한 번의 Release 테스트 명령으로 실행해 순차 실행을 확인했으며
+각각 172개 통과, 네트워크 테스트 1개 건너뜀, 실패 0개를 기록했습니다.
+
 ### 재현 파일과 생성한 HWP
 
 재현 파일은 [공개된 고정 커밋의 원본](https://github.com/emptinessform/hwplib/blob/5452db19228015ffbe3250c6fbaa6d6526901eb5/sample_hwp/issue-315-table-ctrl-header.hwp)을
