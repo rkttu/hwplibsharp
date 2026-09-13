@@ -15,13 +15,34 @@
 
 | 항목 | 값 |
 |------|-----|
-| 대상 프레임워크 | .NET 8.0 (`net8.0`) |
+| 대상 프레임워크 | .NET Standard 2.0 (`netstandard2.0`), .NET Framework 4.7.2 (`net472`), .NET 8.0 (`net8.0`) |
 | 프로젝트 이름 | hwplibsharp |
-| 버전 | 1.1.10.8 (Java 1.1.10 기반) |
+| 버전 | 1.1.11.0 (Java 1.1.11 및 후속 커밋 `6746c27f` 기반) |
 | 원본 라이브러리 | [neolord0/hwplib](https://github.com/neolord0/hwplib) (Java) |
 | 원 저작자 | neolord0 |
 | .NET 포팅 | rkttu (AI 기반 번역) |
-| 주요 의존성 | OpenMcdf 3.1.3 |
+| 주요 의존성 | OpenMcdf 3.1.4 |
+
+---
+
+## 이슈 #18의 업스트림 동기화 범위
+
+2026년 9월 13일에 [이슈 #18](https://github.com/rkttu/hwplibsharp/issues/18)의 추가 댓글까지 대조하고
+`hwplib` 서브모듈을 `cdfb2690`에서 `6746c27f`로 갱신했습니다.
+전체 6개 커밋에서 변경한 Java 파일 4개의 대응 관계를 정리했습니다.
+
+| Java 파일 | C# 대응 파일 또는 구성 요소 | 반영 내용 |
+|-----------|---------------------------|-----------|
+| `reader/bodytext/paragraph/control/gso/part/ForCtrlHeaderGso.java` | `Reader/BodyText/Control/Gso/Part/ForCtrlHeaderGso.cs` | `RemainingBytes > 4`일 때만 쪽나눔 방지 플래그를 읽도록 수정 |
+| `tool/textextractor/ForParagraphList.java` | `Tool/TextExtractor/ForParagraphList.cs` | Java의 미사용 import 제거, C# 추가 변경 없음 |
+| `writer/autosetter/ForDocInfo.java` | `Writer/AutoSetter/ForDocInfo.cs` | Java 전용 SNMP import 제거, C# 추가 변경 없음 |
+| `org/apache/poi/hpsf/MutableSection.java` | OpenMcdf 기반 Compound File 처리 | Java import 순서만 조정, 직접 대응하는 C# 클래스 없음 |
+
+이어서 [업스트림의 최종 수정](https://github.com/neolord0/hwplib/commit/877c78af2f327f84b8a07e1691fe3c79d53b43d0)에 맞춰
+42바이트 표 헤더의 레코드 경계 보존과 선택 필드 읽기를 검증했습니다.
+Java의 레코드 내 읽기 위치와 C#의 절대 스트림 위치를 구분해 기존 `RemainingBytes` 프로퍼티를 사용했습니다.
+실제 읽기 동작이 달라져 프로젝트 버전을 `1.1.11.0`으로 갱신했습니다.
+회귀 테스트 9개와 전체 테스트, 생성한 HWP의 검증 결과는 [테스트 현황](TEST_STATUS.md)에 기록했습니다.
 
 ---
 
@@ -530,4 +551,4 @@ dotnet test  # (테스트 프로젝트 추가 시)
 
 ---
 
-마지막 업데이트: 2026-08-22
+마지막 업데이트: 2026년 9월 13일

@@ -1,5 +1,5 @@
 // =====================================================================
-// Java Original: kr/dogfoot/hwplib/reader/bodytext/gso/part/ForCtrlHeaderGso.java
+// Java Original: kr/dogfoot/hwplib/reader/bodytext/paragraph/control/gso/part/ForCtrlHeaderGso.java
 // Repository: https://github.com/neolord0/hwplib
 // =====================================================================
 
@@ -35,8 +35,14 @@ namespace HwpLib.Reader.BodyText.Control.Gso.Part
 
             if (sr.IsEndOfRecord()) return;
 
-            int temp = sr.ReadSInt4();
-            header.PreventPageDivide = BitFlag.Get(temp, 0);
+            // Older records can omit this field and contain only an explanation.
+            // Java's getCurrentPositionAfterHeader() counts bytes within the record;
+            // C# exposes that remaining length directly through RemainingBytes.
+            if (sr.RemainingBytes > 4)
+            {
+                int temp = sr.ReadSInt4();
+                header.PreventPageDivide = BitFlag.Get(temp, 0);
+            }
 
             if (sr.IsEndOfRecord()) return;
 
